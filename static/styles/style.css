@@ -73,12 +73,25 @@ h2 {
     margin-bottom: 0;
 }
 
+.bookmarks-panel-container {
+  display: grid;
+  width: 63vh;
+  height: 45vh;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: max-content;
+  row-gap: 30px;
+  column-gap: 0px;
+  translate: 70px 0px;
+  background-color: #2e3440;
+  padding-top: 10px;
+  border-radius: 40px;
+  box-shadow: 6px 5px 5px black;
+}
 
 ul {
     margin: 0;
     padding: 0;
-    white-space: nowrap;
-    list-style-type: none;
+    list-style-type: disc;
 }
 
 li {
