@@ -31,7 +31,7 @@
 
 - In line 7 paste the address of the `index.html`(see previous section) in the double quotes. Save and close the file.
 
-3. Open your terminal and `cd` into 'newtab/' (location of `local-settings.js` and `mozilla.cfg`). 
+3. Open your terminal and `cd` into 'newtab/' directory (location of `local-settings.js` and `mozilla.cfg`). 
 4. Now run the following commands as root user:
 ```
 sudo cp mozilla.cfg /usr/lib/firefox/
@@ -45,7 +45,7 @@ You can personalize the startpage by editing the `index.html` file. Change the c
 
 # Credits
 
-- Inspired from [Fxzii Startpage](https://github.com/Fxzzi/startpage).
+- Inspired from [Druxorey Startpage](https://github.com/druxorey/startpage).
 
 
 
