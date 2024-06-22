@@ -24,26 +24,20 @@
 
 ### Setting the startpage as the New Tab page <a name="newtab"></a>
 
-1. Open the 'TonyN678.github.io/firefox/newtab/' directory in your file manager. It contains `local-settings.js` and `mozilla.cfg`.
+1. Open the 'TonyN678.github.io/newtab/' directory in your file manager. It contains `local-settings.js` and `mozilla.cfg`.
 2. Open `mozilla.cfg` in any text editor. It looks like this:
 
 ![prefs](/screenshots/cfg.png)
 
 - In line 7 paste the address of the `index.html`(see previous section) in the double quotes. Save and close the file.
 
-3. Open your terminal and `cd` into firefox/newtab/ (location of `local-settings.js` and `mozilla.cfg`). 
+3. Open your terminal and `cd` into 'newtab/' (location of `local-settings.js` and `mozilla.cfg`). 
 4. Now run the following commands as root user:
 ```
 sudo cp mozilla.cfg /usr/lib/firefox/
 sudo cp local-settings.js /usr/lib/firefox/defaults/pref/
 ```
-![setpage](/screenshots/setpage.png)
 5. Restart firefox (Done!).
-
-
-
-
-
 
 ## Customization
 
