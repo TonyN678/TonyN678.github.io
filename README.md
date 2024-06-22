@@ -3,19 +3,19 @@
 </div>
 
 
-![Screenshot](resources/startpage-2024-06-14.webp)
+![Screenshot](screenshots/startpage.png)
 
 <div align="left">
 <h2>Usage</h2>
 
-1. Clone this repository: `git clone https://github.com/TonyN678/TonyN678.github.io`
-2. Open `index.html` in your browser.
-3. Customize the links and style according to your preferences.
+1. Clone this repository: `git clone https://github.com/TonyN678/TonyN678.github.io`.
+2. Open the file `index.html` in your browser.
+3. Customize the links and style as your will.
 
 ### Setting the startpage as the Home page <a name="homepage"></a>
 
 1. Right click on the `index.html` from the startpage dir and open with firefox. 
-2. Copy the location of the file from the address bar, should look like this: `file:///home/debasis/.mozilla/firefox/sawjo289.default-esr/startpage/index.html`. 
+2. Copy the location of the file from the address bar, should look like this: `file:///home/tien/GithubClonee/TonyN678.github.io/index.html`. 
 3. Open `about:preferences#home` in the search bar, select custom URLs and paste the address like so:
 
 ![prefs](/screenshots/pref.png)

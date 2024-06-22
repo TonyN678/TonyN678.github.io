@@ -27,8 +27,6 @@ body {
     font-family: Font;
     font-size: 18px;
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 img {
@@ -51,9 +49,9 @@ nav {
     grid-row-gap: 1em;
     grid-template-columns: 1fr 1fr;
     width: 40vw;
+    grid-auto-rows: max-content;
     margin-right: 100px;
     margin-left: -200px;
-    grid-auto-rows: max-content;
 
 }
 
@@ -81,14 +79,14 @@ h2 {
 
 .bookmarks-panel-container {
   display: grid;
-  width: 66vh;
+  width: 64vh;
   height: 45vh;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 1fr;
   grid-auto-rows: max-content;
   row-gap: 30px;
   column-gap: 0px;
   translate: 70px 0px;
-  background-color: #2e3440;
+  background-color: var(--tertiary-background-color);
   padding-top: 10px;
   border-radius: 40px;
   box-shadow: var(--normal-shadow) 0px 50px 60px;
@@ -98,7 +96,7 @@ h2 {
 }
 
 .bookmarks-panel-container:hover {
-  width: 67vh;
+  width: 65vh;
   height: 46vh;
   box-shadow: var(--selected-shadow) 0px 54px 55px;
   
@@ -107,12 +105,13 @@ ul {
     margin: 0;
     padding: 0;
     list-style-type: disc;
+    white-space: nowrap;
 }
 
 li {
     color: var(--secondary-foreground-color);
     line-height: 1.4em;
-    margin-left: 4.8em;
+    margin-left: 5em;
 }
 
 li:first-child {
@@ -136,7 +135,7 @@ a:hover {
 }
 
 
-@media (max-width: 1500px) {
+@media (max-width: 1600px) {
     .image {
         display: flex;
         justify-content: center;
@@ -144,17 +143,21 @@ a:hover {
     }
 
     img {
-        width: 350px;
+        margin-left: 20vw;
+        width: 20vw;
         border-radius: 20px;
-        height: auto;
+        height: 40vw;
+        translate: 0px 30px;
     }
 
     img:hover {
-        width: 28vw;
-        height: auto;
+        width: 21vw;
+        height: 41vw;
     }
 
 }
+
+
 
 @media (max-width: 1000px) {
     img {
