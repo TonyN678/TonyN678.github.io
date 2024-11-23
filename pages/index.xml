@@ -13,16 +13,10 @@
       
       <guid>https://tonyn678.github.io/pages/about/</guid>
       
-      <description>&lt;p&gt;Written in Go, Hugo is an open source static site generator available under the &lt;a href=&#34;https://github.com/gohugoio/hugo/blob/master/LICENSE&#34;&gt;Apache Licence 2.0.&lt;/a&gt; Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.&lt;/p&gt;
-&lt;p&gt;Hugo makes use of a variety of open source projects including:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/yuin/goldmark&#34;&gt;https://github.com/yuin/goldmark&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/alecthomas/chroma&#34;&gt;https://github.com/alecthomas/chroma&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/muesli/smartcrop&#34;&gt;https://github.com/muesli/smartcrop&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/spf13/cobra&#34;&gt;https://github.com/spf13/cobra&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/spf13/viper&#34;&gt;https://github.com/spf13/viper&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Welcome to my website! I am Tien Nguyen, an enthusiast in the world of customising linux workspace and currently daily-driving with Arch Linux on my machine.&lt;/p&gt;
+&lt;p&gt;I’m deeply passionate about technology and aspire to build a career in the electronics and IT industry.
+Currently working my way up to create a multi-functional server with my Raspberry Pi 4B.&lt;/p&gt;
+&lt;p&gt;I listen to all genres of music depending on what I am doing atm. My favorite band is Skillet, a rock band based in the US. It&amp;rsquo;s the strong vibe and energy the songs carry that pump my will up in the darkest hours of my life ,ie. an exam :) The top of my Skillet playlist are &amp;ldquo;Awake and Alive&amp;rdquo;, &amp;ldquo;Feel Invincible&amp;rdquo; and &amp;ldquo;Monster&amp;rdquo;.&lt;/p&gt;</description>
       
     </item>
     
