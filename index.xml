@@ -6,7 +6,18 @@
     <description>Recent content in Home on Tien&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sat, 23 Nov 2024 23:00:55 +1100</lastBuildDate><atom:link href="https://tonyn678.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 25 Nov 2024 12:10:33 +1100</lastBuildDate><atom:link href="https://tonyn678.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Raspberry Pi</title>
+      <link>https://tonyn678.github.io/projects/project1/</link>
+      <pubDate>Mon, 25 Nov 2024 12:10:33 +1100</pubDate>
+      
+      <guid>https://tonyn678.github.io/projects/project1/</guid>
+      
+      <description>&lt;p&gt;Buy 1 right now !&lt;/p&gt;</description>
+      
+    </item>
+    
     <item>
       <title>How did I build this blog ?</title>
       <link>https://tonyn678.github.io/posts/thisblog/</link>
@@ -21,10 +32,10 @@
     
     <item>
       <title>About</title>
-      <link>https://tonyn678.github.io/pages/about/</link>
+      <link>https://tonyn678.github.io/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://tonyn678.github.io/pages/about/</guid>
+      <guid>https://tonyn678.github.io/about/</guid>
       
       <description>&lt;p&gt;Welcome to my website! I am Tien Nguyen, an enthusiast in the world of customising linux workspace and currently daily-driving with Arch Linux on my machine.&lt;/p&gt;
 &lt;p&gt;I’m deeply passionate about technology and aspire to build a career in the electronics and IT industry.
