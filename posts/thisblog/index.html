@@ -53,7 +53,7 @@
         },
         "datePublished": "2024-11-23",
         "description": "",
-        "wordCount":  16 ,
+        "wordCount":  261 ,
         "mainEntityOfPage": "True",
         "dateModified": "2024-11-23",
         "image": {
@@ -74,7 +74,8 @@
     <meta property="og:url" content="https://tonyn678.github.io/posts/thisblog/">
   <meta property="og:site_name" content="Tien&#39;s blog">
   <meta property="og:title" content="How did I build this blog ?">
-  <meta property="og:description" content="Inspiration I had always wanted to build own website, no Wordpress or any third-party hosting services!">
+  <meta property="og:description" content="Inspiration I had always wanted to build my own website, no Wordpress or any third-party hosting bloats that rip your pocket! This is also for storing information and experiences I gained throughout my learning journey in the world of tech and engineering so I don’t have to crawling through my dusting physical A4 notebooks or proprietary gg docs :/
+How? I built this website with Hugo and Github Page, a cool fast minimalist combo for hosting with no databases, just raw mark-down texts and basic html, css, js skills :)">
   <meta property="og:locale" content="en_gb">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -86,7 +87,8 @@
     
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="How did I build this blog ?">
-  <meta name="twitter:description" content="Inspiration I had always wanted to build own website, no Wordpress or any third-party hosting services!">
+  <meta name="twitter:description" content="Inspiration I had always wanted to build my own website, no Wordpress or any third-party hosting bloats that rip your pocket! This is also for storing information and experiences I gained throughout my learning journey in the world of tech and engineering so I don’t have to crawling through my dusting physical A4 notebooks or proprietary gg docs :/
+How? I built this website with Hugo and Github Page, a cool fast minimalist combo for hosting with no databases, just raw mark-down texts and basic html, css, js skills :)">
 
 
     
@@ -204,7 +206,42 @@ stroke-linejoin="round" class="feather feather-home">
             
             <div class="page-content">
                 <h2 id="inspiration">Inspiration</h2>
-<p>I had always wanted to build own website, no Wordpress or any third-party hosting services!</p>
+<p>I had always wanted to build my own website, no Wordpress or any third-party hosting bloats that rip your pocket! This is also for storing information and experiences I gained throughout my learning journey in the world of tech and engineering so I don&rsquo;t have to crawling through my dusting physical A4 notebooks or proprietary gg docs :/</p>
+<h2 id="how">How?</h2>
+<p>I built this website with Hugo and Github Page, a cool fast minimalist combo for hosting with no databases, just raw mark-down texts and basic html, css, js skills :)</p>
+<ol>
+<li>
+<p>Download <a href="https://gohugo.io/getting-started/quick-start/">Hugo</a></p>
+</li>
+<li>
+<p>Set up 2 new Github repositories: &ldquo;USERNAME.github.io&rdquo; and &ldquo;blog&rdquo;</p>
+<p>(<em>blog</em> is where I keep all the drafts and themes so I could modify locally, <em>USERNAME.github.io</em> is a github page for publishing the real website in the &ldquo;public&rdquo; folder of hugo workspace).</p>
+</li>
+<li>
+<p>Clone your <em>blog</em> repository to your local machine <code>git clone https://github.com/USERNAME/blog</code>.</p>
+</li>
+<li>
+<p><code>cd blog</code> and create a hugo workspace <code>hugo new site myblog</code>.</p>
+</li>
+<li>
+<p><code>cd myblog</code>
+<code>git clone https://github.com/hugo-sid/hugo-blog-awesome.git themes/hugo-blog-awesome</code> (<a href="https://themes.gohugo.io/themes/hugo-blog-awesome/">hugo-blog-awesome</a>)</p>
+</li>
+<li>
+<p>Create a git submodule of public folder, link it to the publishing page <em>USERNAME.github.io</em>:
+<code>git submodule add -b main https://github.com/USERNAME/USERNAME.github.io.git public/</code> (<a href="https://www.youtube.com/watch?v=LIFvgrRxdt4&list=WL&index=23">Refs</a>)</p>
+<p>*NOTE: if error, delete the folder <em>public</em> !</p>
+</li>
+<li>
+<p>Now you can customise any html, css, js files you see in <em>themes</em> folder and preview with <code>hugo serve</code></p>
+</li>
+<li>
+<p>Once you satisfy with everything simply publish the website by typing <code>hugo</code>, remember to delete everything in <em>public</em> folder everytime you publish to avoid any collision cause <code>hugo</code> will generate a new website in <em>public</em> folder everytime.</p>
+</li>
+<li>
+<p>Add, Commit and Push to Gihub repos and enjoy your page at <em>USERNAME.github.io</em>.</p>
+</li>
+</ol>
 
             </div>
         </article></main>
