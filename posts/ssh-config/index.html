@@ -3,11 +3,11 @@
 <meta http-equiv="content-type" content="text/html">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title itemprop="name">How did I build this blog ? | Tien&#39;s blog</title>
-<meta property="og:title" content="How did I build this blog ? | Tien&#39;s blog" />
-<meta name="twitter:title" content="How did I build this blog ? | Tien&#39;s blog" />
-<meta itemprop="name" content="How did I build this blog ? | Tien&#39;s blog" />
-<meta name="application-name" content="How did I build this blog ? | Tien&#39;s blog" />
+<title itemprop="name">Setting Up SSH Connection Without Password to a Remote Server | Tien&#39;s blog</title>
+<meta property="og:title" content="Setting Up SSH Connection Without Password to a Remote Server | Tien&#39;s blog" />
+<meta name="twitter:title" content="Setting Up SSH Connection Without Password to a Remote Server | Tien&#39;s blog" />
+<meta itemprop="name" content="Setting Up SSH Connection Without Password to a Remote Server | Tien&#39;s blog" />
+<meta name="application-name" content="Setting Up SSH Connection Without Password to a Remote Server | Tien&#39;s blog" />
 <meta property="og:site_name" content="MyPage" />
 
 <meta name="description" content="A minimal webUI">
@@ -18,7 +18,7 @@
 <meta property="og:locale" content="en-gb" />
 <meta name="language" content="en-gb" />
 
-  <link rel="alternate" hreflang="en-gb" href="https://tonyn678.github.io/posts/thisblog/" title="English" />
+  <link rel="alternate" hreflang="en-gb" href="https://tonyn678.github.io/posts/ssh-config/" title="English" />
 
 
 
@@ -29,9 +29,9 @@
     
 
     <meta property="og:type" content="article" />
-    <meta property="og:article:published_time" content=2024-11-23T23:00:55&#43;1100 />
-    <meta property="article:published_time" content=2024-11-23T23:00:55&#43;1100 />
-    <meta property="og:url" content="https://tonyn678.github.io/posts/thisblog/" />
+    <meta property="og:article:published_time" content=2024-12-19T16:01:05&#43;1100 />
+    <meta property="article:published_time" content=2024-12-19T16:01:05&#43;1100 />
+    <meta property="og:url" content="https://tonyn678.github.io/posts/ssh-config/" />
 
     
     <meta property="og:article:author" content="Tien Nguyen" />
@@ -46,16 +46,16 @@
     {
         "@context": "http://schema.org",
         "@type": "Article",
-        "headline": "How did I build this blog ?",
+        "headline": "Setting Up SSH Connection Without Password to a Remote Server",
         "author": {
         "@type": "Person",
         "name": ""
         },
-        "datePublished": "2024-11-23",
+        "datePublished": "2024-12-19",
         "description": "",
-        "wordCount":  285 ,
+        "wordCount":  519 ,
         "mainEntityOfPage": "True",
-        "dateModified": "2024-11-23",
+        "dateModified": "2024-12-19",
         "image": {
         "@type": "imageObject",
         "url": ""
@@ -71,29 +71,29 @@
 <meta name="generator" content="Hugo 0.139.3">
 
     
-    <meta property="og:url" content="https://tonyn678.github.io/posts/thisblog/">
+    <meta property="og:url" content="https://tonyn678.github.io/posts/ssh-config/">
   <meta property="og:site_name" content="Tien&#39;s blog">
-  <meta property="og:title" content="How did I build this blog ?">
-  <meta property="og:description" content="Inspiration I had always wanted to build my own website, no Wordpress or any third-party hosting bloats that rip your pocket! This is also for storing information and experiences I gained throughout my learning journey in the world of tech and engineering so I don’t have to crawling through my dusting physical A4 notebooks or proprietary gg docs :/
-How? I built this website with Hugo and Github Page, a cool fast minimalist combo for hosting with no databases, just raw mark-down texts and basic html, css, js skills :)">
+  <meta property="og:title" content="Setting Up SSH Connection Without Password to a Remote Server">
+  <meta property="og:description" content="Introduction Secure Shell (SSH) is a powerful tool for remotely accessing and managing servers. Setting up SSH key-based authentication eliminates the need for passwords and enhances security. This guide walks you through the process of setting up an SSH connection without a password to a remote server.
+Step 1: Generate an SSH Key Pair The first step is to create a public and private SSH key pair on your local machine. If you already have an SSH key pair, you can skip this step.">
   <meta property="og:locale" content="en_gb">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2024-11-23T23:00:55+11:00">
-    <meta property="article:modified_time" content="2024-11-23T23:00:55+11:00">
+    <meta property="article:published_time" content="2024-12-19T16:01:05+11:00">
+    <meta property="article:modified_time" content="2024-12-19T16:01:05+11:00">
 
 
     
     
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="How did I build this blog ?">
-  <meta name="twitter:description" content="Inspiration I had always wanted to build my own website, no Wordpress or any third-party hosting bloats that rip your pocket! This is also for storing information and experiences I gained throughout my learning journey in the world of tech and engineering so I don’t have to crawling through my dusting physical A4 notebooks or proprietary gg docs :/
-How? I built this website with Hugo and Github Page, a cool fast minimalist combo for hosting with no databases, just raw mark-down texts and basic html, css, js skills :)">
+  <meta name="twitter:title" content="Setting Up SSH Connection Without Password to a Remote Server">
+  <meta name="twitter:description" content="Introduction Secure Shell (SSH) is a powerful tool for remotely accessing and managing servers. Setting up SSH key-based authentication eliminates the need for passwords and enhances security. This guide walks you through the process of setting up an SSH connection without a password to a remote server.
+Step 1: Generate an SSH Key Pair The first step is to create a public and private SSH key pair on your local machine. If you already have an SSH key pair, you can skip this step.">
 
 
     
 
-    <link rel="canonical" href="https://tonyn678.github.io/posts/thisblog/">
+    <link rel="canonical" href="https://tonyn678.github.io/posts/ssh-config/">
     <link href="/style.min.a2167ef260f352cd9ff2e8a7192ed110d23d97ad346d16a9e96828f4ac24ce34.css" rel="stylesheet">
     <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
 
@@ -193,61 +193,142 @@ stroke-linejoin="round" class="feather feather-home">
     <main class="page-content" aria-label="Content">
         <article>
             <header class="header">
-                <h1 class="header-title">How did I build this blog ?</h1>
+                <h1 class="header-title">Setting Up SSH Connection Without Password to a Remote Server</h1>
                 
                 
                 
                 <div class="post-meta">
-                    <time datetime="2024-11-23T23:00:55&#43;11:00" itemprop="datePublished"> 23 Nov 2024 </time>
+                    <time datetime="2024-12-19T16:01:05&#43;11:00" itemprop="datePublished"> 19 Dec 2024 </time>
                 </div>
                 
             </header>
             
+    
+    <details class="toc" ZgotmplZ>
+        <summary><b></b></summary>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#step-1-generate-an-ssh-key-pair">Step 1: Generate an SSH Key Pair</a></li>
+    <li><a href="#step-2-copy-the-public-key-to-the-remote-server">Step 2: Copy the Public Key to the Remote Server</a>
+      <ul>
+        <li><a href="#option-1-use-ssh-copy-id-recommended">Option 1: Use <code>ssh-copy-id</code> (Recommended)</a></li>
+        <li><a href="#option-2-manually-copy-the-key">Option 2: Manually Copy the Key</a></li>
+      </ul>
+    </li>
+    <li><a href="#step-3-test-the-connection">Step 3: Test the Connection</a></li>
+    <li><a href="#step-4-disable-password-authentication-optional-but-recommended">Step 4: Disable Password Authentication (Optional but Recommended)</a>
+      <ul>
+        <li><a href="#super-important-">SUPER IMPORTANT !!!</a></li>
+      </ul>
+    </li>
+    <li><a href="#troubleshooting">Troubleshooting</a>
+      <ul>
+        <li><a href="#1-ssh-still-asks-for-a-password">1. SSH Still Asks for a Password</a></li>
+        <li><a href="#2-debug-the-ssh-connection">2. Debug the SSH Connection</a></li>
+      </ul>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+    </details>
             <div class="page-content">
-                <h2 id="inspiration">Inspiration</h2>
-<p>I had always wanted to build my own website, no Wordpress or any third-party hosting bloats that rip your pocket! This is also for storing information and experiences I gained throughout my learning journey in the world of tech and engineering so I don&rsquo;t have to crawling through my dusting physical A4 notebooks or proprietary gg docs :/</p>
-<h2 id="how">How?</h2>
-<p>I built this website with Hugo and Github Page, a cool fast minimalist combo for hosting with no databases, just raw mark-down texts and basic html, css, js skills :)</p>
+                <h1 id="introduction">Introduction</h1>
+<p>Secure Shell (SSH) is a powerful tool for remotely accessing and managing servers. Setting up SSH key-based authentication eliminates the need for passwords and enhances security. This guide walks you through the process of setting up an SSH connection without a password to a remote server.</p>
+<hr>
+<h2 id="step-1-generate-an-ssh-key-pair">Step 1: Generate an SSH Key Pair</h2>
+<p>The first step is to create a public and private SSH key pair on your local machine. If you already have an SSH key pair, you can skip this step.</p>
 <ol>
 <li>
-<p>Download <a href="https://gohugo.io/getting-started/quick-start/">Hugo</a></p>
+<p>Open a terminal on your local machine.</p>
 </li>
 <li>
-<p>Set up 2 new Github repositories: &ldquo;USERNAME.github.io&rdquo; and &ldquo;blog&rdquo;</p>
-<p>(<em>blog</em> is where I keep all the drafts and themes so I could modify locally, <em>USERNAME.github.io</em> is a github page for publishing the real website in the &ldquo;public&rdquo; folder of hugo workspace).</p>
+<p>Run the following command:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh-keygen -t rsa -b <span class="m">4096</span> -C <span class="s2">&#34;your_email@example.com&#34;</span>
+</span></span></code></pre></div><blockquote>
+<p><strong><em>NOTE:</em></strong>   <code>ssh-keygen</code> uses default options if no flag provided.</p>
+</blockquote>
+<ul>
+<li><code>-t rsa</code>: Specifies the RSA algorithm.(optional)</li>
+<li><code>-b 4096</code>: Generates a 4096-bit key for extra security. (optional)</li>
+<li><code>-C &quot;your_email@example.com&quot;</code>: Adds a comment to identify the key. (optional)</li>
+</ul>
 </li>
 <li>
-<p>Clone your <em>blog</em> repository to your local machine <code>git clone https://github.com/USERNAME/blog</code>.</p>
+<p>Save the key to the default location (<code>~/.ssh/id_rsa</code>) with a key name to store the key when prompted.</p>
 </li>
 <li>
-<p><code>cd blog</code> and create a hugo workspace <code>hugo new site myblog</code>.</p>
-</li>
-<li>
-<p><code>cd myblog</code>
-<code>git clone https://github.com/hugo-sid/hugo-blog-awesome.git themes/hugo-blog-awesome</code> (<a href="https://themes.gohugo.io/themes/hugo-blog-awesome/">hugo-blog-awesome</a>)</p>
-</li>
-<li>
-<p>Create a git submodule of public folder, link it to the publishing page <em>USERNAME.github.io</em>:
-<code>git submodule add -b main https://github.com/USERNAME/USERNAME.github.io.git public/</code> (<a href="https://www.youtube.com/watch?v=LIFvgrRxdt4&list=WL&index=23">Refs</a>)</p>
-<p>*NOTE: if error, delete the folder <em>public</em> !</p>
-</li>
-<li>
-<p>Now you can customise any html, css, js files you see in <em>themes</em> folder and preview with <code>hugo serve</code></p>
-</li>
-<li>
-<p>You can publish new posts with <code>hugo new content content/posts/my-first-post.md</code>.</p>
-</li>
-<li>
-<p>Once you satisfy with everything simply publish the website by typing <code>hugo</code>, remember to delete everything in <em>public</em> folder everytime you publish to avoid any collision cause <code>hugo</code> will generate a new website in <em>public</em> folder everytime.</p>
-</li>
-<li>
-<p>Add, Commit and Push to Gihub repos and enjoy your page at <em>USERNAME.github.io</em>.</p>
+<p>Consider adding a passphrase to the key for extra security.</p>
 </li>
 </ol>
-<h2 id="adjustments--fixes">Adjustments &amp; Fixes</h2>
+<hr>
+<h2 id="step-2-copy-the-public-key-to-the-remote-server">Step 2: Copy the Public Key to the Remote Server</h2>
+<p>You need to transfer the public key to the remote server so it knows to trust your private key.</p>
+<h3 id="option-1-use-ssh-copy-id-recommended">Option 1: Use <code>ssh-copy-id</code> (Recommended)</h3>
+<p>Run the following command:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh-copy-id -i ~/.ssh/&lt;key_name&gt; &lt;user&gt;@&lt;remote_host&gt;
+</span></span></code></pre></div><ul>
+<li>Replace <code>&lt;key_name&gt;</code> with your key&rsquo;s name you set earlier.</li>
+<li>Replace <code>&lt;user&gt;</code> with your remote username.</li>
+<li>Replace <code>&lt;remote_host&gt;</code> with the server&rsquo;s IP address or domain name.</li>
+</ul>
+<h3 id="option-2-manually-copy-the-key">Option 2: Manually Copy the Key</h3>
 <ol>
-<li>Add more sub-folder in header(navigation bar): Add another entry in hugo.toml</li>
+<li>Display the contents of your public key:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat ~/.ssh/id_rsa.pub
+</span></span></code></pre></div></li>
+<li>Copy the output and paste it into the <code>~/.ssh/authorized_keys</code> file on the remote server:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vim ~/.ssh/authorized_keys
+</span></span></code></pre></div></li>
+<li>Ensure the file has the correct permissions:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod <span class="m">600</span> ~/.ssh/authorized_keys
+</span></span></code></pre></div></li>
 </ol>
+<hr>
+<h2 id="step-3-test-the-connection">Step 3: Test the Connection</h2>
+<p>Verify that you can connect to the server without a password:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh -i .ssh/&lt;key_name&gt; &lt;user&gt;@&lt;remote_host&gt;
+</span></span></code></pre></div><blockquote>
+<p><strong><em>NOTE:</em></strong>  The &ldquo;-i&rdquo; flag is used to point to your key&rsquo;s location, not needed to specify when key&rsquo;s name is default as you should be logged in without being prompted for a password.</p>
+</blockquote>
+<hr>
+<h2 id="step-4-disable-password-authentication-optional-but-recommended">Step 4: Disable Password Authentication (Optional but Recommended)</h2>
+<p>To enhance security, disable password authentication on the remote server. This ensures only users with the private key can log in.</p>
+<ol>
+<li>Open the SSH daemon configuration file on the remote server:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo vim /etc/ssh/sshd_config
+</span></span></code></pre></div></li>
+<li>Set the following options:
+<pre tabindex="0"><code>PasswordAuthentication no
+PermitRootLogin no
+</code></pre></li>
+<li>Restart the SSH service:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl restart sshd
+</span></span></code></pre></div></li>
+</ol>
+<h3 id="super-important-">SUPER IMPORTANT !!!</h3>
+<p>Before disabling password authentication, ensure you have tested key-based access and confirmed it works.</p>
+<hr>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="1-ssh-still-asks-for-a-password">1. SSH Still Asks for a Password</h3>
+<ul>
+<li>Ensure the public key is in <code>~/.ssh/authorized_keys</code> on the remote server.</li>
+<li>Check file permissions:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod <span class="m">700</span> ~/.ssh
+</span></span><span class="line"><span class="cl">chmod <span class="m">600</span> ~/.ssh/authorized_keys
+</span></span></code></pre></div></li>
+<li>Verify the SSH configuration:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo vim /etc/ssh/sshd_config
+</span></span></code></pre></div>Ensure <code>PubkeyAuthentication yes</code> is enabled.</li>
+</ul>
+<h3 id="2-debug-the-ssh-connection">2. Debug the SSH Connection</h3>
+<p>Use verbose mode to debug:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh -v &lt;user&gt;@&lt;remote_host&gt;
+</span></span></code></pre></div><p>This will provide detailed output about the connection process.</p>
+<hr>
+<h2 id="conclusion">Conclusion</h2>
+<p>Setting up SSH key-based authentication not only improves security but also makes logging into remote servers more convenient. By following the steps above, you can eliminate the need for passwords and protect your server against brute-force attacks.</p>
+<p>Remember to keep your private key secure, and consider disabling password authentication for maximum security.</p>
+<p>Happy server managing!</p>
 
             </div>
         </article></main>

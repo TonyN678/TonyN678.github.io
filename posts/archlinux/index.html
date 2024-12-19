@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en-gb"><head><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">Archlinux Setup and common Linux Errors | Tien&#39;s blog</title>
+<meta property="og:title" content="Archlinux Setup and common Linux Errors | Tien&#39;s blog" />
+<meta name="twitter:title" content="Archlinux Setup and common Linux Errors | Tien&#39;s blog" />
+<meta itemprop="name" content="Archlinux Setup and common Linux Errors | Tien&#39;s blog" />
+<meta name="application-name" content="Archlinux Setup and common Linux Errors | Tien&#39;s blog" />
+<meta property="og:site_name" content="MyPage" />
+
+<meta name="description" content="A minimal webUI">
+<meta itemprop="description" content="A minimal webUI" />
+<meta property="og:description" content="A minimal webUI" />
+<meta name="twitter:description" content="A minimal webUI" />
+
+<meta property="og:locale" content="en-gb" />
+<meta name="language" content="en-gb" />
+
+  <link rel="alternate" hreflang="en-gb" href="https://tonyn678.github.io/posts/archlinux/" title="English" />
+
+
+
+
+
+    
+    
+    
+
+    <meta property="og:type" content="article" />
+    <meta property="og:article:published_time" content=2024-12-17T15:02:12&#43;1100 />
+    <meta property="article:published_time" content=2024-12-17T15:02:12&#43;1100 />
+    <meta property="og:url" content="https://tonyn678.github.io/posts/archlinux/" />
+
+    
+    <meta property="og:article:author" content="Tien Nguyen" />
+    <meta property="article:author" content="Tien Nguyen" />
+    <meta name="author" content="Tien Nguyen" />
+    
+    
+
+    
+
+    <script defer type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "headline": "Archlinux Setup and common Linux Errors",
+        "author": {
+        "@type": "Person",
+        "name": ""
+        },
+        "datePublished": "2024-12-17",
+        "description": "",
+        "wordCount":  1399 ,
+        "mainEntityOfPage": "True",
+        "dateModified": "2024-12-17",
+        "image": {
+        "@type": "imageObject",
+        "url": ""
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "Tien\u0027s blog"
+        }
+    }
+    </script>
+
+
+<meta name="generator" content="Hugo 0.139.3">
+
+    
+    <meta property="og:url" content="https://tonyn678.github.io/posts/archlinux/">
+  <meta property="og:site_name" content="Tien&#39;s blog">
+  <meta property="og:title" content="Archlinux Setup and common Linux Errors">
+  <meta property="og:description" content="How to Install Arch Linux Make sure that the machine is not in Secure Boot mode to prevent further authentication or you will end up with a black and yellow window and can’t do anything.
+Refer to the link below for how to set up a VM in virtualbox for any OS: https://docs.google.com/document/d/1-uePhx7kDsEjF_vA6O1jVVHpX85VpOUiTH6j-3TIvz4/edit?usp=sharing
+Refer to the https://wiki.archlinux.org/title/Installation_guide.
+Keyboard and Font (Optional) Set up the keyboard layout and console font:
+loadkeys us # Set keyboard to US layout setfont iso09.16 # Set console font (example) # ls /usr/share/kbd/consolefonts/ # List available console fonts loadkeys us ensures the keyboard input follows the US layout, which is helpful if you are used to it. setfont changes the console font. This step is optional but improves readability in some cases. Verify Boot Mode (Optional) Check if the system is booted in UEFI mode:">
+  <meta property="og:locale" content="en_gb">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-12-17T15:02:12+11:00">
+    <meta property="article:modified_time" content="2024-12-17T15:02:12+11:00">
+
+
+    
+    
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Archlinux Setup and common Linux Errors">
+  <meta name="twitter:description" content="How to Install Arch Linux Make sure that the machine is not in Secure Boot mode to prevent further authentication or you will end up with a black and yellow window and can’t do anything.
+Refer to the link below for how to set up a VM in virtualbox for any OS: https://docs.google.com/document/d/1-uePhx7kDsEjF_vA6O1jVVHpX85VpOUiTH6j-3TIvz4/edit?usp=sharing
+Refer to the https://wiki.archlinux.org/title/Installation_guide.
+Keyboard and Font (Optional) Set up the keyboard layout and console font:
+loadkeys us # Set keyboard to US layout setfont iso09.16 # Set console font (example) # ls /usr/share/kbd/consolefonts/ # List available console fonts loadkeys us ensures the keyboard input follows the US layout, which is helpful if you are used to it. setfont changes the console font. This step is optional but improves readability in some cases. Verify Boot Mode (Optional) Check if the system is booted in UEFI mode:">
+
+
+    
+
+    <link rel="canonical" href="https://tonyn678.github.io/posts/archlinux/">
+    <link href="/style.min.a2167ef260f352cd9ff2e8a7192ed110d23d97ad346d16a9e96828f4ac24ce34.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="https://tonyn678.github.io/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+
+    
+    
+    
+</head>
+<body data-theme = "auto" class="notransition">
+
+<script src="/js/theme.min.8961c317c5b88b953fe27525839672c9343f1058ab044696ca225656c8ba2ab0.js" integrity="sha256-iWHDF8W4i5U/4nUlg5ZyyTQ/EFirBEaWyiJWVsi6KrA="></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="https://tonyn678.github.io/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title></title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/posts/">
+                        Posts
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/projects/">
+                        Projects
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">Archlinux Setup and common Linux Errors</h1>
+                
+                
+                
+                <div class="post-meta">
+                    <time datetime="2024-12-17T15:02:12&#43;11:00" itemprop="datePublished"> 17 Dec 2024 </time>
+                </div>
+                
+            </header>
+            
+    
+    <details class="toc" ZgotmplZ>
+        <summary><b></b></summary>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#keyboard-and-font-optional">Keyboard and Font (Optional)</a></li>
+    <li><a href="#verify-boot-mode-optional">Verify Boot Mode (Optional)</a></li>
+    <li><a href="#internet-connection">Internet Connection</a>
+      <ul>
+        <li><a href="#on-a-virtual-machine">On a Virtual Machine</a></li>
+        <li><a href="#on-a-bare-metal-system">On a Bare Metal System</a></li>
+      </ul>
+    </li>
+    <li><a href="#partitioning">Partitioning</a></li>
+    <li><a href="#formatting-the-partitions">Formatting the Partitions</a></li>
+    <li><a href="#mounting-the-partitions">Mounting the Partitions</a></li>
+    <li><a href="#installing-the-base-system">Installing the Base System</a></li>
+    <li><a href="#generating-fstab">Generating fstab</a></li>
+    <li><a href="#chroot-into-the-new-system">Chroot into the New System</a></li>
+    <li><a href="#set-time-and-location">Set Time and Location</a></li>
+    <li><a href="#localisation">Localisation</a></li>
+    <li><a href="#setting-the-hostname">Setting the Hostname</a></li>
+    <li><a href="#set-root-password">Set Root Password</a></li>
+    <li><a href="#adding-a-user">Adding a User</a></li>
+    <li><a href="#installing-the-bootloader">Installing the Bootloader</a></li>
+    <li><a href="#reboot">Reboot</a></li>
+    <li><a href="#post-installation">Post-Installation</a></li>
+    <li><a href="#arch-linux-post-installation-guide">Arch Linux Post-Installation Guide</a>
+      <ul>
+        <li><a href="#resolving-common-errors">Resolving Common Errors</a>
+          <ul>
+            <li><a href="#invalid-or-corrupted-package-pgp-signature-when-updating-or-installing-packages-arm64"><strong>Invalid or Corrupted Package (PGP Signature) when Updating or Installing Packages (ARM64)</strong></a></li>
+          </ul>
+        </li>
+        <li><a href="#connecting-to-wi-fi">Connecting to Wi-Fi</a>
+          <ul>
+            <li><a href="#1-using-nmtui-recommended"><strong>1. Using <code>nmtui</code> (Recommended)</strong></a></li>
+            <li><a href="#2-using-networkmanager-manual-method"><strong>2. Using <code>NetworkManager</code> (Manual Method)</strong></a></li>
+          </ul>
+        </li>
+        <li><a href="#common-tools-for-daily-usage">Common Tools for Daily Usage</a>
+          <ul>
+            <li><a href="#1-fix-touchpad-issues-clickscroll-not-working"><strong>1. Fix Touchpad Issues (Click/Scroll Not Working)</strong></a></li>
+            <li><a href="#2-adjust-screen-brightness-with-brightnessctl"><strong>2. Adjust Screen Brightness with <code>brightnessctl</code></strong></a></li>
+            <li><a href="#3-adjust-audio-volume-with-pactl-pulseaudio"><strong>3. Adjust Audio Volume with <code>pactl</code> (PulseAudio)</strong></a></li>
+            <li><a href="#4-connect-bluetooth-devices-with-bluetoothctl"><strong>4. Connect Bluetooth Devices with <code>bluetoothctl</code></strong></a></li>
+          </ul>
+        </li>
+        <li><a href="#resolving-protonvpn-kill-switch-issues">Resolving ProtonVPN Kill Switch Issues</a></li>
+        <li><a href="#configure-touchpad-gestures">Configure Touchpad Gestures</a></li>
+        <li><a href="#configure-nvidia-gpu-driver">Configure Nvidia GPU Driver</a></li>
+        <li><a href="#correcting-system-time">Correcting System Time</a></li>
+        <li><a href="#screen-colours-not-rendering-correctly">Screen Colours Not Rendering Correctly</a></li>
+        <li><a href="#final-notes">Final Notes</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </details>
+            <div class="page-content">
+                <h1 id="how-to-install-arch-linux">How to Install Arch Linux</h1>
+<p>Make sure that the machine is not in Secure Boot mode to prevent further authentication or you will end up with a black and yellow window and can’t do anything.</p>
+<p>Refer to the link below for how to set up a VM in virtualbox for any OS: <a href="https://docs.google.com/document/d/1-uePhx7kDsEjF_vA6O1jVVHpX85VpOUiTH6j-3TIvz4/edit?usp=sharing">https://docs.google.com/document/d/1-uePhx7kDsEjF_vA6O1jVVHpX85VpOUiTH6j-3TIvz4/edit?usp=sharing</a></p>
+<p>Refer to the <a href="https://wiki.archlinux.org/title/Installation_guide">https://wiki.archlinux.org/title/Installation_guide</a>.</p>
+<h2 id="keyboard-and-font-optional">Keyboard and Font (Optional)</h2>
+<p>Set up the keyboard layout and console font:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">loadkeys us           <span class="c1"># Set keyboard to US layout</span>
+</span></span><span class="line"><span class="cl">setfont iso09.16      <span class="c1"># Set console font (example)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># ls /usr/share/kbd/consolefonts/   # List available console fonts</span>
+</span></span></code></pre></div><ul>
+<li><code>loadkeys us</code> ensures the keyboard input follows the US layout, which is helpful if you are used to it.</li>
+<li><code>setfont</code> changes the console font. This step is optional but improves readability in some cases.</li>
+</ul>
+<hr>
+<h2 id="verify-boot-mode-optional">Verify Boot Mode (Optional)</h2>
+<p>Check if the system is booted in UEFI mode:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat /sys/firmware/efi/fw_platform_size
+</span></span><span class="line"><span class="cl"><span class="c1"># If the result is &#34;64&#34;, the system is using UEFI boot.</span>
+</span></span></code></pre></div><ul>
+<li>UEFI boot mode is required for systems that use modern boot managers like GRUB in EFI mode.</li>
+</ul>
+<hr>
+<h2 id="internet-connection">Internet Connection</h2>
+<h3 id="on-a-virtual-machine">On a Virtual Machine</h3>
+<ol>
+<li>
+<p>Check for network connectivity:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ip link
+</span></span></code></pre></div><ul>
+<li><code>ip link</code> shows the status of all network devices. Look for the &ldquo;UP&rdquo; symbol.</li>
+</ul>
+</li>
+<li>
+<p>If all network interfaces show <code>DOWN</code>, follow these steps:</p>
+<ul>
+<li>Reboot to the boot page.</li>
+<li>Enter <strong>Firmware Settings</strong>.</li>
+<li>Go to the network tab and select the displayed <strong>MAC address</strong> (the network adapter).</li>
+<li>Reboot into the Arch Linux installation medium.</li>
+<li>Verify connectivity:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ip link   <span class="c1"># One interface should now show &#34;UP&#34;</span>
+</span></span></code></pre></div></li>
+</ul>
+</li>
+</ol>
+<h3 id="on-a-bare-metal-system">On a Bare Metal System</h3>
+<ol>
+<li>
+<p>Use <code>iwctl</code> to connect to Wi-Fi:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">iwctl
+</span></span><span class="line"><span class="cl">device list
+</span></span><span class="line"><span class="cl">station wlan0 get-networks
+</span></span><span class="line"><span class="cl">station wlan0 connect &lt;wifi_name&gt;
+</span></span></code></pre></div><ul>
+<li><code>device list</code> displays available network adapters.</li>
+<li>Replace <code>wlan0</code> with the name of your wireless interface.</li>
+<li>Use <code>get-networks</code> to see nearby Wi-Fi networks and <code>connect</code> to join one.</li>
+</ul>
+</li>
+<li>
+<p>For Ethernet (wired) connections:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ip link   <span class="c1"># A network adapter should show &#34;UP&#34;</span>
+</span></span></code></pre></div></li>
+<li>
+<p>Verify the connection:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ping youtube.com
+</span></span></code></pre></div><ul>
+<li>A successful <code>ping</code> means your internet connection is active.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="partitioning">Partitioning</h2>
+<ol>
+<li>
+<p>Start the partition tool and point it to the desired drive, not the bootable drive:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cfdisk /dev/sda
+</span></span></code></pre></div><p>Choose &ldquo;GPT&rdquo;, &ldquo;DOS&rdquo; is typically for usb sticks!</p>
+<ul>
+<li>GPT (GUID Partition Table) is the modern standard for partitioning.</li>
+</ul>
+</li>
+<li>
+<p>Create the following partitions:</p>
+<ul>
+<li><strong>EFI System</strong>: ≥ 500MB (for booting)</li>
+<li><strong>Swap</strong>: ≥ 1GB (for memory overflow)</li>
+<li><strong>Linux Root</strong>: Remaining storage</li>
+</ul>
+</li>
+<li>
+<p>Verify the partitions:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lsblk
+</span></span></code></pre></div><ul>
+<li><code>lsblk</code> lists all storage devices and partitions. Note their names (e.g., <code>/dev/sda1</code>, <code>/dev/sda2</code>).</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="formatting-the-partitions">Formatting the Partitions</h2>
+<p>Format the partitions as follows:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># EFI System</span>
+</span></span><span class="line"><span class="cl">mkfs.fat -F <span class="m">32</span> /dev/&lt;efi_partition&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Swap</span>
+</span></span><span class="line"><span class="cl">mkswap /dev/&lt;swap_partition&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Linux Root</span>
+</span></span><span class="line"><span class="cl">mkfs.ext4 /dev/&lt;root_partition&gt;
+</span></span></code></pre></div><ul>
+<li><strong>EFI System</strong>: Use <code>mkfs.fat -F 32</code> because EFI requires the FAT32 file system.</li>
+<li><strong>Swap</strong>: <code>mkswap</code> initializes a swap partition.</li>
+<li><strong>Linux Root</strong>: <code>mkfs.ext4</code> sets up the main filesystem.</li>
+</ul>
+<hr>
+<h2 id="mounting-the-partitions">Mounting the Partitions</h2>
+<p>Mount the partitions in this order:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Linux Root</span>
+</span></span><span class="line"><span class="cl">mount /dev/&lt;root_partition&gt; /mnt
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># EFI System</span>
+</span></span><span class="line"><span class="cl">mkdir -p /mnt/boot/efi
+</span></span><span class="line"><span class="cl">mount /dev/&lt;efi_partition&gt; /mnt/boot/efi
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Swap</span>
+</span></span><span class="line"><span class="cl">swapon /dev/&lt;swap_partition&gt;
+</span></span></code></pre></div><p>Verify with:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lsblk
+</span></span></code></pre></div><ul>
+<li>The mounted partitions should now appear under <code>/mnt</code>.</li>
+</ul>
+<hr>
+<h2 id="installing-the-base-system">Installing the Base System</h2>
+<p>Install essential packages:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pacstrap -K /mnt base linux linux-firmware sudo vim grub efibootmgr
+</span></span><span class="line"><span class="cl"><span class="c1"># Optional: Add git and networkmanager</span>
+</span></span></code></pre></div><ul>
+<li><strong>base</strong>: Core Arch Linux system packages.</li>
+<li><strong>linux</strong>: The kernel.</li>
+<li><strong>linux-firmware</strong>: Firmware for hardware compatibility.</li>
+<li><strong>sudo</strong>: Required for managing administrative tasks.</li>
+<li><strong>vim</strong>: A text editor for editing configuration files.</li>
+<li><strong>grub</strong> and <strong>efibootmgr</strong>: Tools for bootloader setup.</li>
+</ul>
+<blockquote>
+<p><strong>Note</strong>: If you encounter errors such as &ldquo;Failed to install packages,&rdquo; refer to the <a href="https://wiki.archlinux.org/title/Pacman/Package_signing#Cannot_import_keys">Arch Wiki</a> for troubleshooting.</p>
+</blockquote>
+<hr>
+<h2 id="generating-fstab">Generating fstab</h2>
+<p>Generate the filesystem table and verify:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">genfstab -U /mnt &gt;&gt; /mnt/etc/fstab
+</span></span><span class="line"><span class="cl">vim /mnt/etc/fstab   <span class="c1"># Check partition entries</span>
+</span></span></code></pre></div><ul>
+<li><code>fstab</code> stores partition mounting information. Ensure it includes all three partitions.</li>
+</ul>
+<hr>
+<h2 id="chroot-into-the-new-system">Chroot into the New System</h2>
+<p>Change root into the new installation:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">arch-chroot /mnt
+</span></span></code></pre></div><ul>
+<li>This changes the environment to the newly installed Arch Linux system.</li>
+</ul>
+<hr>
+<h2 id="set-time-and-location">Set Time and Location</h2>
+<ol>
+<li>Set the system time:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ln -sf /usr/share/zoneinfo/&lt;Region&gt;/&lt;City&gt; /etc/localtime
+</span></span><span class="line"><span class="cl">hwclock --systohc
+</span></span></code></pre></div></li>
+<li>Verify:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hwclock
+</span></span></code></pre></div></li>
+</ol>
+<ul>
+<li><code>hwclock --systohc</code> synchronises the hardware clock with the system time.</li>
+</ul>
+<hr>
+<h2 id="localisation">Localisation</h2>
+<ol>
+<li>Edit locale configuration:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vim /etc/locale.gen
+</span></span></code></pre></div><ul>
+<li>Uncomment:
+<pre tabindex="0"><code>en_US.UTF-8 UTF-8
+</code></pre></li>
+</ul>
+</li>
+<li>Generate the locale:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">locale-gen
+</span></span></code></pre></div></li>
+</ol>
+<hr>
+<h2 id="setting-the-hostname">Setting the Hostname</h2>
+<p>Create a hostname for your machine:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vim /etc/hostname
+</span></span><span class="line"><span class="cl"><span class="c1"># Enter your desired machine name</span>
+</span></span></code></pre></div><ul>
+<li>The hostname identifies your computer on a network.</li>
+</ul>
+<hr>
+<h2 id="set-root-password">Set Root Password</h2>
+<p>Set the root password:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">passwd
+</span></span></code></pre></div><ul>
+<li>This password is required for the root user to log in.</li>
+</ul>
+<hr>
+<h2 id="adding-a-user">Adding a User</h2>
+<ol>
+<li>Add a new user and set a password:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">useradd -m -G wheel -s /bin/bash &lt;username&gt;
+</span></span><span class="line"><span class="cl">passwd &lt;username&gt;
+</span></span></code></pre></div></li>
+<li>Enable sudo for the user:
+<ul>
+<li>Edit <code>visudo</code>:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">EDITOR</span><span class="o">=</span>vim visudo
+</span></span></code></pre></div></li>
+<li>Uncomment the line for the &ldquo;wheel&rdquo; group:
+<pre tabindex="0"><code>%wheel ALL=(ALL) ALL
+</code></pre></li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="installing-the-bootloader">Installing the Bootloader</h2>
+<p>Install and configure GRUB:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">grub-install --target<span class="o">=</span>x86_64-efi --efi-directory<span class="o">=</span>/boot --bootloader-id<span class="o">=</span>GRUB
+</span></span><span class="line"><span class="cl">grub-mkconfig -o /boot/grub/grub.cfg
+</span></span></code></pre></div><ul>
+<li><code>grub-install</code> sets up the bootloader in EFI mode.</li>
+<li><code>grub-mkconfig</code> generates the GRUB configuration file.</li>
+</ul>
+<hr>
+<h2 id="reboot">Reboot</h2>
+<ol>
+<li>Exit the chroot environment:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">exit</span>
+</span></span></code></pre></div></li>
+<li>Optionally, unmount all partitions:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">umount -R /mnt
+</span></span></code></pre></div></li>
+<li>Reboot the system:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">reboot
+</span></span></code></pre></div></li>
+</ol>
+<p>Remove the installation medium and log in as the root user.</p>
+<hr>
+<h2 id="post-installation">Post-Installation</h2>
+<p>Congratulations! Your Arch Linux system is now installed. Proceed to install additional software and configure the system as needed.</p>
+<h2 id="arch-linux-post-installation-guide">Arch Linux Post-Installation Guide</h2>
+<p>This section covers essential tasks after installing Arch Linux, including resolving common errors, configuring Wi-Fi, and setting up tools for daily usage.</p>
+<hr>
+<h3 id="resolving-common-errors">Resolving Common Errors</h3>
+<h4 id="invalid-or-corrupted-package-pgp-signature-when-updating-or-installing-packages-arm64"><strong>Invalid or Corrupted Package (PGP Signature) when Updating or Installing Packages (ARM64)</strong></h4>
+<p><strong>Example Error:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ pacman -S vim
+</span></span><span class="line"><span class="cl">error: vim-runtime: signature from <span class="s2">&#34;Arch Linux ARM Build System &lt;builder@archlinuxarm.org&gt;&#34;</span> is unknown trust
+</span></span><span class="line"><span class="cl">:: File /var/cache/pacman/pkg/vim-runtime-8.1.0022-1-aarch64.pkg.tar.xz is corrupted <span class="o">(</span>invalid or corrupted package <span class="o">(</span>PGP signature<span class="o">))</span>.
+</span></span><span class="line"><span class="cl">Do you want to delete it? <span class="o">[</span>Y/n<span class="o">]</span>
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">error: failed to commit transaction <span class="o">(</span>invalid or corrupted package <span class="o">(</span>PGP signature<span class="o">))</span>
+</span></span><span class="line"><span class="cl">Errors occurred, no packages were upgraded.
+</span></span></code></pre></div><p><strong>Solution (x86_64 Systems):</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pacman-key --init <span class="o">&amp;&amp;</span> pacman-key --populate archlinux
+</span></span></code></pre></div><p><strong>Solution (ARM64 Systems, e.g., MacBook Virtual Machine):</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pacman -S archlinuxarm-keyring
+</span></span><span class="line"><span class="cl">pacman-key --init <span class="o">&amp;&amp;</span> pacman-key --populate archlinuxarm
+</span></span></code></pre></div><p><strong>If <code>archlinuxarm.gpg</code> Keyring File Does Not Exist:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ pacman-key --init <span class="o">&amp;&amp;</span> pacman-key --populate <span class="nv">archlinuxarm</span>
+</span></span><span class="line"><span class="cl"><span class="o">==</span>&gt; ERROR: The keyring file /usr/share/pacman/keyrings/archlinuxarm.gpg does not exist.
+</span></span></code></pre></div><p><strong>Fix:</strong></p>
+<ol>
+<li>Temporarily disable signature checking in <code>/etc/pacman.conf</code> by setting:
+<pre tabindex="0"><code>SigLevel = Never
+</code></pre></li>
+<li>Reinitialize the keyring:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pacman-key --init
+</span></span><span class="line"><span class="cl">pacman -S archlinuxarm-keyring
+</span></span><span class="line"><span class="cl">pacman-key --populate archlinuxarm
+</span></span></code></pre></div></li>
+<li>Revert the <code>SigLevel</code> setting back to:
+<pre tabindex="0"><code>SigLevel = Required DatabaseOptional
+</code></pre></li>
+<li>Perform a system upgrade:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pacman -Syu
+</span></span></code></pre></div></li>
+</ol>
+<hr>
+<h3 id="connecting-to-wi-fi">Connecting to Wi-Fi</h3>
+<h4 id="1-using-nmtui-recommended"><strong>1. Using <code>nmtui</code> (Recommended)</strong></h4>
+<p><code>nmtui</code> is a simple text-based GUI tool for managing networks:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nmtui
+</span></span></code></pre></div><p>Follow the on-screen instructions to connect to Wi-Fi.</p>
+<h4 id="2-using-networkmanager-manual-method"><strong>2. Using <code>NetworkManager</code> (Manual Method)</strong></h4>
+<ol>
+<li>Install and enable NetworkManager:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S networkmanager
+</span></span><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> NetworkManager
+</span></span><span class="line"><span class="cl">sudo systemctl start NetworkManager
+</span></span></code></pre></div></li>
+<li>List available networks:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nmcli device wifi list
+</span></span></code></pre></div></li>
+<li>Connect to a Wi-Fi network:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nmcli device wifi connect SSID password PASSWORD
+</span></span></code></pre></div></li>
+<li>Connect to hidden networks:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nmcli device wifi connect SSID password PASSWORD hidden yes
+</span></span></code></pre></div></li>
+</ol>
+<hr>
+<h3 id="common-tools-for-daily-usage">Common Tools for Daily Usage</h3>
+<h4 id="1-fix-touchpad-issues-clickscroll-not-working"><strong>1. Fix Touchpad Issues (Click/Scroll Not Working)</strong></h4>
+<p>Use <code>xinput</code> to identify and configure touchpad properties:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">xinput list
+</span></span><span class="line"><span class="cl">xinput list-props DEVICE_NAME
+</span></span><span class="line"><span class="cl">xinput set-prop DEVICE_NAME PROPERTY VALUE
+</span></span></code></pre></div><p>For persistent settings, add the commands to <code>~/.xprofile</code> or <code>~/.xinitrc</code>.</p>
+<h4 id="2-adjust-screen-brightness-with-brightnessctl"><strong>2. Adjust Screen Brightness with <code>brightnessctl</code></strong></h4>
+<p>Increase or decrease brightness:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">brightnessctl <span class="nb">set</span> +10%  <span class="c1"># Increase by 10%</span>
+</span></span><span class="line"><span class="cl">brightnessctl <span class="nb">set</span> 10%-  <span class="c1"># Decrease by 10%</span>
+</span></span></code></pre></div><p>For keybindings, use:</p>
+<ul>
+<li><code>XF86MonBrightnessUp</code> (e.g., Fn+Brightness Up)</li>
+<li><code>XF86MonBrightnessDown</code>.</li>
+</ul>
+<h4 id="3-adjust-audio-volume-with-pactl-pulseaudio"><strong>3. Adjust Audio Volume with <code>pactl</code> (PulseAudio)</strong></h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pactl set-sink-volume @DEFAULT_SINK@ +10%  <span class="c1"># Increase by 10%</span>
+</span></span><span class="line"><span class="cl">pactl set-sink-volume @DEFAULT_SINK@ -10%  <span class="c1"># Decrease by 10%</span>
+</span></span></code></pre></div><h4 id="4-connect-bluetooth-devices-with-bluetoothctl"><strong>4. Connect Bluetooth Devices with <code>bluetoothctl</code></strong></h4>
+<ol>
+<li>Install required packages:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S bluez bluez-utils
+</span></span><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> --now bluetooth.service
+</span></span></code></pre></div></li>
+<li>Use <code>bluetoothctl</code> CLI:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">bluetoothctl
+</span></span><span class="line"><span class="cl"><span class="o">[</span>bluetooth<span class="o">]</span> power on
+</span></span><span class="line"><span class="cl"><span class="o">[</span>bluetooth<span class="o">]</span> agent on
+</span></span><span class="line"><span class="cl"><span class="o">[</span>bluetooth<span class="o">]</span> default-agent
+</span></span><span class="line"><span class="cl"><span class="o">[</span>bluetooth<span class="o">]</span> scan on
+</span></span><span class="line"><span class="cl"><span class="o">[</span>bluetooth<span class="o">]</span> pair MAC_ADDRESS
+</span></span><span class="line"><span class="cl"><span class="o">[</span>bluetooth<span class="o">]</span> connect MAC_ADDRESS
+</span></span></code></pre></div></li>
+<li>Enable autostart for Bluetooth:
+Edit <code>/etc/bluetooth/main.conf</code>:
+<pre tabindex="0"><code>AutoEnable=true
+</code></pre></li>
+</ol>
+<hr>
+<h3 id="resolving-protonvpn-kill-switch-issues">Resolving ProtonVPN Kill Switch Issues</h3>
+<p><strong>Problem:</strong> If ProtonVPN&rsquo;s kill switch is active, internet connection will be blocked when the VPN disconnects unexpectedly.</p>
+<p><strong>Fix:</strong></p>
+<ol>
+<li>Check for the kill switch interface:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ip link
+</span></span></code></pre></div>If you see <code>ipv6leakintrf0</code>, delete it:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo ip link delete ipv6leakintrf0
+</span></span></code></pre></div></li>
+<li>Alternatively, disable autoconnect:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nmcli con down pvpn-ipv6leak-protection
+</span></span><span class="line"><span class="cl">nmcli con mod pvpn-ipv6leak-protection connection.autoconnect no
+</span></span></code></pre></div></li>
+</ol>
+<hr>
+<h3 id="configure-touchpad-gestures">Configure Touchpad Gestures</h3>
+<p>Install <code>libinput-gestures</code> for touchpad gesture support:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo gpasswd -a <span class="nv">$USER</span> input
+</span></span><span class="line"><span class="cl">sudo pacman -S libinput-gestures wmctrl xdotool
+</span></span><span class="line"><span class="cl">libinput-gestures-setup stop desktop autostart start
+</span></span></code></pre></div><hr>
+<h3 id="configure-nvidia-gpu-driver">Configure Nvidia GPU Driver</h3>
+<p>Install the Nvidia driver:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S nvidia
+</span></span></code></pre></div><p>Edit <code>/etc/mkinitcpio.conf</code> and add:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">MODULES</span><span class="o">=(</span>nvidia nvidia_modeset nvidia_uvm nvidia_drm<span class="o">)</span>
+</span></span></code></pre></div><hr>
+<h3 id="correcting-system-time">Correcting System Time</h3>
+<p>Set time synchronization with NTP:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">timedatectl set-ntp <span class="nb">true</span>
+</span></span></code></pre></div><hr>
+<h3 id="screen-colours-not-rendering-correctly">Screen Colours Not Rendering Correctly</h3>
+<p>If using Optimus Manager, configure AMD GPU:</p>
+<ol>
+<li>Install AMD driver:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S xf86-video-amdgpu
+</span></span></code></pre></div></li>
+<li>Update <code>/etc/optimus-manager/optimus-manager.conf</code>:
+<pre tabindex="0"><code>driver=amdgpu
+</code></pre></li>
+<li>Reboot.</li>
+</ol>
+<hr>
+<h3 id="final-notes">Final Notes</h3>
+<p>For detailed information, consult the Arch Wiki links provided in each section. Regular system updates (<code>pacman -Syu</code>) ensure your system remains stable and secure.</p>
+<hr>
+<p>This guide aims to streamline the most common post-installation tasks for Arch Linux users, offering solutions to common errors and tools for improved functionality.</p>
+
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://github.com/tonyn678" target="_blank" rel="noopener noreferrer me"
+    title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+<a href="mailto:tony.nht16@gmail.com" target="_blank" rel="noopener noreferrer me"
+    title="Email">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 21" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+    <polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+</a>
+<a href="https://www.linkedin.com/in/tienngg" target="_blank" rel="noopener noreferrer me"
+    title="Linkedin">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+</svg>
+</a>
+<a href="https://discord.com/users/525637838083981333" target="_blank" rel="noopener noreferrer me"
+    title="Discord">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="20 15 205 190" fill="currentColor" stroke="none">
+    <path
+        d="M104.4 103.9c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.2-5 10.2-11.1.1-6.1-4.5-11.1-10.2-11.1zM140.9 103.9c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.2-5 10.2-11.1s-4.5-11.1-10.2-11.1z" />
+    <path
+        d="M189.5 20h-134C44.2 20 35 29.2 35 40.6v135.2c0 11.4 9.2 20.6 20.5 20.6h113.4l-5.3-18.5 12.8 11.9 12.1 11.2 21.5 19V40.6c0-11.4-9.2-20.6-20.5-20.6zm-38.6 130.6s-3.6-4.3-6.6-8.1c13.1-3.7 18.1-11.9 18.1-11.9-4.1 2.7-8 4.6-11.5 5.9-5 2.1-9.8 3.5-14.5 4.3-9.6 1.8-18.4 1.3-25.9-.1-5.7-1.1-10.6-2.7-14.7-4.3-2.3-.9-4.8-2-7.3-3.4-.3-.2-.6-.3-.9-.5-.2-.1-.3-.2-.4-.3-1.8-1-2.8-1.7-2.8-1.7s4.8 8 17.5 11.8c-3 3.8-6.7 8.3-6.7 8.3-22.1-.7-30.5-15.2-30.5-15.2 0-32.2 14.4-58.3 14.4-58.3 14.4-10.8 28.1-10.5 28.1-10.5l1 1.2c-18 5.2-26.3 13.1-26.3 13.1s2.2-1.2 5.9-2.9c10.7-4.7 19.2-6 22.7-6.3.6-.1 1.1-.2 1.7-.2 6.1-.8 13-1 20.2-.2 9.5 1.1 19.7 3.9 30.1 9.6 0 0-7.9-7.5-24.9-12.7l1.4-1.6s13.7-.3 28.1 10.5c0 0 14.4 26.1 14.4 58.3 0 0-8.5 14.5-30.6 15.2z" />
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2024 Tien Nguyen.
+        
+    </small>
+</footer><a href="#" title="" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+
+
+
+    
+    <script src="https://tonyn678.github.io/js/main.min.35f435a5d8eac613c52daa28d8af544a4512337d3e95236e4a4978417b8dcb2f.js" integrity="sha256-NfQ1pdjqxhPFLaoo2K9USkUSM30&#43;lSNuSkl4QXuNyy8="></script>
+
+    
+
+</body>
+</html>
