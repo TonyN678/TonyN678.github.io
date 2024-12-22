@@ -2,28 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://tonyn678.github.io/</loc>
+    <loc>https://tienng.xyz/</loc>
+    <lastmod>2024-12-21T14:27:51+11:00</lastmod>
+  </url><url>
+    <loc>https://tienng.xyz/posts/my-own-email-domain/</loc>
+    <lastmod>2024-12-21T14:27:51+11:00</lastmod>
+  </url><url>
+    <loc>https://tienng.xyz/posts/</loc>
+    <lastmod>2024-12-21T14:27:51+11:00</lastmod>
+  </url><url>
+    <loc>https://tienng.xyz/posts/ssh-key-config/</loc>
     <lastmod>2024-12-19T16:01:05+11:00</lastmod>
   </url><url>
-    <loc>https://tonyn678.github.io/posts/</loc>
-    <lastmod>2024-12-19T16:01:05+11:00</lastmod>
-  </url><url>
-    <loc>https://tonyn678.github.io/posts/ssh-config/</loc>
-    <lastmod>2024-12-19T16:01:05+11:00</lastmod>
-  </url><url>
-    <loc>https://tonyn678.github.io/posts/archlinux/</loc>
+    <loc>https://tienng.xyz/posts/arch-linux-setup/</loc>
     <lastmod>2024-12-17T15:02:12+11:00</lastmod>
   </url><url>
-    <loc>https://tonyn678.github.io/projects/</loc>
+    <loc>https://tienng.xyz/projects/</loc>
     <lastmod>2024-12-17T15:01:15+11:00</lastmod>
   </url><url>
-    <loc>https://tonyn678.github.io/posts/thisblog/</loc>
+    <loc>https://tienng.xyz/projects/raspberry-pi-server/</loc>
+    <lastmod>2024-12-17T15:01:15+11:00</lastmod>
+  </url><url>
+    <loc>https://tienng.xyz/posts/this-hugo-blog/</loc>
     <lastmod>2024-11-23T23:00:55+11:00</lastmod>
   </url><url>
-    <loc>https://tonyn678.github.io/about/</loc>
+    <loc>https://tienng.xyz/about/</loc>
   </url><url>
-    <loc>https://tonyn678.github.io/categories/</loc>
+    <loc>https://tienng.xyz/categories/</loc>
   </url><url>
-    <loc>https://tonyn678.github.io/tags/</loc>
+    <loc>https://tienng.xyz/tags/</loc>
   </url>
 </urlset>

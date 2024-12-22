@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en-gb"><head><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">RaspberryPi Home Server | Tien&#39;s blog</title>
+<meta property="og:title" content="RaspberryPi Home Server | Tien&#39;s blog" />
+<meta name="twitter:title" content="RaspberryPi Home Server | Tien&#39;s blog" />
+<meta itemprop="name" content="RaspberryPi Home Server | Tien&#39;s blog" />
+<meta name="application-name" content="RaspberryPi Home Server | Tien&#39;s blog" />
+<meta property="og:site_name" content="MyPage" />
+
+<meta name="description" content="A minimal webUI">
+<meta itemprop="description" content="A minimal webUI" />
+<meta property="og:description" content="A minimal webUI" />
+<meta name="twitter:description" content="A minimal webUI" />
+
+<meta property="og:locale" content="en-gb" />
+<meta name="language" content="en-gb" />
+
+  <link rel="alternate" hreflang="en-gb" href="https://tienng.xyz/projects/raspberry-pi-server/" title="English" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.139.3">
+
+    
+    <meta property="og:url" content="https://tienng.xyz/projects/raspberry-pi-server/">
+  <meta property="og:site_name" content="Tien&#39;s blog">
+  <meta property="og:title" content="RaspberryPi Home Server">
+  <meta property="og:description" content="Setting Up a Raspberry Pi Home Server with Docker A Raspberry Pi can be transformed into a powerful and lightweight home server with the right configuration. In this guide, I will walk you through my setup process, starting from installing the Raspberry Pi OS Lite to configuring Docker containers and setting up essential services for remote file access, media streaming, and more.
+Step 1: Install 64-bit Raspberry Pi OS Lite To maximise performance and compatibility, I opted for the 64-bit version of Raspberry Pi OS Lite with no GUI. Here are the steps I followed:">
+  <meta property="og:locale" content="en_gb">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="projects">
+    <meta property="article:published_time" content="2024-12-17T15:01:15+11:00">
+    <meta property="article:modified_time" content="2024-12-17T15:01:15+11:00">
+
+
+    
+    
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="RaspberryPi Home Server">
+  <meta name="twitter:description" content="Setting Up a Raspberry Pi Home Server with Docker A Raspberry Pi can be transformed into a powerful and lightweight home server with the right configuration. In this guide, I will walk you through my setup process, starting from installing the Raspberry Pi OS Lite to configuring Docker containers and setting up essential services for remote file access, media streaming, and more.
+Step 1: Install 64-bit Raspberry Pi OS Lite To maximise performance and compatibility, I opted for the 64-bit version of Raspberry Pi OS Lite with no GUI. Here are the steps I followed:">
+
+
+    
+
+    <link rel="canonical" href="https://tienng.xyz/projects/raspberry-pi-server/">
+    <link href="/style.min.a2167ef260f352cd9ff2e8a7192ed110d23d97ad346d16a9e96828f4ac24ce34.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="https://tienng.xyz/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+
+    
+    
+    
+</head>
+<body data-theme = "auto" class="notransition">
+
+<script src="/js/theme.min.8961c317c5b88b953fe27525839672c9343f1058ab044696ca225656c8ba2ab0.js" integrity="sha256-iWHDF8W4i5U/4nUlg5ZyyTQ/EFirBEaWyiJWVsi6KrA="></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="https://tienng.xyz/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title></title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/posts/">
+                        Posts
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/projects/">
+                        Projects
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">RaspberryPi Home Server</h1>
+                
+                
+                
+                <div class="post-meta">
+                    <time datetime="2024-12-17T15:01:15&#43;11:00" itemprop="datePublished"> 17 Dec 2024 </time>
+                </div>
+                
+            </header>
+            
+    
+    <details class="toc" ZgotmplZ>
+        <summary><b></b></summary>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#step-1-install-64-bit-raspberry-pi-os-lite">Step 1: Install 64-bit Raspberry Pi OS Lite</a></li>
+    <li><a href="#step-2-install-docker">Step 2: Install Docker</a></li>
+    <li><a href="#step-3-install-portainer">Step 3: Install Portainer</a></li>
+    <li><a href="#step-4-mount-an-external-hard-drive">Step 4: Mount an External Hard Drive</a>
+      <ul>
+        <li><a href="#identify-the-drive">Identify the Drive</a></li>
+        <li><a href="#create-a-mount-point">Create a Mount Point</a></li>
+        <li><a href="#add-the-drive-to-etcfstab">Add the Drive to <code>/etc/fstab</code></a></li>
+        <li><a href="#set-ownership-and-permissions">Set Ownership and Permissions</a></li>
+        <li><a href="#automate-ownership-changes-if-needed">Automate Ownership Changes (if Needed)</a>
+          <ul>
+            <li><a href="#option-a-use-etcrclocal">Option A: Use <code>/etc/rc.local</code></a></li>
+            <li><a href="#option-b-use-a-systemd-service">Option B: Use a <code>systemd</code> Service</a></li>
+          </ul>
+        </li>
+        <li><a href="#verify-the-setup">Verify the Setup</a></li>
+      </ul>
+    </li>
+    <li><a href="#step-5-install-filebrowser">Step 5: Install FileBrowser</a></li>
+    <li><a href="#step-6-buy-a-domain-name">Step 6: Buy a Domain Name</a></li>
+    <li><a href="#step-7-set-up-cloudflare-tunnel">Step 7: Set Up Cloudflare Tunnel</a></li>
+    <li><a href="#step-8-set-up-immich-and-navidrome">Step 8: Set Up Immich and Navidrome</a></li>
+  </ul>
+</nav>
+    </details>
+            <div class="page-content">
+                <h1 id="setting-up-a-raspberry-pi-home-server-with-docker">Setting Up a Raspberry Pi Home Server with Docker</h1>
+<p>A Raspberry Pi can be transformed into a powerful and lightweight home server with the right configuration. In this guide, I will walk you through my setup process, starting from installing the Raspberry Pi OS Lite to configuring Docker containers and setting up essential services for remote file access, media streaming, and more.</p>
+<hr>
+<h2 id="step-1-install-64-bit-raspberry-pi-os-lite">Step 1: Install 64-bit Raspberry Pi OS Lite</h2>
+<p>To maximise performance and compatibility, I opted for the 64-bit version of Raspberry Pi OS Lite with no GUI. Here are the steps I followed:</p>
+<ol>
+<li><strong>Download the OS</strong>: Visit the official Raspberry Pi website and download the latest <a href="https://www.raspberrypi.com/software/">64-bit Raspberry Pi OS Lite</a>.</li>
+<li><strong>Flash the SD Card</strong>: Flash the OS onto the sd card using tool like Raspberry Pi Imager.</li>
+<li><strong>Enable SSH</strong>: Set up password for user and enable SSH before starting the flashing proccess.</li>
+<li><strong>Boot the Pi</strong>: Insert the SD card into the Raspberry Pi and power it on. Connect via SSH.</li>
+</ol>
+<hr>
+<h2 id="step-2-install-docker">Step 2: Install Docker</h2>
+<p>Docker is the backbone of this setup, allowing me to run and manage services efficiently in isolated containers, also uses far lesser computer resources than on a VM or BareMetal.</p>
+<ul>
+<li><a href="https://pimylifeup.com/raspberry-pi-docker/">pimylifeup&rsquo;s guide</a></li>
+</ul>
+<ol>
+<li><strong>Update the System</strong>:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt update <span class="o">&amp;&amp;</span> sudo apt upgrade -y
+</span></span></code></pre></div></li>
+<li><strong>Install Docker</strong>:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -sSL https://get.docker.com <span class="p">|</span> sh
+</span></span></code></pre></div></li>
+<li><strong>Add User to Docker Group</strong>:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo usermod -aG docker <span class="nv">$USER</span>
+</span></span></code></pre></div>Log out and back in to apply group changes.</li>
+</ol>
+<hr>
+<h2 id="step-3-install-portainer">Step 3: Install Portainer</h2>
+<p><a href="https://docs.portainer.io/start/install-ce/server/docker/linux">Portainer</a> provides an intuitive web interface for managing Docker containers.</p>
+<ol>
+<li><strong>Pull the Portainer Image</strong>:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker volume create portainer_data
+</span></span><span class="line"><span class="cl">docker run -d -p 8000:8000 -p 9443:9443 --name<span class="o">=</span>portainer --restart<span class="o">=</span>always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest
+</span></span></code></pre></div></li>
+<li><strong>Access the Interface</strong>: Open a browser and navigate to <code>https://&lt;Raspberry_Pi_IP&gt;:9443</code> to set up Portainer.</li>
+</ol>
+<hr>
+<h2 id="step-4-mount-an-external-hard-drive">Step 4: Mount an External Hard Drive</h2>
+<p>This guide explains how to mount an external hard drive to your Raspberry Pi, set ownership and permissions, and make these changes persist across reboots.</p>
+<h3 id="identify-the-drive">Identify the Drive</h3>
+<ol>
+<li>
+<p>Plug in your external hard drive.</p>
+</li>
+<li>
+<p>Identify the drive using <code>lsblk</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lsblk
+</span></span></code></pre></div><p>Look for your drive (e.g., <code>/dev/sda1</code>).</p>
+</li>
+<li>
+<p>Get the UUID of the partition:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo blkid /dev/sda1
+</span></span></code></pre></div><p>Copy the UUID of your drive (e.g., <code>UUID=&quot;1234-5678&quot;</code>).</p>
+</li>
+</ol>
+<h3 id="create-a-mount-point">Create a Mount Point</h3>
+<ol>
+<li>
+<p>Create a directory to mount the drive:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo mkdir /mnt/extdrive
+</span></span></code></pre></div></li>
+<li>
+<p>(Optional) Adjust permissions for the directory:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo chmod <span class="m">755</span> /mnt/data
+</span></span></code></pre></div></li>
+</ol>
+<h3 id="add-the-drive-to-etcfstab">Add the Drive to <code>/etc/fstab</code></h3>
+<ol>
+<li>
+<p>Open <code>/etc/fstab</code> for editing:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo nano /etc/fstab
+</span></span></code></pre></div></li>
+<li>
+<p>Add an entry for the drive:</p>
+<pre tabindex="0"><code>UUID=1234-5678 /mnt/data ext4 defaults 0 2
+</code></pre><ul>
+<li>Replace <code>1234-5678</code> with your drive&rsquo;s UUID.</li>
+<li>Adjust the filesystem type (<code>ext4</code>, <code>ntfs</code>, etc.) as necessary.</li>
+</ul>
+</li>
+<li>
+<p>Save and exit the editor.</p>
+</li>
+<li>
+<p>Test the configuration:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo mount -a
+</span></span></code></pre></div><p>If there are no errors, your drive is now mounted.</p>
+</li>
+</ol>
+<h3 id="set-ownership-and-permissions">Set Ownership and Permissions</h3>
+<ol>
+<li>
+<p>Change ownership of the mount point to a specific user (e.g., <code>tien</code>):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo chown -R tien:tien /mnt/data
+</span></span></code></pre></div></li>
+<li>
+<p>(Optional) Adjust permissions if multiple users need access:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo chmod -R <span class="m">775</span> /mnt/data
+</span></span></code></pre></div></li>
+</ol>
+<h3 id="automate-ownership-changes-if-needed">Automate Ownership Changes (if Needed)</h3>
+<p>The <code>chown</code> command does not persist across reboots. To automate this:</p>
+<h4 id="option-a-use-etcrclocal">Option A: Use <code>/etc/rc.local</code></h4>
+<ol>
+<li>
+<p>Open or create the <code>rc.local</code> file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo nano /etc/rc.local
+</span></span></code></pre></div></li>
+<li>
+<p>Add the <code>chown</code> command before <code>exit 0</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chown -R tien:tien /mnt/data
+</span></span></code></pre></div></li>
+<li>
+<p>Save the file and make it executable:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo chmod +x /etc/rc.local
+</span></span></code></pre></div></li>
+</ol>
+<h4 id="option-b-use-a-systemd-service">Option B: Use a <code>systemd</code> Service</h4>
+<ol>
+<li>
+<p>Create a new <code>systemd</code> service:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo nano /etc/systemd/system/fix-permissions.service
+</span></span></code></pre></div></li>
+<li>
+<p>Add the following content:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="k">[Unit]</span>
+</span></span><span class="line"><span class="cl"><span class="na">Description</span><span class="o">=</span><span class="s">Fix ownership of /mnt/data</span>
+</span></span><span class="line"><span class="cl"><span class="na">After</span><span class="o">=</span><span class="s">local-fs.target</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">[Service]</span>
+</span></span><span class="line"><span class="cl"><span class="na">Type</span><span class="o">=</span><span class="s">oneshot</span>
+</span></span><span class="line"><span class="cl"><span class="na">ExecStart</span><span class="o">=</span><span class="s">/bin/chown -R tien:tien /mnt/data</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">[Install]</span>
+</span></span><span class="line"><span class="cl"><span class="na">WantedBy</span><span class="o">=</span><span class="s">multi-user.target</span>
+</span></span></code></pre></div></li>
+<li>
+<p>Save and enable the service:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> fix-permissions.service
+</span></span></code></pre></div></li>
+</ol>
+<h3 id="verify-the-setup">Verify the Setup</h3>
+<ol>
+<li>
+<p>Reboot your Raspberry Pi:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo reboot
+</span></span></code></pre></div></li>
+<li>
+<p>After reboot, check the ownership and permissions of the mount point:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ls -ld /mnt/data
+</span></span></code></pre></div></li>
+</ol>
+<p>You should see the correct ownership (e.g., <code>tien:tien</code>).</p>
+<p>By following these steps, your external hard drive will be properly mounted and accessible, with ownership and permissions configured to persist across reboots.</p>
+<hr>
+<h2 id="step-5-install-filebrowser">Step 5: Install FileBrowser</h2>
+<p><a href="https://filebrowser.org/installation">FileBrowser</a> is a lightweight file management solution, perfect for 4GB RAM Raspberry Pi 4. We could also create tunnel to FileBrowser with CloudFlares to have a NAS/cloud functions.  <br>
+I chose FileBrowser because Samba is too minimal and don&rsquo;t have web GUI, NextCloud is over-featured and heavy.</p>
+<ol>
+<li><strong>Run FileBrowser in Docker</strong>:</li>
+</ol>
+<pre tabindex="0"><code>docker run -v /path/to/root:/srv -v /path/to/filebrowser.db:/database/filebrowser.db -e PUID=$(id -u) -e PGID=$(id -g) -p 8080:80 filebrowser/filebrowser:s6
+</code></pre><blockquote>
+<p><strong><em>NOTE:</em></strong>  The &ldquo;/path/to/root&rdquo; is storage space(/mnt/extdrive), &ldquo;/path/to/filebrowser&rdquo; is database. Only modify the path to the left of the colon &lsquo;:&rsquo;.</p>
+</blockquote>
+<ol start="2">
+<li><strong>Access FileBrowser</strong>: Navigate to <code>http://&lt;Raspberry_Pi_IP&gt;:8080</code> and log in with the default credentials.</li>
+</ol>
+<hr>
+<h2 id="step-6-buy-a-domain-name">Step 6: Buy a Domain Name</h2>
+<p>I purchased the domain name <code>tienng.xyz</code> from <a href="https://gen.xyz">gen.xyz</a>. After purchasing, I configured DNS settings to point to my Raspberry Pi using Cloudflare.</p>
+<hr>
+<h2 id="step-7-set-up-cloudflare-tunnel">Step 7: Set Up Cloudflare Tunnel</h2>
+<p>Since I could not enable port forwarding on my school&rsquo;s network, I used Cloudflare Tunnel to access my Raspberry Pi services remotely.</p>
+<ol>
+<li><strong>Register an Account on Cloudflare</strong>:</li>
+<li><strong>Verify Domain Name</strong>: Add a domain, choose Free plan, input given Cloudflare&rsquo;s nameservers to my domain&rsquo;s setting on <a href="https://gen.xyz">gen.xyz</a>, you will be taken to Quick Start Guide and can just choose default options.
+Remember to press &ldquo;check Nameservers again&rdquo; and wait for confirmation in email.</li>
+<li><strong>Create a Tunnel</strong>: After successfully verifying your domain name, press your domain name, in Access tab press &ldquo;Launch Zero Trust&rdquo;, on the left sidebar find Networks tab and choose Tunnels,
+create a new tunnel and follow the intructions on the page.</li>
+<li><strong>Access Services</strong>: I mapped <code>cloud.tienng.xyz</code> to FileBrowser, enabling secure external access to my files.</li>
+</ol>
+<p><strong>&ndash;&gt; BUT at this point</strong>, we have our tunnel up and running but literally ANYONE can get into our network, there may be cases where you
+DO want to open up a tunnel connection to the whole wide world (such as if you’re running a public web server), but in this case,
+we’re just trying to access some stuff on our own local LAN – we absolutely do not want the whole wide world to be able to
+connect in – we only want to be able to access it ourselves!</p>
+<ol start="5">
+<li><strong>Add Application for Authentication</strong>:
+<ul>
+<li><a href="https://www.crosstalksolutions.com/cloudflare-tunnel-easy-setup/">https://www.crosstalksolutions.com/cloudflare-tunnel-easy-setup/</a></li>
+<li><a href="https://www.youtube.com/watch?v=ey4u7OUAF3c&list=WL&index=14">https://www.youtube.com/watch?v=ey4u7OUAF3c&list=WL&index=14</a> (NetworkChuck Remote Network)</li>
+<li><a href="https://www.youtube.com/watch?v=65FdHRs0axE&list=WL&index=9&pp=gAQBiAQB">https://www.youtube.com/watch?v=65FdHRs0axE&list=WL&index=9&pp=gAQBiAQB</a> (Restrict Cloudflare Application)</li>
+<li><a href="https://www.youtube.com/watch?v=wdmbAo02ktQ&list=WL&index=8&pp=gAQBiAQB">https://www.youtube.com/watch?v=wdmbAo02ktQ&list=WL&index=8&pp=gAQBiAQB</a> (Restrict to Google&amp;Github Auth)</li>
+<li><a href="https://www.youtube.com/watch?v=lnw616HiINY&list=WL&index=5&pp=gAQBiAQB">https://www.youtube.com/watch?v=lnw616HiINY&list=WL&index=5&pp=gAQBiAQB</a> (SSH Remote Connection)</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="step-8-set-up-immich-and-navidrome">Step 8: Set Up Immich and Navidrome</h2>
+<p>Immich and Navidrome are excellent solutions for managing photos and music streaming, respectively.</p>
+<ol>
+<li><strong>Install Immich</strong>:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker run -d --name<span class="o">=</span>immich -p 3000:3000 -v /mnt/extdrive/immich:/data ghcr.io/immich-app/server
+</span></span></code></pre></div></li>
+<li><strong>Install Navidrome</strong>:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker run -d --name<span class="o">=</span>navidrome -p 4533:4533 -v /mnt/extdrive/music:/data navidrome/navidrome:latest
+</span></span></code></pre></div></li>
+<li><strong>Access Services</strong>:
+<ul>
+<li>Immich: <code>http://&lt;Raspberry_Pi_IP&gt;:3000</code></li>
+<li>Navidrome: <code>http://&lt;Raspberry_Pi_IP&gt;:4533</code></li>
+</ul>
+</li>
+</ol>
+<hr>
+<h1 id="conclusion">Conclusion</h1>
+<p>This setup transformed my Raspberry Pi into a versatile home server capable of file management, media streaming, and photo management—all accessible remotely through a secure Cloudflare Tunnel. With Docker, adding or modifying services is a breeze, making this setup highly customisable and scalable.</p>
+
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://github.com/tonyn678" target="_blank" rel="noopener noreferrer me"
+    title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+<a href="mailto:tien@tienng.xyz" target="_blank" rel="noopener noreferrer me"
+    title="Email">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 21" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+    <polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+</a>
+<a href="https://www.linkedin.com/in/tienngg" target="_blank" rel="noopener noreferrer me"
+    title="Linkedin">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+</svg>
+</a>
+<a href="https://discord.com/users/525637838083981333" target="_blank" rel="noopener noreferrer me"
+    title="Discord">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="20 15 205 190" fill="currentColor" stroke="none">
+    <path
+        d="M104.4 103.9c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.2-5 10.2-11.1.1-6.1-4.5-11.1-10.2-11.1zM140.9 103.9c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.2-5 10.2-11.1s-4.5-11.1-10.2-11.1z" />
+    <path
+        d="M189.5 20h-134C44.2 20 35 29.2 35 40.6v135.2c0 11.4 9.2 20.6 20.5 20.6h113.4l-5.3-18.5 12.8 11.9 12.1 11.2 21.5 19V40.6c0-11.4-9.2-20.6-20.5-20.6zm-38.6 130.6s-3.6-4.3-6.6-8.1c13.1-3.7 18.1-11.9 18.1-11.9-4.1 2.7-8 4.6-11.5 5.9-5 2.1-9.8 3.5-14.5 4.3-9.6 1.8-18.4 1.3-25.9-.1-5.7-1.1-10.6-2.7-14.7-4.3-2.3-.9-4.8-2-7.3-3.4-.3-.2-.6-.3-.9-.5-.2-.1-.3-.2-.4-.3-1.8-1-2.8-1.7-2.8-1.7s4.8 8 17.5 11.8c-3 3.8-6.7 8.3-6.7 8.3-22.1-.7-30.5-15.2-30.5-15.2 0-32.2 14.4-58.3 14.4-58.3 14.4-10.8 28.1-10.5 28.1-10.5l1 1.2c-18 5.2-26.3 13.1-26.3 13.1s2.2-1.2 5.9-2.9c10.7-4.7 19.2-6 22.7-6.3.6-.1 1.1-.2 1.7-.2 6.1-.8 13-1 20.2-.2 9.5 1.1 19.7 3.9 30.1 9.6 0 0-7.9-7.5-24.9-12.7l1.4-1.6s13.7-.3 28.1 10.5c0 0 14.4 26.1 14.4 58.3 0 0-8.5 14.5-30.6 15.2z" />
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2024 Tien Nguyen.
+        
+    </small>
+</footer><a href="#" title="" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+
+
+
+    
+    <script src="https://tienng.xyz/js/main.min.35f435a5d8eac613c52daa28d8af544a4512337d3e95236e4a4978417b8dcb2f.js" integrity="sha256-NfQ1pdjqxhPFLaoo2K9USkUSM30&#43;lSNuSkl4QXuNyy8="></script>
+
+    
+
+</body>
+</html>

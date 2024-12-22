@@ -2,17 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Tien&#39;s blog</title>
-    <link>https://tonyn678.github.io/posts/</link>
+    <link>https://tienng.xyz/posts/</link>
     <description>Recent content in Posts on Tien&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 19 Dec 2024 16:01:05 +1100</lastBuildDate><atom:link href="https://tonyn678.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 21 Dec 2024 14:27:51 +1100</lastBuildDate><atom:link href="https://tienng.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Own Email Domain</title>
+      <link>https://tienng.xyz/posts/my-own-email-domain/</link>
+      <pubDate>Sat, 21 Dec 2024 14:27:51 +1100</pubDate>
+      
+      <guid>https://tienng.xyz/posts/my-own-email-domain/</guid>
+      
+      <description>&lt;h1 id=&#34;how-to-set-up-your-own-email-on-your-domain-name&#34;&gt;How to Set Up Your Own Email on Your Domain Name&lt;/h1&gt;
+&lt;p&gt;Having your own email address at your custom domain name adds a professional touch to your communications. This guide will walk you through the process of setting up your own email address using your domain and integrating it with Gmail for sending and receiving emails. This guide will show how I set up my own email address at &lt;a href=&#34;mailto:tien@tienng.xyz&#34;&gt;tien@tienng.xyz&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I wrote this guide using informations from &lt;a href=&#34;https://www.youtube.com/watch?v=nNGcvz1Sc_8&amp;list=WL&amp;index=12&#34;&gt;IdeaSpot&amp;rsquo;s video&lt;/a&gt; so feel free to check it out.&lt;/p&gt;</description>
+      
+    </item>
+    
     <item>
       <title>Setting Up SSH Connection Without Password to a Remote Server</title>
-      <link>https://tonyn678.github.io/posts/ssh-config/</link>
+      <link>https://tienng.xyz/posts/ssh-key-config/</link>
       <pubDate>Thu, 19 Dec 2024 16:01:05 +1100</pubDate>
       
-      <guid>https://tonyn678.github.io/posts/ssh-config/</guid>
+      <guid>https://tienng.xyz/posts/ssh-key-config/</guid>
       
       <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
 &lt;p&gt;Secure Shell (SSH) is a powerful tool for remotely accessing and managing servers. Setting up SSH key-based authentication eliminates the need for passwords and enhances security. This guide walks you through the process of setting up an SSH connection without a password to a remote server.&lt;/p&gt;
@@ -24,10 +37,10 @@
     
     <item>
       <title>Archlinux Setup and common Linux Errors</title>
-      <link>https://tonyn678.github.io/posts/archlinux/</link>
+      <link>https://tienng.xyz/posts/arch-linux-setup/</link>
       <pubDate>Tue, 17 Dec 2024 15:02:12 +1100</pubDate>
       
-      <guid>https://tonyn678.github.io/posts/archlinux/</guid>
+      <guid>https://tienng.xyz/posts/arch-linux-setup/</guid>
       
       <description>&lt;h1 id=&#34;how-to-install-arch-linux&#34;&gt;How to Install Arch Linux&lt;/h1&gt;
 &lt;p&gt;Make sure that the machine is not in Secure Boot mode to prevent further authentication or you will end up with a black and yellow window and can’t do anything.&lt;/p&gt;
@@ -50,14 +63,14 @@
     
     <item>
       <title>How did I build this blog ?</title>
-      <link>https://tonyn678.github.io/posts/thisblog/</link>
+      <link>https://tienng.xyz/posts/this-hugo-blog/</link>
       <pubDate>Sat, 23 Nov 2024 23:00:55 +1100</pubDate>
       
-      <guid>https://tonyn678.github.io/posts/thisblog/</guid>
+      <guid>https://tienng.xyz/posts/this-hugo-blog/</guid>
       
       <description>&lt;h2 id=&#34;inspiration&#34;&gt;Inspiration&lt;/h2&gt;
 &lt;p&gt;I had always wanted to build my own website, no Wordpress or any third-party hosting bloats that rip your pocket! This is also for storing information and experiences I gained throughout my learning journey in the world of tech and engineering so I don&amp;rsquo;t have to crawling through my dusting physical A4 notebooks or proprietary gg docs :/&lt;/p&gt;
-&lt;h2 id=&#34;how&#34;&gt;How?&lt;/h2&gt;
+&lt;h2 id=&#34;set-up-hugo&#34;&gt;Set Up HUGO&lt;/h2&gt;
 &lt;p&gt;I built this website with Hugo and Github Page, a cool fast minimalist combo for hosting with no databases, just raw mark-down texts and basic html, css, js skills :)&lt;/p&gt;</description>
       
     </item>
