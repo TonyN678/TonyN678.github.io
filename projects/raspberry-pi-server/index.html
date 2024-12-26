@@ -51,7 +51,7 @@ Step 1: Install 64-bit Raspberry Pi OS Lite To maximise performance and compatib
     
 
     <link rel="canonical" href="https://tienng.xyz/projects/raspberry-pi-server/">
-    <link href="/style.min.a2167ef260f352cd9ff2e8a7192ed110d23d97ad346d16a9e96828f4ac24ce34.css" rel="stylesheet">
+    <link href="/style.min.a436a17099c2d1137a67c1e33fb8c1f693d1f58ad0f29da539fcc42135c88532.css" rel="stylesheet">
     <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
 
     
@@ -183,10 +183,71 @@ stroke-linejoin="round" class="feather feather-home">
         <li><a href="#verify-the-setup">Verify the Setup</a></li>
       </ul>
     </li>
-    <li><a href="#step-5-install-filebrowser">Step 5: Install FileBrowser</a></li>
-    <li><a href="#step-6-buy-a-domain-name">Step 6: Buy a Domain Name</a></li>
-    <li><a href="#step-7-set-up-cloudflare-tunnel">Step 7: Set Up Cloudflare Tunnel</a></li>
-    <li><a href="#step-8-set-up-immich-and-navidrome">Step 8: Set Up Immich and Navidrome</a></li>
+    <li><a href="#step-5-encrypt-the-external-hard-drive-with-luks-with-keyfile">Step 5: Encrypt the External Hard Drive with LUKS with Keyfile</a>
+      <ul>
+        <li><a href="#video-tutorial">Video tutorial</a></li>
+        <li><a href="#if-you-need-to-create-your-partitions-on-your-disk">If you need to create your partitions on your disk:</a>
+          <ul>
+            <li><a href="#list-partitions">List partitions</a></li>
+            <li><a href="#wipe-the-hard-drive-if-there-is-still-something-on-there">Wipe the hard-drive if there is still something on there</a></li>
+            <li><a href="#create-partition">Create partition</a></li>
+            <li><a href="#verify-partition-was-created">Verify partition was created</a></li>
+          </ul>
+        </li>
+        <li><a href="#encrypting-with-luks">Encrypting with LUKS</a></li>
+        <li><a href="#unlock-the-luks-partition">Unlock the LUKS partition</a></li>
+        <li><a href="#create-the-luks-filesystem">Create the LUKS filesystem</a></li>
+        <li><a href="#using-a-keyfile">Using a keyfile</a>
+          <ul>
+            <li><a href="#create-the-keyfile">Create the keyfile</a></li>
+            <li><a href="#set-keyfile-permissions">Set keyfile permissions</a></li>
+            <li><a href="#adding-keyfile-to-luks">Adding keyfile to LUKS</a></li>
+          </ul>
+        </li>
+        <li><a href="#retrieve-the-uuid-of-luks-partition">Retrieve the UUID of LUKS partition</a></li>
+        <li><a href="#edit-crypttab">Edit crypttab</a>
+          <ul>
+            <li><a href="#open-crypttab">Open crypttab</a></li>
+            <li><a href="#add-the-unlock-partition-in-crypttab">Add the unlock partition in crypttab</a></li>
+          </ul>
+        </li>
+        <li><a href="#edit-fstab">Edit FSTAB</a>
+          <ul>
+            <li><a href="#open-fstab">Open FSTAB</a></li>
+            <li><a href="#add-the-mountpoint-to-fstab">Add the mountpoint to FSTAB</a></li>
+          </ul>
+        </li>
+        <li><a href="#mount-point">Mount point</a>
+          <ul>
+            <li><a href="#create-the-mount-point">Create the mount point</a></li>
+            <li><a href="#setting-the-ownership">Setting the ownership</a></li>
+            <li><a href="#reboot">Reboot</a></li>
+            <li><a href="#reset-the-ownership-again">Reset the ownership again</a></li>
+          </ul>
+        </li>
+        <li><a href="#verifications">Verifications</a>
+          <ul>
+            <li><a href="#verify-partitions">Verify partitions</a></li>
+            <li><a href="#verify-that-mountpoint-is-readable-and-writable">Verify that mountpoint is readable and writable</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#step-6-install-filebrowser">Step 6: Install FileBrowser</a></li>
+    <li><a href="#step-7-buy-a-domain-name">Step 7: Buy a Domain Name</a></li>
+    <li><a href="#step-8-set-up-cloudflare-tunnel">Step 8: Set Up Cloudflare Tunnel</a></li>
+    <li><a href="#step-9-set-up-immich-and-navidrome">Step 9: Set Up Immich and Navidrome</a></li>
+    <li><a href="#step-10-set-up-pi-hole-on-portainer">Step 10: Set Up Pi-Hole on Portainer</a>
+      <ul>
+        <li><a href="#1-clear-port-53">1. Clear port 53</a></li>
+        <li><a href="#2-add-pi-hole-stack-on-portainer">2. Add Pi-Hole Stack on Portainer</a></li>
+        <li><a href="#3-start-the-container">3. Start the Container</a></li>
+        <li><a href="#4-access-the-pi-hole-admin-interface">4. Access the Pi-hole Admin Interface</a></li>
+        <li><a href="#5-configure-your-network">5. Configure Your Network</a></li>
+        <li><a href="#troubleshooting">Troubleshooting</a></li>
+      </ul>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
   </ul>
 </nav>
     </details>
@@ -348,7 +409,94 @@ stroke-linejoin="round" class="feather feather-home">
 <p>You should see the correct ownership (e.g., <code>tien:tien</code>).</p>
 <p>By following these steps, your external hard drive will be properly mounted and accessible, with ownership and permissions configured to persist across reboots.</p>
 <hr>
-<h2 id="step-5-install-filebrowser">Step 5: Install FileBrowser</h2>
+<h2 id="step-5-encrypt-the-external-hard-drive-with-luks-with-keyfile">Step 5: Encrypt the External Hard Drive with LUKS with Keyfile</h2>
+<p>These commands are used to create a partition on a disk, encrypt it, and mount it on a specific mount point. All of this automatically without entering a password at boot.</p>
+<h3 id="video-tutorial">Video tutorial</h3>
+<p><a href="https://www.youtube.com/watch?v=UXJrSji-nNo">https://www.youtube.com/watch?v=UXJrSji-nNo</a></p>
+<h3 id="if-you-need-to-create-your-partitions-on-your-disk">If you need to create your partitions on your disk:</h3>
+<h4 id="list-partitions">List partitions</h4>
+<pre tabindex="0"><code>sudo fdisk -l
+</code></pre><p>This command lists all the available disks and their partitions on the system. It&rsquo;s used to find the name of the disk that you want to partition.
+My disk is &ldquo;sda&rdquo; (find your&rsquo;s name)</p>
+<h4 id="wipe-the-hard-drive-if-there-is-still-something-on-there">Wipe the hard-drive if there is still something on there</h4>
+<pre tabindex="0"><code>sudo wipefs --all /dev/sda
+</code></pre><h4 id="create-partition">Create partition</h4>
+<pre tabindex="0"><code>sudo fdisk /dev/sda
+</code></pre><ul>
+<li>
+<p>This command starts the fdisk partitioning utility on the /dev/sda disk. From here, you can create a new partition by selecting &ldquo;n&rdquo; and following the prompts.</p>
+</li>
+<li>
+<p>&ldquo;n&rdquo; to create a new partition, &ldquo;d&rdquo; to delete the partition, &ldquo;p&rdquo; to check the partition table
+&ldquo;w&rdquo; to write.</p>
+</li>
+</ul>
+<h4 id="verify-partition-was-created">Verify partition was created</h4>
+<pre tabindex="0"><code>lsblk -f 
+</code></pre><p>It&rsquo;s used to verify that the partition was created with the correct filesystem.</p>
+<h3 id="encrypting-with-luks">Encrypting with LUKS</h3>
+<pre tabindex="0"><code>sudo cryptsetup luksFormat /dev/sda1
+</code></pre><p>This command encrypts the newly created partition using the LUKS encryption format. You&rsquo;ll be prompted to enter a passphrase to secure the encryption.</p>
+<h3 id="unlock-the-luks-partition">Unlock the LUKS partition</h3>
+<pre tabindex="0"><code>sudo cryptsetup luksOpen /dev/sda1 storage
+</code></pre><p>This command unlocks the encrypted partition and maps it to the device named &ldquo;storage&rdquo;, or could be any name you like.</p>
+<h3 id="create-the-luks-filesystem">Create the LUKS filesystem</h3>
+<pre tabindex="0"><code>sudo mkfs.ext4 /dev/mapper/storage
+</code></pre><p>This command creates a new ext4 filesystem on the encrypted partition.</p>
+<h3 id="using-a-keyfile">Using a keyfile</h3>
+<h4 id="create-the-keyfile">Create the keyfile</h4>
+<pre tabindex="0"><code>sudo dd if=/dev/urandom of=/root/keyfile bs=1024 count=4
+</code></pre><p>This command generates a super complex password to be used to unlock the encrypted partition.</p>
+<h4 id="set-keyfile-permissions">Set keyfile permissions</h4>
+<pre tabindex="0"><code>sudo chmod 0400 /root/keyfile
+</code></pre><p>This command sets the permissions of the keyfile so it can only be read.</p>
+<h4 id="adding-keyfile-to-luks">Adding keyfile to LUKS</h4>
+<pre tabindex="0"><code>sudo cryptsetup luksAddKey /dev/sda1 /root/keyfile
+</code></pre><p>This command adds the generated keyfile as an additional key to the LUKS encryption.</p>
+<h3 id="retrieve-the-uuid-of-luks-partition">Retrieve the UUID of LUKS partition</h3>
+<pre tabindex="0"><code>sudo cryptsetup luksUUID /dev/sda1
+</code></pre><p>This command retrieves the UUID of the encrypted partition, which is needed to configure the crypttab file.</p>
+<h3 id="edit-crypttab">Edit crypttab</h3>
+<h4 id="open-crypttab">Open crypttab</h4>
+<pre><code>sudo vim /etc/crypttab
+</code></pre>
+<p>This command opens the crypttab file for editing. This file is used to configure the encrypted partition to be automatically unlocked at boot time.</p>
+<h4 id="add-the-unlock-partition-in-crypttab">Add the unlock partition in crypttab</h4>
+<pre tabindex="0"><code>databank     /dev/disk/by-uuid/&lt;YOUR_DISK_UUID&gt;  /root/keyfile  luks
+</code></pre><p>This tells the system to unlock the partition with the UUID (above) using the keyfile located at /root/keyfile, and to map it to the device named &ldquo;databank&rdquo;.</p>
+<h3 id="edit-fstab">Edit FSTAB</h3>
+<h4 id="open-fstab">Open FSTAB</h4>
+<pre tabindex="0"><code>sudo vim /etc/fstab
+</code></pre><p>This file is used to configure the system to automatically mount the encrypted partition at boot time.</p>
+<h4 id="add-the-mountpoint-to-fstab">Add the mountpoint to FSTAB</h4>
+<p>It is the volume in /dev/mapper that you see using lsblk -f</p>
+<pre tabindex="0"><code>/dev/mapper/databank  /mnt/extdrive     ext4    defaults        0       2
+</code></pre><p>This line tells the system to mount the device named &ldquo;databank&rdquo; (which was created in the previous step) at the mount point /mnt/extdrive using the ext4 filesystem.</p>
+<h3 id="mount-point">Mount point</h3>
+<h4 id="create-the-mount-point">Create the mount point</h4>
+<pre tabindex="0"><code>sudo mkdir /media/databank
+</code></pre><p>This command creates the mount point directory for the encrypted partition.</p>
+<h4 id="setting-the-ownership">Setting the ownership</h4>
+<pre tabindex="0"><code>sudo chown tien /mnt/extdrive
+</code></pre><p>This command sets the ownership of the mount point directory to the user &ldquo;tien&rdquo;.</p>
+<h4 id="reboot">Reboot</h4>
+<pre tabindex="0"><code>sudo reboot now
+</code></pre><h4 id="reset-the-ownership-again">Reset the ownership again</h4>
+<pre tabindex="0"><code>sudo chown tien /mnt/extdrive
+</code></pre><ul>
+<li>This command sets the ownership of the mounted partition to the user &ldquo;tien&rdquo; temporarily.</li>
+<li>Or better to set this automatically at boot <a href="/projects/raspberry-pi-server/#automate-ownership-changes-if-needed">here</a>.</li>
+</ul>
+<h3 id="verifications">Verifications</h3>
+<h4 id="verify-partitions">Verify partitions</h4>
+<pre tabindex="0"><code>lsblk -f
+</code></pre><h4 id="verify-that-mountpoint-is-readable-and-writable">Verify that mountpoint is readable and writable</h4>
+<pre tabindex="0"><code>cd /media/databank/
+touch a
+ls
+</code></pre><p><img alt="luks" src="/projects/raspberry-pi-server/luks.png"></p>
+<hr>
+<h2 id="step-6-install-filebrowser">Step 6: Install FileBrowser</h2>
 <p><a href="https://filebrowser.org/installation">FileBrowser</a> is a lightweight file management solution, perfect for 4GB RAM Raspberry Pi 4. We could also create tunnel to FileBrowser with CloudFlares to have a NAS/cloud functions.  <br>
 I chose FileBrowser because Samba is too minimal and don&rsquo;t have web GUI, NextCloud is over-featured and heavy.</p>
 <ol>
@@ -362,10 +510,10 @@ I chose FileBrowser because Samba is too minimal and don&rsquo;t have web GUI, N
 <li><strong>Access FileBrowser</strong>: Navigate to <code>http://&lt;Raspberry_Pi_IP&gt;:8080</code> and log in with the default credentials.</li>
 </ol>
 <hr>
-<h2 id="step-6-buy-a-domain-name">Step 6: Buy a Domain Name</h2>
+<h2 id="step-7-buy-a-domain-name">Step 7: Buy a Domain Name</h2>
 <p>I purchased the domain name <code>tienng.xyz</code> from <a href="https://gen.xyz">gen.xyz</a>. After purchasing, I configured DNS settings to point to my Raspberry Pi using Cloudflare.</p>
 <hr>
-<h2 id="step-7-set-up-cloudflare-tunnel">Step 7: Set Up Cloudflare Tunnel</h2>
+<h2 id="step-8-set-up-cloudflare-tunnel">Step 8: Set Up Cloudflare Tunnel</h2>
 <p>Since I could not enable port forwarding on my school&rsquo;s network, I used Cloudflare Tunnel to access my Raspberry Pi services remotely.</p>
 <ol>
 <li><strong>Register an Account on Cloudflare</strong>:</li>
@@ -391,7 +539,7 @@ connect in – we only want to be able to access it ourselves!</p>
 </li>
 </ol>
 <hr>
-<h2 id="step-8-set-up-immich-and-navidrome">Step 8: Set Up Immich and Navidrome</h2>
+<h2 id="step-9-set-up-immich-and-navidrome">Step 9: Set Up Immich and Navidrome</h2>
 <p>Immich and Navidrome are excellent solutions for managing photos and music streaming, respectively.</p>
 <ol>
 <li><strong>Install Immich</strong>:
@@ -408,7 +556,97 @@ connect in – we only want to be able to access it ourselves!</p>
 </li>
 </ol>
 <hr>
-<h1 id="conclusion">Conclusion</h1>
+<h2 id="step-10-set-up-pi-hole-on-portainer">Step 10: Set Up Pi-Hole on Portainer</h2>
+<ul>
+<li>Pi-hole is a network-wide ad blocker that works at the DNS level, preventing unwanted content from ever reaching your devices. Running it in Docker makes it portable, easy to manage, and isolated from your host system. This guide explains how to set up Pi-hole using Docker.</li>
+<li>See the guide <a href="https://www.youtube.com/watch?v=gAPZ-KI4JIc">here</a>.</li>
+</ul>
+<h3 id="1-clear-port-53">1. Clear port 53</h3>
+<ul>
+<li><a href="https://github.com/bigbeartechworld/big-bear-scripts/tree/master/disable-dns-service">Guide</a></li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">bash -c <span class="s2">&#34;</span><span class="k">$(</span>wget -qLO - https://raw.githubusercontent.com/bigbeartechworld/big-bear-scripts/master/disable-dns-service/disable_dns_service.sh<span class="k">)</span><span class="s2">&#34;</span>
+</span></span></code></pre></div><h3 id="2-add-pi-hole-stack-on-portainer">2. Add Pi-Hole Stack on Portainer</h3>
+<ul>
+<li><a href="https://github.com/bigbeartechworld/big-bear-video-assets/blob/main/how-to-install-pihole-on-portainer/docker-compose-pihole.yml">Script</a></li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="c"># Docker Compose version</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;3&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># Define services (containers to be created)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">services</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># Service name: pihole</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">pihole</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># Name of the container instance</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">pihole</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># Image to use for this container</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># Use the specified version of the pihole image</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">pihole/pihole:2024.07.0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># Expose and map ports (host:container)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s2">&#34;53:53/tcp&#34;</span><span class="w"> </span><span class="c"># DNS (TCP)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s2">&#34;53:53/udp&#34;</span><span class="w"> </span><span class="c"># DNS (UDP)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s2">&#34;7300:80/tcp&#34;</span><span class="w"> </span><span class="c"># Web UI HTTP</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># Environment variables</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">TZ</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;UTC&#34;</span><span class="w"> </span><span class="c"># Time Zone; Update this to your time zone</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">WEBPASSWORD</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;password&#34;</span><span class="w"> </span><span class="c"># Admin password for web UI; Change this to your desired admin password</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># Mount volumes for persistent data</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s2">&#34;/data/pihole/data/pihole:/etc/pihole&#34;</span><span class="w"> </span><span class="c"># Pi-hole data</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s2">&#34;/data/pihole/data/dnsmasq:/etc/dnsmasq.d&#34;</span><span class="w"> </span><span class="c"># dnsmasq data</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># Restart policy for the container when it exits</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l">unless-stopped</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># DNS servers for this container to use</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">dns</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="m">127.0.0.1</span><span class="w"> </span><span class="c"># Localhost for internal resolution</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="m">1.1.1.1</span><span class="w"> </span><span class="c"># Cloudflare DNS for external resolution</span><span class="w">
+</span></span></span></code></pre></div><p>Adjust the <code>TZ</code> and <code>WEBPASSWORD</code> as necessary. The <code>volumes</code> section ensures Pi-hole data persists between container restarts (keep default).</p>
+<h3 id="3-start-the-container">3. Start the Container</h3>
+<ul>
+<li>Deploy Stack</li>
+</ul>
+<h3 id="4-access-the-pi-hole-admin-interface">4. Access the Pi-hole Admin Interface</h3>
+<p>Once the container is running, access the Pi-hole web interface by navigating to the IP address of your Docker host in a web browser. For example:</p>
+<pre tabindex="0"><code>http://192.168.4.178:7300/admin
+</code></pre><p>Log in using the password you set during configuration.</p>
+<hr>
+<h3 id="5-configure-your-network">5. Configure Your Network</h3>
+<p>To start blocking ads, set your router or device DNS to point to your Pi-hole instance. Typically, this involves:</p>
+<ol>
+<li>Logging into your router&rsquo;s admin interface.</li>
+<li>Setting the DNS server to the IP address of your Docker host.</li>
+</ol>
+<p>Alternatively, configure individual devices to use Pi-hole as their DNS server.</p>
+<hr>
+<h3 id="troubleshooting">Troubleshooting</h3>
+<ul>
+<li>
+<p><strong>Issue:</strong> Pi-hole web interface doesn’t load.</p>
+<ul>
+<li><strong>Solution:</strong> Check if the container is running: <code>docker ps</code>. Restart it if necessary: <code>docker restart pihole</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Issue:</strong> DNS resolution isn’t working.</p>
+<ul>
+<li><strong>Solution:</strong> Ensure the required ports (53 and 80) are not used by other services.</li>
+</ul>
+</li>
+<li>
+<p><strong>Issue:</strong> Configuration doesn’t persist after a restart.</p>
+<ul>
+<li><strong>Solution:</strong> Verify that the <code>volumes</code> are correctly mounted.</li>
+</ul>
+</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
 <p>This setup transformed my Raspberry Pi into a versatile home server capable of file management, media streaming, and photo management—all accessible remotely through a secure Cloudflare Tunnel. With Docker, adding or modifying services is a breeze, making this setup highly customisable and scalable.</p>
 
             </div>

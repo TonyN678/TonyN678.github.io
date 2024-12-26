@@ -53,7 +53,7 @@
         },
         "datePublished": "2024-11-23",
         "description": "",
-        "wordCount":  495 ,
+        "wordCount":  620 ,
         "mainEntityOfPage": "True",
         "dateModified": "2024-11-23",
         "image": {
@@ -94,7 +94,7 @@ Set Up HUGO I built this website with Hugo and Github Page, a cool fast minimali
     
 
     <link rel="canonical" href="https://tienng.xyz/posts/this-hugo-blog/">
-    <link href="/style.min.a2167ef260f352cd9ff2e8a7192ed110d23d97ad346d16a9e96828f4ac24ce34.css" rel="stylesheet">
+    <link href="/style.min.a436a17099c2d1137a67c1e33fb8c1f693d1f58ad0f29da539fcc42135c88532.css" rel="stylesheet">
     <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
 
     
@@ -212,13 +212,16 @@ stroke-linejoin="round" class="feather feather-home">
     <li><a href="#set-up-hugo">Set Up HUGO</a></li>
     <li><a href="#how-to-">How To ?</a>
       <ul>
-        <li><a href="#1-link-images">1. Link Images</a>
+        <li><a href="#1-link-images-referencehttpsdiscoursegohugoiothow-to-add-image-to-hugo-with-local-and-remote41391">1. Link Images (<a href="https://discourse.gohugo.io/t/how-to-add-image-to-hugo-with-local-and-remote/41391">reference</a>)</a>
           <ul>
-            <li><a href="#step-1-organise-your-image-files">Step 1: Organise Your Image Files</a></li>
-            <li><a href="#step-2-link-the-image-in-your-post">Step 2: Link the Image in Your Post</a></li>
-            <li><a href="#step-3-resize-or-align-images-optional">Step 3: Resize or Align Images (Optional)</a></li>
-            <li><a href="#step-4-test-your-post">Step 4: Test Your Post</a></li>
-            <li><a href="#step-5-deploy-your-changes">Step 5: Deploy Your Changes</a></li>
+            <li><a href="#option-1-decentralized-images-images-saved-separately-with-each-posts">Option 1: Decentralized Images (images saved separately with each posts)</a></li>
+            <li><a href="#option-2-centralised-images-all-images-saved-in-static-directory">Option 2: Centralised Images (all images saved in static directory)</a></li>
+          </ul>
+        </li>
+        <li><a href="#2-link-custom-domain-to-gihub-page-referencehttpswwwyoutubecomwatchvk3y3c5wlafclistwlindex1">2. Link custom domain to Gihub Page (<a href="https://www.youtube.com/watch?v=k3Y3c5WlAfc&amp;list=WL&amp;index=1">reference</a>)</a>
+          <ul>
+            <li><a href="#step-1-add-githubs-dns-records-to-domain-hosting-site">Step 1: Add Github&rsquo;s DNS records to domain hosting site</a></li>
+            <li><a href="#step-2-add-customed-domain-to-github-page">Step 2: Add Customed Domain to Github Page</a></li>
           </ul>
         </li>
       </ul>
@@ -270,8 +273,14 @@ stroke-linejoin="round" class="feather feather-home">
 </ol>
 <hr>
 <h2 id="how-to-">How To ?</h2>
-<h3 id="1-link-images">1. Link Images</h3>
-<h4 id="step-1-organise-your-image-files">Step 1: Organise Your Image Files</h4>
+<h3 id="1-link-images-referencehttpsdiscoursegohugoiothow-to-add-image-to-hugo-with-local-and-remote41391">1. Link Images (<a href="https://discourse.gohugo.io/t/how-to-add-image-to-hugo-with-local-and-remote/41391">reference</a>)</h3>
+<h4 id="option-1-decentralized-images-images-saved-separately-with-each-posts">Option 1: Decentralized Images (images saved separately with each posts)</h4>
+<ul>
+<li>Instead of putting all the posts in the &ldquo;posts&rdquo; directory which is super messy later on, you could create separate directories for each post and create an index.md in each folder along with prefered images:</li>
+</ul>
+<p><img alt="Page Bundle" src="/posts/this-hugo-blog/pagebundle.png"></p>
+<h4 id="option-2-centralised-images-all-images-saved-in-static-directory">Option 2: Centralised Images (all images saved in static directory)</h4>
+<h5 id="step-1-organise-your-image-files">Step 1: Organise Your Image Files</h5>
 <ol>
 <li>
 <p>Navigate to the <code>static</code> directory in your Hugo project:</p>
@@ -286,11 +295,11 @@ stroke-linejoin="round" class="feather feather-home">
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cp /path/to/your/image.jpg &lt;your-hugo-project&gt;/static/images/
 </span></span></code></pre></div></li>
 </ol>
-<h4 id="step-2-link-the-image-in-your-post">Step 2: Link the Image in Your Post</h4>
+<h5 id="step-2-link-the-image-in-your-post">Step 2: Link the Image in Your Post</h5>
 <ol>
 <li>
 <p>Open your post file in the <code>content</code> directory (e.g., <code>content/posts/example.md</code>):</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nano content/posts/example.md
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vim content/posts/example.md
 </span></span></code></pre></div></li>
 <li>
 <p>Use the Markdown syntax to add the image:</p>
@@ -301,30 +310,39 @@ stroke-linejoin="round" class="feather feather-home">
 </ul>
 </li>
 </ol>
-<h4 id="step-3-resize-or-align-images-optional">Step 3: Resize or Align Images (Optional)</h4>
-<h5 id="resize-images">Resize Images</h5>
+<h5 id="step-3-resize-or-align-images-optional">Step 3: Resize or Align Images (Optional)</h5>
+<h6 id="resize-images">Resize Images</h6>
 <p>Use the <code>width</code> and <code>height</code> attributes in HTML within your Markdown file:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/images/image.jpg&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;Alt text&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;600&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;400&#34;</span><span class="p">&gt;</span>
-</span></span></code></pre></div><h5 id="centre-align-images">Centre Align Images</h5>
+</span></span></code></pre></div><h6 id="centre-align-images">Centre Align Images</h6>
 <p>Wrap the image in a <code>&lt;div&gt;</code> tag with a <code>style</code> attribute:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;text-align: center;&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/images/image.jpg&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;Alt text&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;600&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span></code></pre></div><h4 id="step-4-test-your-post">Step 4: Test Your Post</h4>
+</span></span></code></pre></div><h5 id="step-4-test-your-post">Step 4: Test Your Post</h5>
 <ol>
 <li>
 <p>Start the Hugo development server:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo server
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo serve
 </span></span></code></pre></div></li>
 <li>
 <p>Open your browser and navigate to <code>http://localhost:1313</code> to verify that the image appears correctly.</p>
 </li>
 </ol>
-<h4 id="step-5-deploy-your-changes">Step 5: Deploy Your Changes</h4>
-<p>If the image is displayed as expected, deploy your Hugo site to make it live:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo
-</span></span><span class="line"><span class="cl">scp -r public/ user@your-server:/path/to/site
-</span></span></code></pre></div><p>Now your post is complete with the linked image properly displayed.</p>
+<h3 id="2-link-custom-domain-to-gihub-page-referencehttpswwwyoutubecomwatchvk3y3c5wlafclistwlindex1">2. Link custom domain to Gihub Page (<a href="https://www.youtube.com/watch?v=k3Y3c5WlAfc&list=WL&index=1">reference</a>)</h3>
+<h4 id="step-1-add-githubs-dns-records-to-domain-hosting-site">Step 1: Add Github&rsquo;s DNS records to domain hosting site</h4>
+<ol>
+<li>Go to this <a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site">website</a>,
+go the &ldquo;Configuring an apex domain&rdquo; and at step 5, copy the 4 IP addresses.</li>
+<li>Go to domain provider and edit your domain&rsquo;s DNS settings to include those 4 IP addresses with a &ldquo;www&rdquo; host name with CNAME record pointing to your Gihub Pages:</li>
+</ol>
+<p><img alt="dnsrecord" src="/posts/this-hugo-blog/dnsrecord.png"></p>
+<h4 id="step-2-add-customed-domain-to-github-page">Step 2: Add Customed Domain to Github Page</h4>
+<ol>
+<li>Go to Github Page repository <name>.github.io, go to Settings then Pages.</li>
+<li>Add your domain to &ldquo;Custom domain&rdquo; section.</li>
+<li>Wait up to a day for https to be active for secure connection.</li>
+</ol>
 <hr>
 <h2 id="references">References</h2>
 <ul>
