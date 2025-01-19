@@ -14,9 +14,6 @@
     <loc>https://tienng.xyz/posts/ssh-key-config/</loc>
     <lastmod>2024-12-19T16:01:05+11:00</lastmod>
   </url><url>
-    <loc>https://tienng.xyz/posts/arch-linux-setup/</loc>
-    <lastmod>2024-12-17T15:02:12+11:00</lastmod>
-  </url><url>
     <loc>https://tienng.xyz/projects/</loc>
     <lastmod>2024-12-17T15:01:15+11:00</lastmod>
   </url><url>
@@ -25,6 +22,9 @@
   </url><url>
     <loc>https://tienng.xyz/posts/this-hugo-blog/</loc>
     <lastmod>2024-11-23T23:00:55+11:00</lastmod>
+  </url><url>
+    <loc>https://tienng.xyz/posts/arch-linux-setup/</loc>
+    <lastmod>2024-01-17T15:02:12+11:00</lastmod>
   </url><url>
     <loc>https://tienng.xyz/about/</loc>
   </url><url>

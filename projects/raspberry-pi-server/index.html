@@ -25,7 +25,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.139.3">
+<meta name="generator" content="Hugo 0.141.0">
 
     
     <meta property="og:url" content="https://tienng.xyz/projects/raspberry-pi-server/">
@@ -244,7 +244,12 @@ stroke-linejoin="round" class="feather feather-home">
         <li><a href="#3-start-the-container">3. Start the Container</a></li>
         <li><a href="#4-access-the-pi-hole-admin-interface">4. Access the Pi-hole Admin Interface</a></li>
         <li><a href="#5-configure-your-network">5. Configure Your Network</a></li>
-        <li><a href="#troubleshooting">Troubleshooting</a></li>
+        <li><a href="#pi-hole-troubleshooting">Pi-hole Troubleshooting</a></li>
+      </ul>
+    </li>
+    <li><a href="#common-errors-and-solutions">Common Errors and Solutions</a>
+      <ul>
+        <li><a href="#1-conflict-between-nameservers-and-manual-dns-on-domain-hosting-platform">1. Conflict between Nameservers and Manual DNS on Domain Hosting platform</a></li>
       </ul>
     </li>
     <li><a href="#conclusion">Conclusion</a></li>
@@ -494,7 +499,7 @@ My disk is &ldquo;sda&rdquo; (find your&rsquo;s name)</p>
 <pre tabindex="0"><code>cd /media/databank/
 touch a
 ls
-</code></pre><p><img alt="luks" src="/projects/raspberry-pi-server/luks.png"></p>
+</code></pre><p><img src="/projects/raspberry-pi-server/luks.png" alt="luks"></p>
 <hr>
 <h2 id="step-6-install-filebrowser">Step 6: Install FileBrowser</h2>
 <p><a href="https://filebrowser.org/installation">FileBrowser</a> is a lightweight file management solution, perfect for 4GB RAM Raspberry Pi 4. We could also create tunnel to FileBrowser with CloudFlares to have a NAS/cloud functions.  <br>
@@ -531,10 +536,10 @@ connect in – we only want to be able to access it ourselves!</p>
 <li><strong>Add Application for Authentication</strong>:
 <ul>
 <li><a href="https://www.crosstalksolutions.com/cloudflare-tunnel-easy-setup/">https://www.crosstalksolutions.com/cloudflare-tunnel-easy-setup/</a></li>
-<li><a href="https://www.youtube.com/watch?v=ey4u7OUAF3c&list=WL&index=14">https://www.youtube.com/watch?v=ey4u7OUAF3c&list=WL&index=14</a> (NetworkChuck Remote Network)</li>
-<li><a href="https://www.youtube.com/watch?v=65FdHRs0axE&list=WL&index=9&pp=gAQBiAQB">https://www.youtube.com/watch?v=65FdHRs0axE&list=WL&index=9&pp=gAQBiAQB</a> (Restrict Cloudflare Application)</li>
-<li><a href="https://www.youtube.com/watch?v=wdmbAo02ktQ&list=WL&index=8&pp=gAQBiAQB">https://www.youtube.com/watch?v=wdmbAo02ktQ&list=WL&index=8&pp=gAQBiAQB</a> (Restrict to Google&amp;Github Auth)</li>
-<li><a href="https://www.youtube.com/watch?v=lnw616HiINY&list=WL&index=5&pp=gAQBiAQB">https://www.youtube.com/watch?v=lnw616HiINY&list=WL&index=5&pp=gAQBiAQB</a> (SSH Remote Connection)</li>
+<li><a href="https://www.youtube.com/watch?v=ey4u7OUAF3c&amp;list=WL&amp;index=14">https://www.youtube.com/watch?v=ey4u7OUAF3c&list=WL&index=14</a> (NetworkChuck Remote Network)</li>
+<li><a href="https://www.youtube.com/watch?v=65FdHRs0axE&amp;list=WL&amp;index=9&amp;pp=gAQBiAQB">https://www.youtube.com/watch?v=65FdHRs0axE&list=WL&index=9&pp=gAQBiAQB</a> (Restrict Cloudflare Application)</li>
+<li><a href="https://www.youtube.com/watch?v=wdmbAo02ktQ&amp;list=WL&amp;index=8&amp;pp=gAQBiAQB">https://www.youtube.com/watch?v=wdmbAo02ktQ&list=WL&index=8&pp=gAQBiAQB</a> (Restrict to Google&amp;Github Auth)</li>
+<li><a href="https://www.youtube.com/watch?v=lnw616HiINY&amp;list=WL&amp;index=5&amp;pp=gAQBiAQB">https://www.youtube.com/watch?v=lnw616HiINY&list=WL&index=5&pp=gAQBiAQB</a> (SSH Remote Connection)</li>
 </ul>
 </li>
 </ol>
@@ -625,7 +630,7 @@ connect in – we only want to be able to access it ourselves!</p>
 </ol>
 <p>Alternatively, configure individual devices to use Pi-hole as their DNS server.</p>
 <hr>
-<h3 id="troubleshooting">Troubleshooting</h3>
+<h3 id="pi-hole-troubleshooting">Pi-hole Troubleshooting</h3>
 <ul>
 <li>
 <p><strong>Issue:</strong> Pi-hole web interface doesn’t load.</p>
@@ -646,6 +651,20 @@ connect in – we only want to be able to access it ourselves!</p>
 </ul>
 </li>
 </ul>
+<h2 id="common-errors-and-solutions">Common Errors and Solutions</h2>
+<h3 id="1-conflict-between-nameservers-and-manual-dns-on-domain-hosting-platform">1. Conflict between Nameservers and Manual DNS on Domain Hosting platform</h3>
+<p>At first when I had my personal website at tienng.xyz only, I had to choose either keeping the website alive or the tunnels to my RaspberryPi Server since my
+domain registrar <code>gen.xyz</code> only allow either &ldquo;Nameservers&rdquo; or &ldquo;Manual DNS records&rdquo;. Since all of my services provided by Cloudflares so I decided to assign Cloudflares&rsquo; nameservers
+to my domain registrar. This means that Cloudflare is now in charge of all the DNS records instead of my domain hosting service <code>gen.xyz</code>.</p>
+<ul>
+<li>
+<p>The purpose of a nameserver like Cloudflare is to handle the Domain Name System (DNS) for your domain.</p>
+</li>
+<li>
+<p>By switching to Cloudflare&rsquo;s nameservers, all DNS settings are controlled through Cloudflare&rsquo;s interface instead of your domain registrar.</p>
+</li>
+</ul>
+<p><img src="/projects/raspberry-pi-server/cf-dns.png" alt="Cloudflare DNS Records"></p>
 <h2 id="conclusion">Conclusion</h2>
 <p>This setup transformed my Raspberry Pi into a versatile home server capable of file management, media streaming, and photo management—all accessible remotely through a secure Cloudflare Tunnel. With Docker, adding or modifying services is a breeze, making this setup highly customisable and scalable.</p>
 
@@ -694,7 +713,7 @@ connect in – we only want to be able to access it ourselves!</p>
 </a>
 </div>
     <small class="footer_copyright">
-        © 2024 Tien Nguyen.
+        © 2025 Tien Nguyen.
         
     </small>
 </footer><a href="#" title="" id="totop">

@@ -16,7 +16,7 @@
       
       <description>&lt;h1 id=&#34;how-to-set-up-your-own-email-on-your-domain-name&#34;&gt;How to Set Up Your Own Email on Your Domain Name&lt;/h1&gt;
 &lt;p&gt;Having your own email address at your custom domain name adds a professional touch to your communications. This guide will walk you through the process of setting up your own email address using your domain and integrating it with Gmail for sending and receiving emails. This guide will show how I set up my own email address at &lt;a href=&#34;mailto:tien@tienng.xyz&#34;&gt;tien@tienng.xyz&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;I wrote this guide using informations from &lt;a href=&#34;https://www.youtube.com/watch?v=nNGcvz1Sc_8&amp;list=WL&amp;index=12&#34;&gt;IdeaSpot&amp;rsquo;s video&lt;/a&gt; so feel free to check it out.&lt;/p&gt;</description>
+&lt;p&gt;I wrote this guide using informations from &lt;a href=&#34;https://www.youtube.com/watch?v=nNGcvz1Sc_8&amp;amp;list=WL&amp;amp;index=12&#34;&gt;IdeaSpot&amp;rsquo;s video&lt;/a&gt; so feel free to check it out.&lt;/p&gt;</description>
       
     </item>
     
@@ -32,32 +32,6 @@
 &lt;hr&gt;
 &lt;h2 id=&#34;step-1-generate-an-ssh-key-pair&#34;&gt;Step 1: Generate an SSH Key Pair&lt;/h2&gt;
 &lt;p&gt;The first step is to create a public and private SSH key pair on your local machine. If you already have an SSH key pair, you can skip this step.&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Archlinux Setup and common Linux Errors</title>
-      <link>https://tienng.xyz/posts/arch-linux-setup/</link>
-      <pubDate>Tue, 17 Dec 2024 15:02:12 +1100</pubDate>
-      
-      <guid>https://tienng.xyz/posts/arch-linux-setup/</guid>
-      
-      <description>&lt;h1 id=&#34;how-to-install-arch-linux&#34;&gt;How to Install Arch Linux&lt;/h1&gt;
-&lt;p&gt;Make sure that the machine is not in Secure Boot mode to prevent further authentication or you will end up with a black and yellow window and can’t do anything.&lt;/p&gt;
-&lt;p&gt;Refer to the link below for how to set up a VM in virtualbox for any OS: &lt;a href=&#34;https://docs.google.com/document/d/1-uePhx7kDsEjF_vA6O1jVVHpX85VpOUiTH6j-3TIvz4/edit?usp=sharing&#34;&gt;https://docs.google.com/document/d/1-uePhx7kDsEjF_vA6O1jVVHpX85VpOUiTH6j-3TIvz4/edit?usp=sharing&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Refer to the &lt;a href=&#34;https://wiki.archlinux.org/title/Installation_guide&#34;&gt;https://wiki.archlinux.org/title/Installation_guide&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;keyboard-and-font-optional&#34;&gt;Keyboard and Font (Optional)&lt;/h2&gt;
-&lt;p&gt;Set up the keyboard layout and console font:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;loadkeys us           &lt;span class=&#34;c1&#34;&gt;# Set keyboard to US layout&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;setfont iso09.16      &lt;span class=&#34;c1&#34;&gt;# Set console font (example)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# ls /usr/share/kbd/consolefonts/   # List available console fonts&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;loadkeys us&lt;/code&gt; ensures the keyboard input follows the US layout, which is helpful if you are used to it.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;setfont&lt;/code&gt; changes the console font. This step is optional but improves readability in some cases.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;verify-boot-mode-optional&#34;&gt;Verify Boot Mode (Optional)&lt;/h2&gt;
-&lt;p&gt;Check if the system is booted in UEFI mode:&lt;/p&gt;</description>
       
     </item>
     
@@ -87,6 +61,32 @@
 &lt;p&gt;I had always wanted to build my own website, no Wordpress or any third-party hosting bloats that rip your pocket! This is also for storing information and experiences I gained throughout my learning journey in the world of tech and engineering so I don&amp;rsquo;t have to crawling through my dusting physical A4 notebooks or proprietary gg docs :/&lt;/p&gt;
 &lt;h2 id=&#34;set-up-hugo&#34;&gt;Set Up HUGO&lt;/h2&gt;
 &lt;p&gt;I built this website with Hugo and Github Page, a cool fast minimalist combo for hosting with no databases, just raw mark-down texts and basic html, css, js skills :)&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Archlinux Setup and common Linux Errors</title>
+      <link>https://tienng.xyz/posts/arch-linux-setup/</link>
+      <pubDate>Wed, 17 Jan 2024 15:02:12 +1100</pubDate>
+      
+      <guid>https://tienng.xyz/posts/arch-linux-setup/</guid>
+      
+      <description>&lt;h1 id=&#34;how-to-install-arch-linux&#34;&gt;How to Install Arch Linux&lt;/h1&gt;
+&lt;p&gt;Make sure that the machine is not in Secure Boot mode to prevent further authentication or you will end up with a black and yellow window and can’t do anything.&lt;/p&gt;
+&lt;p&gt;Refer to the link below for how to set up a VM in virtualbox for any OS: &lt;a href=&#34;https://docs.google.com/document/d/1-uePhx7kDsEjF_vA6O1jVVHpX85VpOUiTH6j-3TIvz4/edit?usp=sharing&#34;&gt;https://docs.google.com/document/d/1-uePhx7kDsEjF_vA6O1jVVHpX85VpOUiTH6j-3TIvz4/edit?usp=sharing&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Refer to the &lt;a href=&#34;https://wiki.archlinux.org/title/Installation_guide&#34;&gt;https://wiki.archlinux.org/title/Installation_guide&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;keyboard-and-font-optional&#34;&gt;Keyboard and Font (Optional)&lt;/h2&gt;
+&lt;p&gt;Set up the keyboard layout and console font:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;loadkeys us           &lt;span class=&#34;c1&#34;&gt;# Set keyboard to US layout&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;setfont iso09.16      &lt;span class=&#34;c1&#34;&gt;# Set console font (example)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# ls /usr/share/kbd/consolefonts/   # List available console fonts&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;loadkeys us&lt;/code&gt; ensures the keyboard input follows the US layout, which is helpful if you are used to it.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;setfont&lt;/code&gt; changes the console font. This step is optional but improves readability in some cases.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;verify-boot-mode-optional&#34;&gt;Verify Boot Mode (Optional)&lt;/h2&gt;
+&lt;p&gt;Check if the system is booted in UEFI mode:&lt;/p&gt;</description>
       
     </item>
     
