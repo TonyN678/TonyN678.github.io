@@ -68,7 +68,7 @@
     </script>
 
 
-<meta name="generator" content="Hugo 0.141.0">
+<meta name="generator" content="Hugo 0.152.2">
 
     
     <meta property="og:url" content="https://tienng.xyz/posts/this-hugo-blog/">
@@ -212,13 +212,13 @@ stroke-linejoin="round" class="feather feather-home">
     <li><a href="#set-up-hugo">Set Up HUGO</a></li>
     <li><a href="#how-to-">How To ?</a>
       <ul>
-        <li><a href="#1-link-images-referencehttpsdiscoursegohugoiothow-to-add-image-to-hugo-with-local-and-remote41391">1. Link Images (<a href="https://discourse.gohugo.io/t/how-to-add-image-to-hugo-with-local-and-remote/41391">reference</a>)</a>
+        <li><a href="#1-link-images-reference">1. Link Images (reference)</a>
           <ul>
             <li><a href="#option-1-decentralized-images-images-saved-separately-with-each-posts">Option 1: Decentralized Images (images saved separately with each posts)</a></li>
             <li><a href="#option-2-centralised-images-all-images-saved-in-static-directory">Option 2: Centralised Images (all images saved in static directory)</a></li>
           </ul>
         </li>
-        <li><a href="#2-link-custom-domain-to-gihub-page-referencehttpswwwyoutubecomwatchvk3y3c5wlafclistwlindex1">2. Link custom domain to Gihub Page (<a href="https://www.youtube.com/watch?v=k3Y3c5WlAfc&amp;list=WL&amp;index=1">reference</a>)</a>
+        <li><a href="#2-link-custom-domain-to-gihub-page-reference">2. Link custom domain to Gihub Page (reference)</a>
           <ul>
             <li><a href="#step-1-add-githubs-dns-records-to-domain-hosting-site">Step 1: Add Github&rsquo;s DNS records to domain hosting site</a></li>
             <li><a href="#step-2-add-customed-domain-to-github-page">Step 2: Add Customed Domain to Github Page</a></li>
@@ -273,7 +273,7 @@ stroke-linejoin="round" class="feather feather-home">
 </ol>
 <hr>
 <h2 id="how-to-">How To ?</h2>
-<h3 id="1-link-images-referencehttpsdiscoursegohugoiothow-to-add-image-to-hugo-with-local-and-remote41391">1. Link Images (<a href="https://discourse.gohugo.io/t/how-to-add-image-to-hugo-with-local-and-remote/41391">reference</a>)</h3>
+<h3 id="1-link-images-reference">1. Link Images (<a href="https://discourse.gohugo.io/t/how-to-add-image-to-hugo-with-local-and-remote/41391">reference</a>)</h3>
 <h4 id="option-1-decentralized-images-images-saved-separately-with-each-posts">Option 1: Decentralized Images (images saved separately with each posts)</h4>
 <ul>
 <li>Instead of putting all the posts in the &ldquo;posts&rdquo; directory which is super messy later on, you could create separate directories for each post and create an index.md in each folder along with prefered images:</li>
@@ -313,12 +313,12 @@ stroke-linejoin="round" class="feather feather-home">
 <h5 id="step-3-resize-or-align-images-optional">Step 3: Resize or Align Images (Optional)</h5>
 <h6 id="resize-images">Resize Images</h6>
 <p>Use the <code>width</code> and <code>height</code> attributes in HTML within your Markdown file:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/images/image.jpg&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;Alt text&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;600&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;400&#34;</span><span class="p">&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">&lt;img src=&#34;/images/image.jpg&#34; alt=&#34;Alt text&#34; width=&#34;600&#34; height=&#34;400&#34;&gt;
 </span></span></code></pre></div><h6 id="centre-align-images">Centre Align Images</h6>
 <p>Wrap the image in a <code>&lt;div&gt;</code> tag with a <code>style</code> attribute:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;text-align: center;&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/images/image.jpg&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;Alt text&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;600&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">&lt;div style=&#34;text-align: center;&#34;&gt;
+</span></span><span class="line"><span class="cl">  &lt;img src=&#34;/images/image.jpg&#34; alt=&#34;Alt text&#34; width=&#34;600&#34;&gt;
+</span></span><span class="line"><span class="cl">&lt;/div&gt;
 </span></span></code></pre></div><h5 id="step-4-test-your-post">Step 4: Test Your Post</h5>
 <ol>
 <li>
@@ -329,7 +329,7 @@ stroke-linejoin="round" class="feather feather-home">
 <p>Open your browser and navigate to <code>http://localhost:1313</code> to verify that the image appears correctly.</p>
 </li>
 </ol>
-<h3 id="2-link-custom-domain-to-gihub-page-referencehttpswwwyoutubecomwatchvk3y3c5wlafclistwlindex1">2. Link custom domain to Gihub Page (<a href="https://www.youtube.com/watch?v=k3Y3c5WlAfc&amp;list=WL&amp;index=1">reference</a>)</h3>
+<h3 id="2-link-custom-domain-to-gihub-page-reference">2. Link custom domain to Gihub Page (<a href="https://www.youtube.com/watch?v=k3Y3c5WlAfc&amp;list=WL&amp;index=1">reference</a>)</h3>
 <h4 id="step-1-add-githubs-dns-records-to-domain-hosting-site">Step 1: Add Github&rsquo;s DNS records to domain hosting site</h4>
 <ol>
 <li>Go to this <a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site">website</a>,

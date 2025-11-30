@@ -68,7 +68,7 @@
     </script>
 
 
-<meta name="generator" content="Hugo 0.141.0">
+<meta name="generator" content="Hugo 0.152.2">
 
     
     <meta property="og:url" content="https://tienng.xyz/posts/arch-linux-setup/">
@@ -245,16 +245,16 @@ stroke-linejoin="round" class="feather feather-home">
         </li>
         <li><a href="#connecting-to-wi-fi">Connecting to Wi-Fi</a>
           <ul>
-            <li><a href="#1-using-nmtui-recommended"><strong>1. Using <code>nmtui</code> (Recommended)</strong></a></li>
-            <li><a href="#2-using-networkmanager-manual-method"><strong>2. Using <code>NetworkManager</code> (Manual Method)</strong></a></li>
+            <li><a href="#1-using"><strong>1. Using <code>nmtui</code> (Recommended)</strong></a></li>
+            <li><a href="#2-using"><strong>2. Using <code>NetworkManager</code> (Manual Method)</strong></a></li>
           </ul>
         </li>
         <li><a href="#common-tools-for-daily-usage">Common Tools for Daily Usage</a>
           <ul>
             <li><a href="#1-fix-touchpad-issues-clickscroll-not-working"><strong>1. Fix Touchpad Issues (Click/Scroll Not Working)</strong></a></li>
-            <li><a href="#2-adjust-screen-brightness-with-brightnessctl"><strong>2. Adjust Screen Brightness with <code>brightnessctl</code></strong></a></li>
-            <li><a href="#3-adjust-audio-volume-with-pactl-pulseaudio"><strong>3. Adjust Audio Volume with <code>pactl</code> (PulseAudio)</strong></a></li>
-            <li><a href="#4-connect-bluetooth-devices-with-bluetoothctl"><strong>4. Connect Bluetooth Devices with <code>bluetoothctl</code></strong></a></li>
+            <li><a href="#2-adjust-screen-brightness-with"><strong>2. Adjust Screen Brightness with <code>brightnessctl</code></strong></a></li>
+            <li><a href="#3-adjust-audio-volume-with"><strong>3. Adjust Audio Volume with <code>pactl</code> (PulseAudio)</strong></a></li>
+            <li><a href="#4-connect-bluetooth-devices-with"><strong>4. Connect Bluetooth Devices with <code>bluetoothctl</code></strong></a></li>
           </ul>
         </li>
         <li><a href="#resolving-protonvpn-kill-switch-issues">Resolving ProtonVPN Kill Switch Issues</a></li>
@@ -559,11 +559,11 @@ stroke-linejoin="round" class="feather feather-home">
 </ol>
 <hr>
 <h3 id="connecting-to-wi-fi">Connecting to Wi-Fi</h3>
-<h4 id="1-using-nmtui-recommended"><strong>1. Using <code>nmtui</code> (Recommended)</strong></h4>
+<h4 id="1-using"><strong>1. Using <code>nmtui</code> (Recommended)</strong></h4>
 <p><code>nmtui</code> is a simple text-based GUI tool for managing networks:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nmtui
 </span></span></code></pre></div><p>Follow the on-screen instructions to connect to Wi-Fi.</p>
-<h4 id="2-using-networkmanager-manual-method"><strong>2. Using <code>NetworkManager</code> (Manual Method)</strong></h4>
+<h4 id="2-using"><strong>2. Using <code>NetworkManager</code> (Manual Method)</strong></h4>
 <ol>
 <li>Install and enable NetworkManager:
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S networkmanager
@@ -588,7 +588,7 @@ stroke-linejoin="round" class="feather feather-home">
 </span></span><span class="line"><span class="cl">xinput list-props DEVICE_NAME
 </span></span><span class="line"><span class="cl">xinput set-prop DEVICE_NAME PROPERTY VALUE
 </span></span></code></pre></div><p>For persistent settings, add the commands to <code>~/.xprofile</code> or <code>~/.xinitrc</code>.</p>
-<h4 id="2-adjust-screen-brightness-with-brightnessctl"><strong>2. Adjust Screen Brightness with <code>brightnessctl</code></strong></h4>
+<h4 id="2-adjust-screen-brightness-with"><strong>2. Adjust Screen Brightness with <code>brightnessctl</code></strong></h4>
 <p>Increase or decrease brightness:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">brightnessctl <span class="nb">set</span> +10%  <span class="c1"># Increase by 10%</span>
 </span></span><span class="line"><span class="cl">brightnessctl <span class="nb">set</span> 10%-  <span class="c1"># Decrease by 10%</span>
@@ -597,10 +597,10 @@ stroke-linejoin="round" class="feather feather-home">
 <li><code>XF86MonBrightnessUp</code> (e.g., Fn+Brightness Up)</li>
 <li><code>XF86MonBrightnessDown</code>.</li>
 </ul>
-<h4 id="3-adjust-audio-volume-with-pactl-pulseaudio"><strong>3. Adjust Audio Volume with <code>pactl</code> (PulseAudio)</strong></h4>
+<h4 id="3-adjust-audio-volume-with"><strong>3. Adjust Audio Volume with <code>pactl</code> (PulseAudio)</strong></h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pactl set-sink-volume @DEFAULT_SINK@ +10%  <span class="c1"># Increase by 10%</span>
 </span></span><span class="line"><span class="cl">pactl set-sink-volume @DEFAULT_SINK@ -10%  <span class="c1"># Decrease by 10%</span>
-</span></span></code></pre></div><h4 id="4-connect-bluetooth-devices-with-bluetoothctl"><strong>4. Connect Bluetooth Devices with <code>bluetoothctl</code></strong></h4>
+</span></span></code></pre></div><h4 id="4-connect-bluetooth-devices-with"><strong>4. Connect Bluetooth Devices with <code>bluetoothctl</code></strong></h4>
 <ol>
 <li>Install required packages:
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S bluez bluez-utils

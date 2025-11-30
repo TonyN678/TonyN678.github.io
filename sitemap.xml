@@ -3,7 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://tienng.xyz/</loc>
-    <lastmod>2024-12-21T14:27:51+11:00</lastmod>
+    <lastmod>2025-11-30T14:07:02+11:00</lastmod>
+  </url><url>
+    <loc>https://tienng.xyz/projects/</loc>
+    <lastmod>2025-11-30T14:07:02+11:00</lastmod>
+  </url><url>
+    <loc>https://tienng.xyz/projects/ina219-lcd-display/</loc>
+    <lastmod>2025-11-30T14:07:02+11:00</lastmod>
   </url><url>
     <loc>https://tienng.xyz/posts/my-own-email-domain/</loc>
     <lastmod>2024-12-21T14:27:51+11:00</lastmod>
@@ -13,9 +19,6 @@
   </url><url>
     <loc>https://tienng.xyz/posts/ssh-key-config/</loc>
     <lastmod>2024-12-19T16:01:05+11:00</lastmod>
-  </url><url>
-    <loc>https://tienng.xyz/projects/</loc>
-    <lastmod>2024-12-17T15:01:15+11:00</lastmod>
   </url><url>
     <loc>https://tienng.xyz/projects/raspberry-pi-server/</loc>
     <lastmod>2024-12-17T15:01:15+11:00</lastmod>
