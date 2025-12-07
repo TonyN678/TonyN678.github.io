@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>Arch linux Setup and common Linux Errors - Tien&#39;s Blog</title>
+<meta name="description" content="A way to freedom? Arch is a linux distro catered for tech enthusiasts who want to control their own system...">
+
+<meta name="author" content="Tien Nguyen"><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Tien\u0027s Blog",
+    
+    "url": "https:\/\/lightbi-beta-demo.netlify.app\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/lightbi-beta-demo.netlify.app\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/lightbi-beta-demo.netlify.app\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/lightbi-beta-demo.netlify.app\/post\/2025\/arch-linux-setup\/",
+          "name": "Arch linux setup and common linux errors"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "map[authorinfo:\u003cwhatever it takes for your dreams\u003e authorpostimage:\/img\/author-post-img.jpg discord:525637838083981333 email:tien@tienng.xyz github:tonyn678 linkedin:tienngg name:Tien Nguyen website:https:\/\/www.tienng.xyz\/]"
+  },
+  "headline": "Arch linux Setup and common Linux Errors",
+  "description" : "A way to freedom? Arch is a linux distro catered for tech enthusiasts who want to control their own system...",
+  "inLanguage" : "en",
+  "wordCount":  1399 ,
+  "datePublished" : "2024-01-17T15:02:12",
+  "dateModified" : "2024-01-17T15:02:12",
+  "image" : "https:\/\/lightbi-beta-demo.netlify.app\/",
+  "keywords" : [ "" ],
+  "mainEntityOfPage" : "https:\/\/lightbi-beta-demo.netlify.app\/post\/2025\/arch-linux-setup\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/lightbi-beta-demo.netlify.app\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/lightbi-beta-demo.netlify.app\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Arch linux Setup and common Linux Errors" />
+<meta property="og:description" content="A way to freedom? Arch is a linux distro catered for tech enthusiasts who want to control their own system...">
+<meta property="og:image" content="https://lightbi-beta-demo.netlify.app/img/posts/2025/arch.jpg" />
+<meta property="og:url" content="https://lightbi-beta-demo.netlify.app/post/2025/arch-linux-setup/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Tien&#39;s Blog" />
+<link rel="apple-touch-icon" sizes="180x180" href=" https://lightbi-beta-demo.netlify.app/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lightbi-beta-demo.netlify.app/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lightbi-beta-demo.netlify.app/favicon/favicon-16x16.png">
+
+
+<meta name="generator" content="Hugo 0.152.2">
+<link rel="alternate" href="https://lightbi-beta-demo.netlify.app/index.xml" type="application/rss+xml" title="Tien&#39;s Blog">
+<script src="https://lightbi-beta-demo.netlify.app/js/dark-mode.js"></script><script src="https://lightbi-beta-demo.netlify.app/vendor/lunr/lunr.min.js"></script><script src="https://lightbi-beta-demo.netlify.app/js/lunr-search.js" data-index="/search.json"></script><link rel="stylesheet" href="/style.min.css">
+
+
+
+
+
+
+
+ 
+
+ <link href="https://lightbi-beta-demo.netlify.app/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+
+<script src="https://lightbi-beta-demo.netlify.app/vendor/glightbox/js/glightbox.min.js"></script>
+ 
+  </head>
+  <body>
+    
+<div class="container fixed-top mw-100">
+  <div class="row justify-content-center">
+    <div class="col-sm-12 col-md-12 col-lg-10 col-xl-10">
+
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top p-0">
+        <div class="container">
+
+          <a class="navbar-brand fw-bold" href="https://lightbi-beta-demo.netlify.app/">Tien&#39;s Blog</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav mb-2 mb-lg-0 align-items-baseline">
+              
+              
+              
+
+              <li class="nav-item">
+                
+                
+                
+                
+
+                <a class="nav-link " title="Home"
+                  href="/"> Home</a>
+              </li>
+
+              
+              
+              
+              
+              
+
+              <li class="nav-item">
+                
+                
+                
+                
+
+                <a class="nav-link " title="Blog"
+                  href="/post/"> Blog</a>
+              </li>
+
+              
+              
+              
+              
+              
+
+              <li class="nav-item">
+                
+                
+                
+                
+
+                <a class="nav-link " title="Project"
+                  href="/project/"> Project</a>
+              </li>
+
+              
+              
+              
+              
+              
+
+              <li class="nav-item">
+                
+                
+                
+                
+
+                <a class="nav-link " title="About"
+                  href="/about/"> About</a>
+              </li>
+
+              
+              
+              
+
+
+                
+            
+
+            
+              <li class="nav-item nav-link">
+                <a id="dark-mode-toggle" class="bi bi-moon-stars" role="button"></a>
+              </li>
+
+              
+              
+              <li class="nav-item search-item">
+                <form id="search" class="search" role="search">
+                  <label for="search-input" class="bi bi-search search-icon"></label>
+                  <input type="search" id="search-input" class="search-input">
+                </form>
+              </li>
+              
+            </ul>
+
+            
+            <template id="search-heading" hidden data-results-none=""
+              data-results-one=""
+              data-results-many="">
+              <div class="row">
+                <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 ">
+                  <h1 id="search-title" class="search-title"></h1>
+                </div>
+              </div>
+            </template>
+
+            <template id="search-result" hidden>
+              <div class="row">
+                <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 ">
+                  <article class="content post">
+                    <h2><a class="summary-title-link"></a></h2>
+                    <div class="post-entry"></div>
+                    <div class="read-more-section">
+                      <h6 class="text-muted link-underline">
+                        <a class="read-more-link">
+                          Read more
+                          <i class="bi bi-arrow-right"></i>
+                        </a>
+                      </h6>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </template>
+            
+          </div>
+        </div>
+      </nav>
+
+    </div>
+  </div>
+</div>
+    
+
+
+
+
+
+
+
+
+
+<header class="header-section ">
+
+  <div class="intro-header no-img mt-10 pb-2">
+    <div class="container">
+      <div class="row justify-content-center">
+
+        
+          
+        <div class="col-sm-12  col-md-12 col-lg-12 col-xl-12 tags-sec  text-center">
+          
+          
+
+
+            
+            
+
+            
+            <div class="post-heading">
+              <h1 class="fw-medium lh-1 align-items-center">
+                Arch linux Setup and common Linux Errors
+                
+              </h1>
+            </div>
+
+
+            
+
+            
+
+            
+
+            
+            
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+
+    
+
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
+      
+      <span class="post-meta">
+  <div class="post-meta text-muted" style="text-align: center;">
+    
+    
+
+    <div class="d-flex align-items-center justify-content-center flex-wrap mb-2" style="width: 100%;">
+      
+      
+      <div class="d-flex align-items-center" style="gap: 0;">
+        
+        
+        <img src="/img/author-post-img.jpg" class="img-responsive img-round" style="width: 32px; height: 32px; border-radius: 50%; display: block; object-fit: cover; margin: 10px; padding: 0; vertical-align: middle;"
+                      alt="Image of author">
+        
+        
+        <span class="fw-semibold" style="font-size: 1.1rem; margin-left: 0; white-space: nowrap;">Tien Nguyen</span>
+      </div>
+      
+      
+      
+      <span class="text-muted" style="font-size: 1.1rem; margin-left: 0.5rem;">|</span>
+      <span class="text-muted" style="font-size: 1.1rem; margin-left: 0.5rem;">17 January 2024</span>
+
+      
+      <span class="text-muted" style="font-size: 1.1rem; margin-left: 0.5rem;">|</span>
+      <span class="text-muted" style="font-size: 1.1rem; margin-left: 0.5rem;"><i class="fas fa-clock"></i>&nbsp;7&nbsp;minutes</span>
+      
+
+      
+      <span class="text-muted" style="font-size: 1.1rem; margin-left: 0.5rem;">|</span>
+      <span class="text-muted" style="font-size: 1.1rem; margin-left: 0.5rem;"><i class="fas fa-book"></i>&nbsp;1399&nbsp;words</span>
+      
+    </div>
+
+  
+</div>
+</span>
+
+
+      
+    </div>
+
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
+      <article role="main" class="blog-post">
+        <h1 id="how-to-install-arch-linux">How to Install Arch Linux</h1>
+<p>Make sure that the machine is not in Secure Boot mode to prevent further authentication or you will end up with a black and yellow window and can’t do anything.</p>
+<p>Refer to the link below for how to set up a VM in virtualbox for any OS: <a href="https://docs.google.com/document/d/1-uePhx7kDsEjF_vA6O1jVVHpX85VpOUiTH6j-3TIvz4/edit?usp=sharing">https://docs.google.com/document/d/1-uePhx7kDsEjF_vA6O1jVVHpX85VpOUiTH6j-3TIvz4/edit?usp=sharing</a></p>
+<p>Refer to the <a href="https://wiki.archlinux.org/title/Installation_guide">https://wiki.archlinux.org/title/Installation_guide</a>.</p>
+<h2 id="keyboard-and-font-optional">Keyboard and Font (Optional)</h2>
+<p>Set up the keyboard layout and console font:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">loadkeys us           <span class="c1"># Set keyboard to US layout</span>
+</span></span><span class="line"><span class="cl">setfont iso09.16      <span class="c1"># Set console font (example)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># ls /usr/share/kbd/consolefonts/   # List available console fonts</span>
+</span></span></code></pre></div><ul>
+<li><code>loadkeys us</code> ensures the keyboard input follows the US layout, which is helpful if you are used to it.</li>
+<li><code>setfont</code> changes the console font. This step is optional but improves readability in some cases.</li>
+</ul>
+<hr>
+<h2 id="verify-boot-mode-optional">Verify Boot Mode (Optional)</h2>
+<p>Check if the system is booted in UEFI mode:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat /sys/firmware/efi/fw_platform_size
+</span></span><span class="line"><span class="cl"><span class="c1"># If the result is &#34;64&#34;, the system is using UEFI boot.</span>
+</span></span></code></pre></div><ul>
+<li>UEFI boot mode is required for systems that use modern boot managers like GRUB in EFI mode.</li>
+</ul>
+<hr>
+<h2 id="internet-connection">Internet Connection</h2>
+<h3 id="on-a-virtual-machine">On a Virtual Machine</h3>
+<ol>
+<li>
+<p>Check for network connectivity:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ip link
+</span></span></code></pre></div><ul>
+<li><code>ip link</code> shows the status of all network devices. Look for the &ldquo;UP&rdquo; symbol.</li>
+</ul>
+</li>
+<li>
+<p>If all network interfaces show <code>DOWN</code>, follow these steps:</p>
+<ul>
+<li>Reboot to the boot page.</li>
+<li>Enter <strong>Firmware Settings</strong>.</li>
+<li>Go to the network tab and select the displayed <strong>MAC address</strong> (the network adapter).</li>
+<li>Reboot into the Arch Linux installation medium.</li>
+<li>Verify connectivity:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ip link   <span class="c1"># One interface should now show &#34;UP&#34;</span>
+</span></span></code></pre></div></li>
+</ul>
+</li>
+</ol>
+<h3 id="on-a-bare-metal-system">On a Bare Metal System</h3>
+<ol>
+<li>
+<p>Use <code>iwctl</code> to connect to Wi-Fi:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">iwctl
+</span></span><span class="line"><span class="cl">device list
+</span></span><span class="line"><span class="cl">station wlan0 get-networks
+</span></span><span class="line"><span class="cl">station wlan0 connect &lt;wifi_name&gt;
+</span></span></code></pre></div><ul>
+<li><code>device list</code> displays available network adapters.</li>
+<li>Replace <code>wlan0</code> with the name of your wireless interface.</li>
+<li>Use <code>get-networks</code> to see nearby Wi-Fi networks and <code>connect</code> to join one.</li>
+</ul>
+</li>
+<li>
+<p>For Ethernet (wired) connections:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ip link   <span class="c1"># A network adapter should show &#34;UP&#34;</span>
+</span></span></code></pre></div></li>
+<li>
+<p>Verify the connection:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ping youtube.com
+</span></span></code></pre></div><ul>
+<li>A successful <code>ping</code> means your internet connection is active.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="partitioning">Partitioning</h2>
+<ol>
+<li>
+<p>Start the partition tool and point it to the desired drive, not the bootable drive:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cfdisk /dev/sda
+</span></span></code></pre></div><p>Choose &ldquo;GPT&rdquo;, &ldquo;DOS&rdquo; is typically for usb sticks!</p>
+<ul>
+<li>GPT (GUID Partition Table) is the modern standard for partitioning.</li>
+</ul>
+</li>
+<li>
+<p>Create the following partitions:</p>
+<ul>
+<li><strong>EFI System</strong>: ≥ 500MB (for booting)</li>
+<li><strong>Swap</strong>: ≥ 1GB (for memory overflow)</li>
+<li><strong>Linux Root</strong>: Remaining storage</li>
+</ul>
+</li>
+<li>
+<p>Verify the partitions:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lsblk
+</span></span></code></pre></div><ul>
+<li><code>lsblk</code> lists all storage devices and partitions. Note their names (e.g., <code>/dev/sda1</code>, <code>/dev/sda2</code>).</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="formatting-the-partitions">Formatting the Partitions</h2>
+<p>Format the partitions as follows:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># EFI System</span>
+</span></span><span class="line"><span class="cl">mkfs.fat -F <span class="m">32</span> /dev/&lt;efi_partition&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Swap</span>
+</span></span><span class="line"><span class="cl">mkswap /dev/&lt;swap_partition&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Linux Root</span>
+</span></span><span class="line"><span class="cl">mkfs.ext4 /dev/&lt;root_partition&gt;
+</span></span></code></pre></div><ul>
+<li><strong>EFI System</strong>: Use <code>mkfs.fat -F 32</code> because EFI requires the FAT32 file system.</li>
+<li><strong>Swap</strong>: <code>mkswap</code> initializes a swap partition.</li>
+<li><strong>Linux Root</strong>: <code>mkfs.ext4</code> sets up the main filesystem.</li>
+</ul>
+<hr>
+<h2 id="mounting-the-partitions">Mounting the Partitions</h2>
+<p>Mount the partitions in this order:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Linux Root</span>
+</span></span><span class="line"><span class="cl">mount /dev/&lt;root_partition&gt; /mnt
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># EFI System</span>
+</span></span><span class="line"><span class="cl">mkdir -p /mnt/boot/efi
+</span></span><span class="line"><span class="cl">mount /dev/&lt;efi_partition&gt; /mnt/boot/efi
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Swap</span>
+</span></span><span class="line"><span class="cl">swapon /dev/&lt;swap_partition&gt;
+</span></span></code></pre></div><p>Verify with:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lsblk
+</span></span></code></pre></div><ul>
+<li>The mounted partitions should now appear under <code>/mnt</code>.</li>
+</ul>
+<hr>
+<h2 id="installing-the-base-system">Installing the Base System</h2>
+<p>Install essential packages:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pacstrap -K /mnt base linux linux-firmware sudo vim grub efibootmgr
+</span></span><span class="line"><span class="cl"><span class="c1"># Optional: Add git and networkmanager</span>
+</span></span></code></pre></div><ul>
+<li><strong>base</strong>: Core Arch Linux system packages.</li>
+<li><strong>linux</strong>: The kernel.</li>
+<li><strong>linux-firmware</strong>: Firmware for hardware compatibility.</li>
+<li><strong>sudo</strong>: Required for managing administrative tasks.</li>
+<li><strong>vim</strong>: A text editor for editing configuration files.</li>
+<li><strong>grub</strong> and <strong>efibootmgr</strong>: Tools for bootloader setup.</li>
+</ul>
+<blockquote>
+<p><strong>Note</strong>: If you encounter errors such as &ldquo;Failed to install packages,&rdquo; refer to the <a href="https://wiki.archlinux.org/title/Pacman/Package_signing#Cannot_import_keys">Arch Wiki</a> for troubleshooting.</p>
+</blockquote>
+<hr>
+<h2 id="generating-fstab">Generating fstab</h2>
+<p>Generate the filesystem table and verify:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">genfstab -U /mnt &gt;&gt; /mnt/etc/fstab
+</span></span><span class="line"><span class="cl">vim /mnt/etc/fstab   <span class="c1"># Check partition entries</span>
+</span></span></code></pre></div><ul>
+<li><code>fstab</code> stores partition mounting information. Ensure it includes all three partitions.</li>
+</ul>
+<hr>
+<h2 id="chroot-into-the-new-system">Chroot into the New System</h2>
+<p>Change root into the new installation:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">arch-chroot /mnt
+</span></span></code></pre></div><ul>
+<li>This changes the environment to the newly installed Arch Linux system.</li>
+</ul>
+<hr>
+<h2 id="set-time-and-location">Set Time and Location</h2>
+<ol>
+<li>Set the system time:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ln -sf /usr/share/zoneinfo/&lt;Region&gt;/&lt;City&gt; /etc/localtime
+</span></span><span class="line"><span class="cl">hwclock --systohc
+</span></span></code></pre></div></li>
+<li>Verify:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hwclock
+</span></span></code></pre></div></li>
+</ol>
+<ul>
+<li><code>hwclock --systohc</code> synchronises the hardware clock with the system time.</li>
+</ul>
+<hr>
+<h2 id="localisation">Localisation</h2>
+<ol>
+<li>Edit locale configuration:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vim /etc/locale.gen
+</span></span></code></pre></div><ul>
+<li>Uncomment:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">en_US.UTF-8 UTF-8
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>Generate the locale:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">locale-gen
+</span></span></code></pre></div></li>
+</ol>
+<hr>
+<h2 id="setting-the-hostname">Setting the Hostname</h2>
+<p>Create a hostname for your machine:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vim /etc/hostname
+</span></span><span class="line"><span class="cl"><span class="c1"># Enter your desired machine name</span>
+</span></span></code></pre></div><ul>
+<li>The hostname identifies your computer on a network.</li>
+</ul>
+<hr>
+<h2 id="set-root-password">Set Root Password</h2>
+<p>Set the root password:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">passwd
+</span></span></code></pre></div><ul>
+<li>This password is required for the root user to log in.</li>
+</ul>
+<hr>
+<h2 id="adding-a-user">Adding a User</h2>
+<ol>
+<li>Add a new user and set a password:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">useradd -m -G wheel -s /bin/bash &lt;username&gt;
+</span></span><span class="line"><span class="cl">passwd &lt;username&gt;
+</span></span></code></pre></div></li>
+<li>Enable sudo for the user:
+<ul>
+<li>Edit <code>visudo</code>:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">EDITOR</span><span class="o">=</span>vim visudo
+</span></span></code></pre></div></li>
+<li>Uncomment the line for the &ldquo;wheel&rdquo; group:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">%wheel ALL=(ALL) ALL
+</span></span></code></pre></div></li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="installing-the-bootloader">Installing the Bootloader</h2>
+<p>Install and configure GRUB:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">grub-install --target<span class="o">=</span>x86_64-efi --efi-directory<span class="o">=</span>/boot --bootloader-id<span class="o">=</span>GRUB
+</span></span><span class="line"><span class="cl">grub-mkconfig -o /boot/grub/grub.cfg
+</span></span></code></pre></div><ul>
+<li><code>grub-install</code> sets up the bootloader in EFI mode.</li>
+<li><code>grub-mkconfig</code> generates the GRUB configuration file.</li>
+</ul>
+<hr>
+<h2 id="reboot">Reboot</h2>
+<ol>
+<li>Exit the chroot environment:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">exit</span>
+</span></span></code></pre></div></li>
+<li>Optionally, unmount all partitions:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">umount -R /mnt
+</span></span></code></pre></div></li>
+<li>Reboot the system:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">reboot
+</span></span></code></pre></div></li>
+</ol>
+<p>Remove the installation medium and log in as the root user.</p>
+<hr>
+<h2 id="post-installation">Post-Installation</h2>
+<p>Congratulations! Your Arch Linux system is now installed. Proceed to install additional software and configure the system as needed.</p>
+<h2 id="arch-linux-post-installation-guide">Arch Linux Post-Installation Guide</h2>
+<p>This section covers essential tasks after installing Arch Linux, including resolving common errors, configuring Wi-Fi, and setting up tools for daily usage.</p>
+<hr>
+<h3 id="resolving-common-errors">Resolving Common Errors</h3>
+<h4 id="invalid-or-corrupted-package-pgp-signature-when-updating-or-installing-packages-arm64"><strong>Invalid or Corrupted Package (PGP Signature) when Updating or Installing Packages (ARM64)</strong></h4>
+<p><strong>Example Error:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ pacman -S vim
+</span></span><span class="line"><span class="cl">error: vim-runtime: signature from <span class="s2">&#34;Arch Linux ARM Build System &lt;builder@archlinuxarm.org&gt;&#34;</span> is unknown trust
+</span></span><span class="line"><span class="cl">:: File /var/cache/pacman/pkg/vim-runtime-8.1.0022-1-aarch64.pkg.tar.xz is corrupted <span class="o">(</span>invalid or corrupted package <span class="o">(</span>PGP signature<span class="o">))</span>.
+</span></span><span class="line"><span class="cl">Do you want to delete it? <span class="o">[</span>Y/n<span class="o">]</span>
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">error: failed to commit transaction <span class="o">(</span>invalid or corrupted package <span class="o">(</span>PGP signature<span class="o">))</span>
+</span></span><span class="line"><span class="cl">Errors occurred, no packages were upgraded.
+</span></span></code></pre></div><p><strong>Solution (x86_64 Systems):</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pacman-key --init <span class="o">&amp;&amp;</span> pacman-key --populate archlinux
+</span></span></code></pre></div><p><strong>Solution (ARM64 Systems, e.g., MacBook Virtual Machine):</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pacman -S archlinuxarm-keyring
+</span></span><span class="line"><span class="cl">pacman-key --init <span class="o">&amp;&amp;</span> pacman-key --populate archlinuxarm
+</span></span></code></pre></div><p><strong>If <code>archlinuxarm.gpg</code> Keyring File Does Not Exist:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ pacman-key --init <span class="o">&amp;&amp;</span> pacman-key --populate <span class="nv">archlinuxarm</span>
+</span></span><span class="line"><span class="cl"><span class="o">==</span>&gt; ERROR: The keyring file /usr/share/pacman/keyrings/archlinuxarm.gpg does not exist.
+</span></span></code></pre></div><p><strong>Fix:</strong></p>
+<ol>
+<li>Temporarily disable signature checking in <code>/etc/pacman.conf</code> by setting:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">SigLevel = Never
+</span></span></code></pre></div></li>
+<li>Reinitialize the keyring:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pacman-key --init
+</span></span><span class="line"><span class="cl">pacman -S archlinuxarm-keyring
+</span></span><span class="line"><span class="cl">pacman-key --populate archlinuxarm
+</span></span></code></pre></div></li>
+<li>Revert the <code>SigLevel</code> setting back to:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">SigLevel = Required DatabaseOptional
+</span></span></code></pre></div></li>
+<li>Perform a system upgrade:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pacman -Syu
+</span></span></code></pre></div></li>
+</ol>
+<hr>
+<h3 id="connecting-to-wi-fi">Connecting to Wi-Fi</h3>
+<h4 id="1-using"><strong>1. Using <code>nmtui</code> (Recommended)</strong></h4>
+<p><code>nmtui</code> is a simple text-based GUI tool for managing networks:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nmtui
+</span></span></code></pre></div><p>Follow the on-screen instructions to connect to Wi-Fi.</p>
+<h4 id="2-using"><strong>2. Using <code>NetworkManager</code> (Manual Method)</strong></h4>
+<ol>
+<li>Install and enable NetworkManager:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S networkmanager
+</span></span><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> NetworkManager
+</span></span><span class="line"><span class="cl">sudo systemctl start NetworkManager
+</span></span></code></pre></div></li>
+<li>List available networks:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nmcli device wifi list
+</span></span></code></pre></div></li>
+<li>Connect to a Wi-Fi network:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nmcli device wifi connect SSID password PASSWORD
+</span></span></code></pre></div></li>
+<li>Connect to hidden networks:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nmcli device wifi connect SSID password PASSWORD hidden yes
+</span></span></code></pre></div></li>
+</ol>
+<hr>
+<h3 id="common-tools-for-daily-usage">Common Tools for Daily Usage</h3>
+<h4 id="1-fix-touchpad-issues-clickscroll-not-working"><strong>1. Fix Touchpad Issues (Click/Scroll Not Working)</strong></h4>
+<p>Use <code>xinput</code> to identify and configure touchpad properties:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">xinput list
+</span></span><span class="line"><span class="cl">xinput list-props DEVICE_NAME
+</span></span><span class="line"><span class="cl">xinput set-prop DEVICE_NAME PROPERTY VALUE
+</span></span></code></pre></div><p>For persistent settings, add the commands to <code>~/.xprofile</code> or <code>~/.xinitrc</code>.</p>
+<h4 id="2-adjust-screen-brightness-with"><strong>2. Adjust Screen Brightness with <code>brightnessctl</code></strong></h4>
+<p>Increase or decrease brightness:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">brightnessctl <span class="nb">set</span> +10%  <span class="c1"># Increase by 10%</span>
+</span></span><span class="line"><span class="cl">brightnessctl <span class="nb">set</span> 10%-  <span class="c1"># Decrease by 10%</span>
+</span></span></code></pre></div><p>For keybindings, use:</p>
+<ul>
+<li><code>XF86MonBrightnessUp</code> (e.g., Fn+Brightness Up)</li>
+<li><code>XF86MonBrightnessDown</code>.</li>
+</ul>
+<h4 id="3-adjust-audio-volume-with"><strong>3. Adjust Audio Volume with <code>pactl</code> (PulseAudio)</strong></h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pactl set-sink-volume @DEFAULT_SINK@ +10%  <span class="c1"># Increase by 10%</span>
+</span></span><span class="line"><span class="cl">pactl set-sink-volume @DEFAULT_SINK@ -10%  <span class="c1"># Decrease by 10%</span>
+</span></span></code></pre></div><h4 id="4-connect-bluetooth-devices-with"><strong>4. Connect Bluetooth Devices with <code>bluetoothctl</code></strong></h4>
+<ol>
+<li>Install required packages:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S bluez bluez-utils
+</span></span><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> --now bluetooth.service
+</span></span></code></pre></div></li>
+<li>Use <code>bluetoothctl</code> CLI:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">bluetoothctl
+</span></span><span class="line"><span class="cl"><span class="o">[</span>bluetooth<span class="o">]</span> power on
+</span></span><span class="line"><span class="cl"><span class="o">[</span>bluetooth<span class="o">]</span> agent on
+</span></span><span class="line"><span class="cl"><span class="o">[</span>bluetooth<span class="o">]</span> default-agent
+</span></span><span class="line"><span class="cl"><span class="o">[</span>bluetooth<span class="o">]</span> scan on
+</span></span><span class="line"><span class="cl"><span class="o">[</span>bluetooth<span class="o">]</span> pair MAC_ADDRESS
+</span></span><span class="line"><span class="cl"><span class="o">[</span>bluetooth<span class="o">]</span> connect MAC_ADDRESS
+</span></span></code></pre></div></li>
+<li>Enable autostart for Bluetooth:
+Edit <code>/etc/bluetooth/main.conf</code>:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">AutoEnable=true
+</span></span></code></pre></div></li>
+</ol>
+<hr>
+<h3 id="resolving-protonvpn-kill-switch-issues">Resolving ProtonVPN Kill Switch Issues</h3>
+<p><strong>Problem:</strong> If ProtonVPN&rsquo;s kill switch is active, internet connection will be blocked when the VPN disconnects unexpectedly.</p>
+<p><strong>Fix:</strong></p>
+<ol>
+<li>Check for the kill switch interface:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ip link
+</span></span></code></pre></div>If you see <code>ipv6leakintrf0</code>, delete it:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo ip link delete ipv6leakintrf0
+</span></span></code></pre></div></li>
+<li>Alternatively, disable autoconnect:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nmcli con down pvpn-ipv6leak-protection
+</span></span><span class="line"><span class="cl">nmcli con mod pvpn-ipv6leak-protection connection.autoconnect no
+</span></span></code></pre></div></li>
+</ol>
+<hr>
+<h3 id="configure-touchpad-gestures">Configure Touchpad Gestures</h3>
+<p>Install <code>libinput-gestures</code> for touchpad gesture support:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo gpasswd -a <span class="nv">$USER</span> input
+</span></span><span class="line"><span class="cl">sudo pacman -S libinput-gestures wmctrl xdotool
+</span></span><span class="line"><span class="cl">libinput-gestures-setup stop desktop autostart start
+</span></span></code></pre></div><hr>
+<h3 id="configure-nvidia-gpu-driver">Configure Nvidia GPU Driver</h3>
+<p>Install the Nvidia driver:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S nvidia
+</span></span></code></pre></div><p>Edit <code>/etc/mkinitcpio.conf</code> and add:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">MODULES</span><span class="o">=(</span>nvidia nvidia_modeset nvidia_uvm nvidia_drm<span class="o">)</span>
+</span></span></code></pre></div><hr>
+<h3 id="correcting-system-time">Correcting System Time</h3>
+<p>Set time synchronization with NTP:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">timedatectl set-ntp <span class="nb">true</span>
+</span></span></code></pre></div><hr>
+<h3 id="screen-colours-not-rendering-correctly">Screen Colours Not Rendering Correctly</h3>
+<p>If using Optimus Manager, configure AMD GPU:</p>
+<ol>
+<li>Install AMD driver:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S xf86-video-amdgpu
+</span></span></code></pre></div></li>
+<li>Update <code>/etc/optimus-manager/optimus-manager.conf</code>:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">driver=amdgpu
+</span></span></code></pre></div></li>
+<li>Reboot.</li>
+</ol>
+<hr>
+<h3 id="final-notes">Final Notes</h3>
+<p>For detailed information, consult the Arch Wiki links provided in each section. Regular system updates (<code>pacman -Syu</code>) ensure your system remains stable and secure.</p>
+<hr>
+<p>This guide aims to streamline the most common post-installation tasks for Arch Linux users, offering solutions to common errors and tools for improved functionality.</p>
+
+      </article>
+    </div>
+  </div>
+
+  
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
+      <div class="card bg-light border-0 p-3">
+        <div class="d-flex align-items-start">
+          
+          
+          <img src="/img/author-post-img.jpg" class="img-responsive me-3 flex-shrink-0" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;"
+                alt="Image of Tien Nguyen">
+          
+          
+          <div class="text-start flex-grow-1">
+            
+            <h6 class="mb-1 fw-medium">Tien Nguyen</h6>
+            
+            
+            <p class="mb-0 text-muted small text-start">&lt;whatever it takes for your dreams&gt;</p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  
+  <div class="row">
+        <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-2">
+      
+    </div>
+
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
+      
+      <section id="social-share">
+        <div class="list-inline footer-links">
+          
+
+<div class="card justify-content-center align-items-center mt-4">
+  <div class="card-body">
+    <div class="col-md-12 d-flex align-items-center">
+      <i class="bi bi-chat-text me-2"></i>
+      <p class="fw-medium ">What are your thoughts on this post?</p>
+    </div>
+
+    
+    <div class="col-md-12">
+      <p class="mb-0 small text-muted">If you liked this post, feel free to use the share button below. It always makes me smile when I see someone enjoyed it.</p>
+
+      <div class="share-box d-flex justify-content-center align-items-center" aria-hidden="true">
+        <ul class="share d-flex list-unstyled mb-0">
+          
+          <li>
+            <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2flightbi-beta-demo.netlify.app%2fpost%2f2025%2farch-linux-setup%2f" target="_blank" title="Share on Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-facebook" viewBox="0 0 16 16">
+                <path
+                  d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+              </svg>
+            </a>
+          </li>
+          
+          <li>
+            <a href="//twitter.com/share?url=https%3a%2f%2flightbi-beta-demo.netlify.app%2fpost%2f2025%2farch-linux-setup%2f&amp;text=Arch%20linux%20Setup%20and%20common%20Linux%20Errors&amp;via=map%5b%5d"
+              target="_blank" title="Share on Twitter">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-twitter-x"
+                viewBox="0 0 16 16">
+                <path
+                  d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z" />
+              </svg>
+            </a>
+          </li>
+
+
+          
+          <li>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2flightbi-beta-demo.netlify.app%2fpost%2f2025%2farch-linux-setup%2f&amp;title=Arch%20linux%20Setup%20and%20common%20Linux%20Errors"
+              target="_blank" title="Share on LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-linkedin" viewBox="0 0 16 16">
+                <path
+                  d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+              </svg>
+            </a>
+          </li>
+
+          <li>
+            <a target="_blank" rel="noopener noreferrer" aria-label="share Arch linux Setup and common Linux Errors on reddit"
+              href="https://reddit.com/submit?url=https%3a%2f%2flightbi-beta-demo.netlify.app%2fpost%2f2025%2farch-linux-setup%2f&title=Arch%20linux%20Setup%20and%20common%20Linux%20Errors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-reddit" viewBox="0 0 16 16">
+                <path
+                  d="M6.167 8a.831.831 0 0 0-.83.83c0 .459.372.84.83.831a.831.831 0 0 0 0-1.661zm1.843 3.647c.315 0 1.403-.038 1.976-.611a.232.232 0 0 0 0-.306.213.213 0 0 0-.306 0c-.353.363-1.126.487-1.67.487-.545 0-1.308-.124-1.671-.487a.213.213 0 0 0-.306 0 .213.213 0 0 0 0 .306c.564.563 1.652.61 1.977.61zm.992-2.807c0 .458.373.83.831.83.458 0 .83-.381.83-.83a.831.831 0 0 0-1.66 0z" />
+                <path
+                  d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.828-1.165c-.315 0-.602.124-.812.325-.801-.573-1.9-.945-3.121-.993l.534-2.501 1.738.372a.83.83 0 1 0 .83-.869.83.83 0 0 0-.744.468l-1.938-.41a.203.203 0 0 0-.153.028.186.186 0 0 0-.086.134l-.592 2.788c-1.24.038-2.358.41-3.17.992-.21-.2-.496-.324-.81-.324a1.163 1.163 0 0 0-.478 2.224c-.02.115-.029.23-.029.353 0 1.795 2.091 3.256 4.669 3.256 2.577 0 4.668-1.451 4.668-3.256 0-.114-.01-.238-.029-.353.401-.181.688-.592.688-1.069 0-.65-.525-1.165-1.165-1.165z" />
+              </svg>
+            </a>
+          </li>
+
+
+
+          
+          <li>
+            <a href="whatsapp://send?text=https%3a%2f%2flightbi-beta-demo.netlify.app%2fpost%2f2025%2farch-linux-setup%2f&amp;description=Arch%20linux%20Setup%20and%20common%20Linux%20Errors" target="_blank" rel="noopener"
+              title="Share on WhatsApp">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                <path
+                  d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+              </svg>
+            </a>
+          </li>
+
+          
+          <li>
+          <a class="resp-sharing-button__link"
+            href="https://telegram.me/share/url?text=Arch%20linux%20Setup%20and%20common%20Linux%20Errors&amp;url=https%3a%2f%2flightbi-beta-demo.netlify.app%2fpost%2f2025%2farch-linux-setup%2f" target="_blank"
+            rel="noopener" aria-label="Share on Telegram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-telegram" viewBox="0 0 16 16">
+              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09"/>
+            </svg>
+          </a>
+          </li>
+
+
+          
+          <li>
+              <a href="mailto:?subject=Arch%20linux%20Setup%20and%20common%20Linux%20Errors&amp;body=https%3a%2f%2flightbi-beta-demo.netlify.app%2fpost%2f2025%2farch-linux-setup%2f&amp;description=Arch%20linux%20Setup%20and%20common%20Linux%20Errors" target="_self" rel="noopener" aria-label="Share by E-Mail">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-envelope-heart" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l3.235 1.94a2.8 2.8 0 0 0-.233 1.027L1 5.384v5.721l3.453-2.124q.219.416.55.835l-3.97 2.443A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741l-3.968-2.442q.33-.421.55-.836L15 11.105V5.383l-3.002 1.801a2.8 2.8 0 0 0-.233-1.026L15 4.217V4a1 1 0 0 0-1-1zm6 2.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"/>
+                </svg>
+              </a>              
+            </li>
+
+        </ul>
+      </div>
+    </div>
+
+    
+        </div>
+      </section>
+      
+    </div>
+
+    <div class="col-lg-8 offset-lg-2 col-md-12 offset-md-1 pt-4">
+      
+      <ul class="list-group list-group-horizontal" style="flex-direction: row">
+        
+        <li class="list-group-item b-0 p-0">
+
+          <a type="button" class="btn btn-dark" role="button" href="https://lightbi-beta-demo.netlify.app/post/2020/sample-post/"
+            data-toggle="tooltip" data-placement="top" title="Sample Post">&larr;
+            Previous Post</a>
+        </li>
+        
+
+
+        
+        <li class="list-group-item ms-auto b-0 p-0">
+          <a type="button" class="btn btn-dark" role="button" href="https://lightbi-beta-demo.netlify.app/post/2025/this-hugo-blog/"
+            data-toggle="tooltip" data-placement="top" title="How did I build this blog?">Next Post
+            &rarr;</a>
+        </li>
+        
+      </ul>
+      
+    </div>
+
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
+    </div>
+  </div>
+  
+</div>
+
+<div class="">
+  
+  
+  
+  
+  
+    
+  
+
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 mt-3">
+        <h3>Read more</h3>
+        <hr />
+      </div>
+
+      
+      
+<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6  mb-4">
+    <a href="https://lightbi-beta-demo.netlify.app/post/2025/my-own-email-domain/">
+        <div class="card h-100 single-post-card shadow-effect bg-faded-light border rounded-4">
+            <div class="card-body">
+                <h3 class="fw-medium post-title">My Own Email Domain</h3>
+                
+
+                <p class="post-meta">
+                    <span class="post-meta text-muted">
+  
+  
+
+  21 December 2024
+
+  
+
+  
+  &nbsp;|&nbsp; <i class="bi bi-clock"></i>&nbsp;4&nbsp;minutes
+  
+
+  
+  &nbsp;|&nbsp;<i class="bi bi-book"></i>&nbsp;726&nbsp;words
+  
+
+  
+</span>
+
+                </p>
+                
+
+                <div class="post-entry text-secondary">
+                    
+                    No more dependance on Gmail for your Email services, a way to host that yourself...
+                    
+                </div>
+
+                <div class="read-more-section">
+                    
+                    <h6 class="text-muted ">Read more <i class="bi bi-arrow-right"></i></h6>
+                </div>
+            </div>
+
+            
+           
+    <div class="image-wrapper">
+        <img src="/img/posts/2025/email_hu_5952cb4788b94120.jpg" alt="/img/posts/2025/email.jpg"
+             class="img-fluid lazyload fixed-img rounded-bottom-4">
+    </div>
+    
+
+    
+        </div>
+    </a>
+</div>
+
+
+      
+      
+<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6  mb-4">
+    <a href="https://lightbi-beta-demo.netlify.app/post/2025/ssh-key-config/">
+        <div class="card h-100 single-post-card shadow-effect bg-faded-light border rounded-4">
+            <div class="card-body">
+                <h3 class="fw-medium post-title">SSH Connection (Without Password) to a Remote Server</h3>
+                
+
+                <p class="post-meta">
+                    <span class="post-meta text-muted">
+  
+  
+
+  19 December 2024
+
+  
+
+  
+  &nbsp;|&nbsp; <i class="bi bi-clock"></i>&nbsp;3&nbsp;minutes
+  
+
+  
+  &nbsp;|&nbsp;<i class="bi bi-book"></i>&nbsp;557&nbsp;words
+  
+
+  
+</span>
+
+                </p>
+                
+
+                <div class="post-entry text-secondary">
+                    
+                    Setting Up SSH Connection Without Password to a Remote Server&#39;...
+                    
+                </div>
+
+                <div class="read-more-section">
+                    
+                    <h6 class="text-muted ">Read more <i class="bi bi-arrow-right"></i></h6>
+                </div>
+            </div>
+
+            
+           
+    <div class="image-wrapper">
+        <img src="/img/posts/2025/ssh_hu_fdaffdc0a5bde531.jpg" alt="/img/posts/2025/ssh.jpg"
+             class="img-fluid lazyload fixed-img rounded-bottom-4">
+    </div>
+    
+
+    
+        </div>
+    </a>
+</div>
+
+
+      
+      
+<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6  mb-4">
+    <a href="https://lightbi-beta-demo.netlify.app/post/2025/this-hugo-blog/">
+        <div class="card h-100 single-post-card shadow-effect bg-faded-light border rounded-4">
+            <div class="card-body">
+                <h3 class="fw-medium post-title">How did I build this blog?</h3>
+                
+
+                <p class="post-meta">
+                    <span class="post-meta text-muted">
+  
+  
+
+  23 November 2024
+
+  
+
+  
+  &nbsp;|&nbsp; <i class="bi bi-clock"></i>&nbsp;4&nbsp;minutes
+  
+
+  
+  &nbsp;|&nbsp;<i class="bi bi-book"></i>&nbsp;754&nbsp;words
+  
+
+  
+</span>
+
+                </p>
+                
+
+                <div class="post-entry text-secondary">
+                    
+                    Building a personal blog like this one is a way to enhance your technical knowledge about the WWW...
+                    
+                </div>
+
+                <div class="read-more-section">
+                    
+                    <h6 class="text-muted ">Read more <i class="bi bi-arrow-right"></i></h6>
+                </div>
+            </div>
+
+            
+           
+    <div class="image-wrapper">
+        <img src="/img/posts/2025/blog_hu_857e9cefe38dde11.jpg" alt="/img/posts/2025/blog.jpg"
+             class="img-fluid lazyload fixed-img rounded-bottom-4">
+    </div>
+    
+
+    
+        </div>
+    </a>
+</div>
+
+
+      
+    </div>
+  </div>
+  
+  
+
+  
+
+</div>
+
+    
+
+
+<footer>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <ul
+          class="list-inline list-group list-group-horizontal text-center footer-links d-flex justify-content-center flex-row">
+
+          
+          <li>
+            <a href="mailto:tien@tienng.xyz" title="Email me" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-envelope"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://discord.com/users/525637838083981333" title="Discord" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-discord"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/tonyn678" title="GitHub" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-github"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/in/tienngg" title="LinkedIn" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-linkedin"></i>
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="mx-2">
+                <i class="bi bi-rss"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <p class="credits copyright text-muted">
+          
+          
+          <a href="https://www.tienng.xyz/">Tien Nguyen</a>
+          
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+          2025
+          
+
+          
+          &nbsp;&bull;&nbsp;
+          <a href="https://lightbi-beta-demo.netlify.app/">Tien&#39;s Blog</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          Powered by <a href="https://gohugo.io">Hugo</a> & <a href="https://github.com/binokochumolvarghese/lightbi-hugo">Lightbi.</a>&nbsp; Made with ❤ by <a href="https://binovarghese.com">Bino</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://lightbi-beta-demo.netlify.app/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://lightbi-beta-demo.netlify.app/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> 
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll("pre.chroma").forEach(function (element) {
+    element.style.padding = "0";
+  });
+});
+ </script>
+
+    
+  </body>
+</html>
+

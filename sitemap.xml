@@ -2,37 +2,102 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://tienng.xyz/</loc>
+    <loc>https://lightbi-beta-demo.netlify.app/tags/hardware/</loc>
     <lastmod>2025-11-30T14:07:02+11:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url><url>
-    <loc>https://tienng.xyz/projects/</loc>
+    <loc>https://lightbi-beta-demo.netlify.app/project/</loc>
     <lastmod>2025-11-30T14:07:02+11:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url><url>
-    <loc>https://tienng.xyz/projects/ina219-lcd-display/</loc>
+    <loc>https://lightbi-beta-demo.netlify.app/tags/</loc>
     <lastmod>2025-11-30T14:07:02+11:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url><url>
-    <loc>https://tienng.xyz/posts/my-own-email-domain/</loc>
+    <loc>https://lightbi-beta-demo.netlify.app/tags/tech/</loc>
+    <lastmod>2025-11-30T14:07:02+11:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://lightbi-beta-demo.netlify.app/</loc>
+    <lastmod>2025-11-30T14:07:02+11:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://lightbi-beta-demo.netlify.app/project/2025/ina219-lcd-display/</loc>
+    <lastmod>2025-11-30T14:07:02+11:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://lightbi-beta-demo.netlify.app/post/2025/my-own-email-domain/</loc>
     <lastmod>2024-12-21T14:27:51+11:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url><url>
-    <loc>https://tienng.xyz/posts/</loc>
+    <loc>https://lightbi-beta-demo.netlify.app/post/</loc>
     <lastmod>2024-12-21T14:27:51+11:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url><url>
-    <loc>https://tienng.xyz/posts/ssh-key-config/</loc>
+    <loc>https://lightbi-beta-demo.netlify.app/post/2025/ssh-key-config/</loc>
     <lastmod>2024-12-19T16:01:05+11:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url><url>
-    <loc>https://tienng.xyz/projects/raspberry-pi-server/</loc>
+    <loc>https://lightbi-beta-demo.netlify.app/tags/automation/</loc>
     <lastmod>2024-12-17T15:01:15+11:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url><url>
-    <loc>https://tienng.xyz/posts/this-hugo-blog/</loc>
+    <loc>https://lightbi-beta-demo.netlify.app/project/2025/raspberry-pi-server/</loc>
+    <lastmod>2024-12-17T15:01:15+11:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://lightbi-beta-demo.netlify.app/post/2025/this-hugo-blog/</loc>
     <lastmod>2024-11-23T23:00:55+11:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url><url>
-    <loc>https://tienng.xyz/posts/arch-linux-setup/</loc>
+    <loc>https://lightbi-beta-demo.netlify.app/post/2025/arch-linux-setup/</loc>
     <lastmod>2024-01-17T15:02:12+11:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url><url>
-    <loc>https://tienng.xyz/about/</loc>
+    <loc>https://lightbi-beta-demo.netlify.app/tags/blog/</loc>
+    <lastmod>2023-12-25T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url><url>
-    <loc>https://tienng.xyz/categories/</loc>
+    <loc>https://lightbi-beta-demo.netlify.app/post/2020/sample-post/</loc>
+    <lastmod>2023-12-25T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url><url>
-    <loc>https://tienng.xyz/tags/</loc>
+    <loc>https://lightbi-beta-demo.netlify.app/tags/shortcodes/</loc>
+    <lastmod>2023-11-30T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://lightbi-beta-demo.netlify.app/post/2020/understanding-hugo-shortcodes/</loc>
+    <lastmod>2023-11-30T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://lightbi-beta-demo.netlify.app/post/2020/custom-shortcodes/</loc>
+    <lastmod>2023-11-24T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://lightbi-beta-demo.netlify.app/about/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://lightbi-beta-demo.netlify.app/categories/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>

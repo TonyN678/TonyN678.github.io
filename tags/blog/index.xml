@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on Tien&#39;s Blog</title>
+    <link>https://lightbi-beta-demo.netlify.app/tags/blog/</link>
+    <description>Recent content in Blog on Tien&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>tien@tienng.xyz (Tien Nguyen)</managingEditor>
+    <webMaster>tien@tienng.xyz (Tien Nguyen)</webMaster>
+    <lastBuildDate>Mon, 25 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://lightbi-beta-demo.netlify.app/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sample Post</title>
+      <link>https://lightbi-beta-demo.netlify.app/post/2020/sample-post/</link>
+      <pubDate>Mon, 25 Dec 2023 00:00:00 +0000</pubDate><author>tien@tienng.xyz (Tien Nguyen)</author>
+      <guid>https://lightbi-beta-demo.netlify.app/post/2020/sample-post/</guid>
+      <description>&lt;p&gt;This is a sample post where you can understand how this is working.&lt;/p&gt;&#xA;&lt;p&gt;Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

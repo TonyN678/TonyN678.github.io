@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>RaspberryPi Home Server - Tien&#39;s Blog</title>
+<meta name="description" content="A complete home server with integrated music, media and file storage services.">
+
+<meta name="author" content="Tien Nguyen"><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Tien\u0027s Blog",
+    
+    "url": "https:\/\/lightbi-beta-demo.netlify.app\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/lightbi-beta-demo.netlify.app\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/lightbi-beta-demo.netlify.app\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/lightbi-beta-demo.netlify.app\/project\/2025\/raspberry-pi-server\/",
+          "name": "Raspberry pi home server"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "map[authorinfo:\u003cwhatever it takes for your dreams\u003e authorpostimage:\/img\/author-post-img.jpg discord:525637838083981333 email:tien@tienng.xyz github:tonyn678 linkedin:tienngg name:Tien Nguyen website:https:\/\/www.tienng.xyz\/]"
+  },
+  "headline": "RaspberryPi Home Server",
+  "description" : "A complete home server with integrated music, media and file storage services.",
+  "inLanguage" : "en",
+  "wordCount":  2208 ,
+  "datePublished" : "2024-12-17T15:01:15",
+  "dateModified" : "2024-12-17T15:01:15",
+  "image" : "https:\/\/lightbi-beta-demo.netlify.app\/",
+  "keywords" : [ "tech, automation" ],
+  "mainEntityOfPage" : "https:\/\/lightbi-beta-demo.netlify.app\/project\/2025\/raspberry-pi-server\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/lightbi-beta-demo.netlify.app\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/lightbi-beta-demo.netlify.app\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="RaspberryPi Home Server" />
+<meta property="og:description" content="A complete home server with integrated music, media and file storage services.">
+<meta property="og:image" content="https://lightbi-beta-demo.netlify.app/img/project/2025/rasp.jpg" />
+<meta property="og:url" content="https://lightbi-beta-demo.netlify.app/project/2025/raspberry-pi-server/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Tien&#39;s Blog" />
+<link rel="apple-touch-icon" sizes="180x180" href=" https://lightbi-beta-demo.netlify.app/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lightbi-beta-demo.netlify.app/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lightbi-beta-demo.netlify.app/favicon/favicon-16x16.png">
+
+
+<meta name="generator" content="Hugo 0.152.2">
+<link rel="alternate" href="https://lightbi-beta-demo.netlify.app/index.xml" type="application/rss+xml" title="Tien&#39;s Blog">
+<script src="https://lightbi-beta-demo.netlify.app/js/dark-mode.js"></script><script src="https://lightbi-beta-demo.netlify.app/vendor/lunr/lunr.min.js"></script><script src="https://lightbi-beta-demo.netlify.app/js/lunr-search.js" data-index="/search.json"></script><link rel="stylesheet" href="/style.min.css">
+
+
+
+
+
+
+
+ 
+
+ <link href="https://lightbi-beta-demo.netlify.app/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+
+<script src="https://lightbi-beta-demo.netlify.app/vendor/glightbox/js/glightbox.min.js"></script>
+ 
+  </head>
+  <body>
+    
+<div class="container fixed-top mw-100">
+  <div class="row justify-content-center">
+    <div class="col-sm-12 col-md-12 col-lg-10 col-xl-10">
+
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top p-0">
+        <div class="container">
+
+          <a class="navbar-brand fw-bold" href="https://lightbi-beta-demo.netlify.app/">Tien&#39;s Blog</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav mb-2 mb-lg-0 align-items-baseline">
+              
+              
+              
+
+              <li class="nav-item">
+                
+                
+                
+                
+
+                <a class="nav-link " title="Home"
+                  href="/"> Home</a>
+              </li>
+
+              
+              
+              
+              
+              
+
+              <li class="nav-item">
+                
+                
+                
+                
+
+                <a class="nav-link " title="Blog"
+                  href="/post/"> Blog</a>
+              </li>
+
+              
+              
+              
+              
+              
+
+              <li class="nav-item">
+                
+                
+                
+                
+
+                <a class="nav-link  active " title="Project"
+                  href="/project/"> Project</a>
+              </li>
+
+              
+              
+              
+              
+              
+
+              <li class="nav-item">
+                
+                
+                
+                
+
+                <a class="nav-link " title="About"
+                  href="/about/"> About</a>
+              </li>
+
+              
+              
+              
+
+
+                
+            
+
+            
+              <li class="nav-item nav-link">
+                <a id="dark-mode-toggle" class="bi bi-moon-stars" role="button"></a>
+              </li>
+
+              
+              
+              <li class="nav-item search-item">
+                <form id="search" class="search" role="search">
+                  <label for="search-input" class="bi bi-search search-icon"></label>
+                  <input type="search" id="search-input" class="search-input">
+                </form>
+              </li>
+              
+            </ul>
+
+            
+            <template id="search-heading" hidden data-results-none=""
+              data-results-one=""
+              data-results-many="">
+              <div class="row">
+                <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 ">
+                  <h1 id="search-title" class="search-title"></h1>
+                </div>
+              </div>
+            </template>
+
+            <template id="search-result" hidden>
+              <div class="row">
+                <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 ">
+                  <article class="content post">
+                    <h2><a class="summary-title-link"></a></h2>
+                    <div class="post-entry"></div>
+                    <div class="read-more-section">
+                      <h6 class="text-muted link-underline">
+                        <a class="read-more-link">
+                          Read more
+                          <i class="bi bi-arrow-right"></i>
+                        </a>
+                      </h6>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </template>
+            
+          </div>
+        </div>
+      </nav>
+
+    </div>
+  </div>
+</div>
+    
+
+
+
+
+
+
+
+
+
+<header class="header-section ">
+
+  <div class="intro-header no-img mt-10 pb-2">
+    <div class="container">
+      <div class="row justify-content-center">
+
+        
+          
+        <div class="col-sm-12  col-md-12 col-lg-12 col-xl-12 tags-sec  text-center">
+          
+          
+
+
+            
+            
+
+            
+            <div class="project-heading">
+              <h1 class="fw-medium lh-1 align-items-center">
+                RaspberryPi Home Server
+                
+              </h1>
+            </div>
+
+
+            
+
+            
+
+            
+
+            
+            
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+
+    
+
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
+      
+      <span class="post-meta">
+  <div class="post-meta text-muted" style="text-align: center;">
+    
+    
+
+    <div class="d-flex align-items-center justify-content-center flex-wrap mb-2" style="width: 100%;">
+      
+      
+      <div class="d-flex align-items-center" style="gap: 0;">
+        
+        
+        <img src="/img/author-post-img.jpg" class="img-responsive img-round" style="width: 32px; height: 32px; border-radius: 50%; display: block; object-fit: cover; margin: 10px; padding: 0; vertical-align: middle;"
+                      alt="Image of author">
+        
+        
+        <span class="fw-semibold" style="font-size: 1.1rem; margin-left: 0; white-space: nowrap;">Tien Nguyen</span>
+      </div>
+      
+      
+      
+      <span class="text-muted" style="font-size: 1.1rem; margin-left: 0.5rem;">|</span>
+      <span class="text-muted" style="font-size: 1.1rem; margin-left: 0.5rem;">17 December 2024</span>
+
+      
+      <span class="text-muted" style="font-size: 1.1rem; margin-left: 0.5rem;">|</span>
+      <span class="text-muted" style="font-size: 1.1rem; margin-left: 0.5rem;"><i class="fas fa-clock"></i>&nbsp;11&nbsp;minutes</span>
+      
+
+      
+      <span class="text-muted" style="font-size: 1.1rem; margin-left: 0.5rem;">|</span>
+      <span class="text-muted" style="font-size: 1.1rem; margin-left: 0.5rem;"><i class="fas fa-book"></i>&nbsp;2208&nbsp;words</span>
+      
+    </div>
+
+  
+</div>
+</span>
+
+
+      
+    </div>
+
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
+      <article role="main" class="blog-post">
+        <h1 id="setting-up-a-raspberry-pi-home-server-with-docker">Setting Up a Raspberry Pi Home Server with Docker</h1>
+<p>A Raspberry Pi can be transformed into a powerful and lightweight home server with the right configuration. In this guide, I will walk you through my setup process, starting from installing the Raspberry Pi OS Lite to configuring Docker containers and setting up essential services for remote file access, media streaming, and more.</p>
+<hr>
+<h2 id="step-1-install-64-bit-raspberry-pi-os-lite">Step 1: Install 64-bit Raspberry Pi OS Lite</h2>
+<p>To maximise performance and compatibility, I opted for the 64-bit version of Raspberry Pi OS Lite with no GUI. Here are the steps I followed:</p>
+<ol>
+<li><strong>Download the OS</strong>: Visit the official Raspberry Pi website and download the latest <a href="https://www.raspberrypi.com/software/">64-bit Raspberry Pi OS Lite</a>.</li>
+<li><strong>Flash the SD Card</strong>: Flash the OS onto the sd card using tool like Raspberry Pi Imager.</li>
+<li><strong>Enable SSH</strong>: Set up password for user and enable SSH before starting the flashing proccess.</li>
+<li><strong>Boot the Pi</strong>: Insert the SD card into the Raspberry Pi and power it on. Connect via SSH.</li>
+</ol>
+<hr>
+<h2 id="step-2-install-docker">Step 2: Install Docker</h2>
+<p>Docker is the backbone of this setup, allowing me to run and manage services efficiently in isolated containers, also uses far lesser computer resources than on a VM or BareMetal.</p>
+<ul>
+<li><a href="https://pimylifeup.com/raspberry-pi-docker/">pimylifeup&rsquo;s guide</a></li>
+</ul>
+<ol>
+<li><strong>Update the System</strong>:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt update <span class="o">&amp;&amp;</span> sudo apt upgrade -y
+</span></span></code></pre></div></li>
+<li><strong>Install Docker</strong>:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -sSL https://get.docker.com <span class="p">|</span> sh
+</span></span></code></pre></div></li>
+<li><strong>Add User to Docker Group</strong>:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo usermod -aG docker <span class="nv">$USER</span>
+</span></span></code></pre></div>Log out and back in to apply group changes.</li>
+</ol>
+<hr>
+<h2 id="step-3-install-portainer">Step 3: Install Portainer</h2>
+<p><a href="https://docs.portainer.io/start/install-ce/server/docker/linux">Portainer</a> provides an intuitive web interface for managing Docker containers.</p>
+<ol>
+<li><strong>Pull the Portainer Image</strong>:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker volume create portainer_data
+</span></span><span class="line"><span class="cl">docker run -d -p 8000:8000 -p 9443:9443 --name<span class="o">=</span>portainer --restart<span class="o">=</span>always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest
+</span></span></code></pre></div></li>
+<li><strong>Access the Interface</strong>: Open a browser and navigate to <code>https://&lt;Raspberry_Pi_IP&gt;:9443</code> to set up Portainer.</li>
+</ol>
+<hr>
+<h2 id="step-4-mount-an-external-hard-drive">Step 4: Mount an External Hard Drive</h2>
+<p>This guide explains how to mount an external hard drive to your Raspberry Pi, set ownership and permissions, and make these changes persist across reboots.</p>
+<h3 id="identify-the-drive">Identify the Drive</h3>
+<ol>
+<li>
+<p>Plug in your external hard drive.</p>
+</li>
+<li>
+<p>Identify the drive using <code>lsblk</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lsblk
+</span></span></code></pre></div><p>Look for your drive (e.g., <code>/dev/sda1</code>).</p>
+</li>
+<li>
+<p>Get the UUID of the partition:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo blkid /dev/sda1
+</span></span></code></pre></div><p>Copy the UUID of your drive (e.g., <code>UUID=&quot;1234-5678&quot;</code>).</p>
+</li>
+</ol>
+<h3 id="create-a-mount-point">Create a Mount Point</h3>
+<ol>
+<li>
+<p>Create a directory to mount the drive:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo mkdir /mnt/extdrive
+</span></span></code></pre></div></li>
+<li>
+<p>(Optional) Adjust permissions for the directory:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo chmod <span class="m">755</span> /mnt/data
+</span></span></code></pre></div></li>
+</ol>
+<h3 id="add-the-drive-to-etcfstab">Add the Drive to <code>/etc/fstab</code></h3>
+<ol>
+<li>
+<p>Open <code>/etc/fstab</code> for editing:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo nano /etc/fstab
+</span></span></code></pre></div></li>
+<li>
+<p>Add an entry for the drive:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">UUID=1234-5678 /mnt/data ext4 defaults 0 2
+</span></span></code></pre></div><ul>
+<li>Replace <code>1234-5678</code> with your drive&rsquo;s UUID.</li>
+<li>Adjust the filesystem type (<code>ext4</code>, <code>ntfs</code>, etc.) as necessary.</li>
+</ul>
+</li>
+<li>
+<p>Save and exit the editor.</p>
+</li>
+<li>
+<p>Test the configuration:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo mount -a
+</span></span></code></pre></div><p>If there are no errors, your drive is now mounted.</p>
+</li>
+</ol>
+<h3 id="set-ownership-and-permissions">Set Ownership and Permissions</h3>
+<ol>
+<li>
+<p>Change ownership of the mount point to a specific user (e.g., <code>tien</code>):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo chown -R tien:tien /mnt/data
+</span></span></code></pre></div></li>
+<li>
+<p>(Optional) Adjust permissions if multiple users need access:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo chmod -R <span class="m">775</span> /mnt/data
+</span></span></code></pre></div></li>
+</ol>
+<h3 id="automate-ownership-changes-if-needed">Automate Ownership Changes (if Needed)</h3>
+<p>The <code>chown</code> command does not persist across reboots. To automate this:</p>
+<h4 id="option-a-use-etcrclocal">Option A: Use <code>/etc/rc.local</code></h4>
+<ol>
+<li>
+<p>Open or create the <code>rc.local</code> file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo nano /etc/rc.local
+</span></span></code></pre></div></li>
+<li>
+<p>Add the <code>chown</code> command before <code>exit 0</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chown -R tien:tien /mnt/data
+</span></span></code></pre></div></li>
+<li>
+<p>Save the file and make it executable:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo chmod +x /etc/rc.local
+</span></span></code></pre></div></li>
+</ol>
+<h4 id="option-b-use-a-systemd-service">Option B: Use a <code>systemd</code> Service</h4>
+<ol>
+<li>
+<p>Create a new <code>systemd</code> service:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo nano /etc/systemd/system/fix-permissions.service
+</span></span></code></pre></div></li>
+<li>
+<p>Add the following content:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="k">[Unit]</span>
+</span></span><span class="line"><span class="cl"><span class="na">Description</span><span class="o">=</span><span class="s">Fix ownership of /mnt/data</span>
+</span></span><span class="line"><span class="cl"><span class="na">After</span><span class="o">=</span><span class="s">local-fs.target</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">[Service]</span>
+</span></span><span class="line"><span class="cl"><span class="na">Type</span><span class="o">=</span><span class="s">oneshot</span>
+</span></span><span class="line"><span class="cl"><span class="na">ExecStart</span><span class="o">=</span><span class="s">/bin/chown -R tien:tien /mnt/data</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">[Install]</span>
+</span></span><span class="line"><span class="cl"><span class="na">WantedBy</span><span class="o">=</span><span class="s">multi-user.target</span>
+</span></span></code></pre></div></li>
+<li>
+<p>Save and enable the service:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> fix-permissions.service
+</span></span></code></pre></div></li>
+</ol>
+<h3 id="verify-the-setup">Verify the Setup</h3>
+<ol>
+<li>
+<p>Reboot your Raspberry Pi:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo reboot
+</span></span></code></pre></div></li>
+<li>
+<p>After reboot, check the ownership and permissions of the mount point:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ls -ld /mnt/data
+</span></span></code></pre></div></li>
+</ol>
+<p>You should see the correct ownership (e.g., <code>tien:tien</code>).</p>
+<p>By following these steps, your external hard drive will be properly mounted and accessible, with ownership and permissions configured to persist across reboots.</p>
+<hr>
+<h2 id="step-5-encrypt-the-external-hard-drive-with-luks-with-keyfile">Step 5: Encrypt the External Hard Drive with LUKS with Keyfile</h2>
+<p>These commands are used to create a partition on a disk, encrypt it, and mount it on a specific mount point. All of this automatically without entering a password at boot.</p>
+<h3 id="video-tutorial">Video tutorial</h3>
+<p><a href="https://www.youtube.com/watch?v=UXJrSji-nNo">https://www.youtube.com/watch?v=UXJrSji-nNo</a></p>
+<h3 id="if-you-need-to-create-your-partitions-on-your-disk">If you need to create your partitions on your disk:</h3>
+<h4 id="list-partitions">List partitions</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo fdisk -l
+</span></span></code></pre></div><p>This command lists all the available disks and their partitions on the system. It&rsquo;s used to find the name of the disk that you want to partition.
+My disk is &ldquo;sda&rdquo; (find your&rsquo;s name)</p>
+<h4 id="wipe-the-hard-drive-if-there-is-still-something-on-there">Wipe the hard-drive if there is still something on there</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo wipefs --all /dev/sda
+</span></span></code></pre></div><h4 id="create-partition">Create partition</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo fdisk /dev/sda
+</span></span></code></pre></div><ul>
+<li>
+<p>This command starts the fdisk partitioning utility on the /dev/sda disk. From here, you can create a new partition by selecting &ldquo;n&rdquo; and following the prompts.</p>
+</li>
+<li>
+<p>&ldquo;n&rdquo; to create a new partition, &ldquo;d&rdquo; to delete the partition, &ldquo;p&rdquo; to check the partition table
+&ldquo;w&rdquo; to write.</p>
+</li>
+</ul>
+<h4 id="verify-partition-was-created">Verify partition was created</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">lsblk -f 
+</span></span></code></pre></div><p>It&rsquo;s used to verify that the partition was created with the correct filesystem.</p>
+<h3 id="encrypting-with-luks">Encrypting with LUKS</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo cryptsetup luksFormat /dev/sda1
+</span></span></code></pre></div><p>This command encrypts the newly created partition using the LUKS encryption format. You&rsquo;ll be prompted to enter a passphrase to secure the encryption.</p>
+<h3 id="unlock-the-luks-partition">Unlock the LUKS partition</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo cryptsetup luksOpen /dev/sda1 storage
+</span></span></code></pre></div><p>This command unlocks the encrypted partition and maps it to the device named &ldquo;storage&rdquo;, or could be any name you like.</p>
+<h3 id="create-the-luks-filesystem">Create the LUKS filesystem</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo mkfs.ext4 /dev/mapper/storage
+</span></span></code></pre></div><p>This command creates a new ext4 filesystem on the encrypted partition.</p>
+<h3 id="using-a-keyfile">Using a keyfile</h3>
+<h4 id="create-the-keyfile">Create the keyfile</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo dd if=/dev/urandom of=/root/keyfile bs=1024 count=4
+</span></span></code></pre></div><p>This command generates a super complex password to be used to unlock the encrypted partition.</p>
+<h4 id="set-keyfile-permissions">Set keyfile permissions</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo chmod 0400 /root/keyfile
+</span></span></code></pre></div><p>This command sets the permissions of the keyfile so it can only be read.</p>
+<h4 id="adding-keyfile-to-luks">Adding keyfile to LUKS</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo cryptsetup luksAddKey /dev/sda1 /root/keyfile
+</span></span></code></pre></div><p>This command adds the generated keyfile as an additional key to the LUKS encryption.</p>
+<h3 id="retrieve-the-uuid-of-luks-partition">Retrieve the UUID of LUKS partition</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo cryptsetup luksUUID /dev/sda1
+</span></span></code></pre></div><p>This command retrieves the UUID of the encrypted partition, which is needed to configure the crypttab file.</p>
+<h3 id="edit-crypttab">Edit crypttab</h3>
+<h4 id="open-crypttab">Open crypttab</h4>
+<pre><code>sudo vim /etc/crypttab
+</code></pre>
+<p>This command opens the crypttab file for editing. This file is used to configure the encrypted partition to be automatically unlocked at boot time.</p>
+<h4 id="add-the-unlock-partition-in-crypttab">Add the unlock partition in crypttab</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">databank     /dev/disk/by-uuid/&lt;YOUR_DISK_UUID&gt;  /root/keyfile  luks
+</span></span></code></pre></div><p>This tells the system to unlock the partition with the UUID (above) using the keyfile located at /root/keyfile, and to map it to the device named &ldquo;databank&rdquo;.</p>
+<h3 id="edit-fstab">Edit FSTAB</h3>
+<h4 id="open-fstab">Open FSTAB</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo vim /etc/fstab
+</span></span></code></pre></div><p>This file is used to configure the system to automatically mount the encrypted partition at boot time.</p>
+<h4 id="add-the-mountpoint-to-fstab">Add the mountpoint to FSTAB</h4>
+<p>It is the volume in /dev/mapper that you see using lsblk -f</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/dev/mapper/databank  /mnt/extdrive     ext4    defaults        0       2
+</span></span></code></pre></div><p>This line tells the system to mount the device named &ldquo;databank&rdquo; (which was created in the previous step) at the mount point /mnt/extdrive using the ext4 filesystem.</p>
+<h3 id="mount-point">Mount point</h3>
+<h4 id="create-the-mount-point">Create the mount point</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo mkdir /media/databank
+</span></span></code></pre></div><p>This command creates the mount point directory for the encrypted partition.</p>
+<h4 id="setting-the-ownership">Setting the ownership</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo chown tien /mnt/extdrive
+</span></span></code></pre></div><p>This command sets the ownership of the mount point directory to the user &ldquo;tien&rdquo;.</p>
+<h4 id="reboot">Reboot</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo reboot now
+</span></span></code></pre></div><h4 id="reset-the-ownership-again">Reset the ownership again</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo chown tien /mnt/extdrive
+</span></span></code></pre></div><ul>
+<li>This command sets the ownership of the mounted partition to the user &ldquo;tien&rdquo; temporarily.</li>
+<li>Or better to set this automatically at boot <a href="#automate-ownership-changes-if-needed">here</a>.</li>
+</ul>
+<h3 id="verifications">Verifications</h3>
+<h4 id="verify-partitions">Verify partitions</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">lsblk -f
+</span></span></code></pre></div><h4 id="verify-that-mountpoint-is-readable-and-writable">Verify that mountpoint is readable and writable</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cd /media/databank/
+</span></span><span class="line"><span class="cl">touch a
+</span></span><span class="line"><span class="cl">ls
+</span></span></code></pre></div><p><img src="./luks.png" alt="luks"></p>
+<hr>
+<h2 id="step-6-install-filebrowser">Step 6: Install FileBrowser</h2>
+<p><a href="https://filebrowser.org/installation">FileBrowser</a> is a lightweight file management solution, perfect for 4GB RAM Raspberry Pi 4. We could also create tunnel to FileBrowser with CloudFlares to have a NAS/cloud functions.  <br>
+I chose FileBrowser because Samba is too minimal and don&rsquo;t have web GUI, NextCloud is over-featured and heavy.</p>
+<ol>
+<li><strong>Run FileBrowser in Docker</strong>:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">docker run -v /path/to/root:/srv -v /path/to/filebrowser.db:/database/filebrowser.db -e PUID=$(id -u) -e PGID=$(id -g) -p 8080:80 filebrowser/filebrowser:s6
+</span></span></code></pre></div><blockquote>
+<p><strong><em>NOTE:</em></strong>  The &ldquo;/path/to/root&rdquo; is storage space(/mnt/extdrive), &ldquo;/path/to/filebrowser&rdquo; is database. Only modify the path to the left of the colon &lsquo;:&rsquo;.</p>
+</blockquote>
+<ol start="2">
+<li><strong>Access FileBrowser</strong>: Navigate to <code>http://&lt;Raspberry_Pi_IP&gt;:8080</code> and log in with the default credentials.</li>
+</ol>
+<hr>
+<h2 id="step-7-buy-a-domain-name">Step 7: Buy a Domain Name</h2>
+<p>I purchased the domain name <code>tienng.xyz</code> from <a href="https://gen.xyz">gen.xyz</a>. After purchasing, I configured DNS settings to point to my Raspberry Pi using Cloudflare.</p>
+<hr>
+<h2 id="step-8-set-up-cloudflare-tunnel">Step 8: Set Up Cloudflare Tunnel</h2>
+<p>Since I could not enable port forwarding on my school&rsquo;s network, I used Cloudflare Tunnel to access my Raspberry Pi services remotely.</p>
+<ol>
+<li><strong>Register an Account on Cloudflare</strong>:</li>
+<li><strong>Verify Domain Name</strong>: Add a domain, choose Free plan, input given Cloudflare&rsquo;s nameservers to my domain&rsquo;s setting on <a href="https://gen.xyz">gen.xyz</a>, you will be taken to Quick Start Guide and can just choose default options.
+Remember to press &ldquo;check Nameservers again&rdquo; and wait for confirmation in email.</li>
+<li><strong>Create a Tunnel</strong>: After successfully verifying your domain name, press your domain name, in Access tab press &ldquo;Launch Zero Trust&rdquo;, on the left sidebar find Networks tab and choose Tunnels,
+create a new tunnel and follow the intructions on the page.</li>
+<li><strong>Access Services</strong>: I mapped <code>cloud.tienng.xyz</code> to FileBrowser, enabling secure external access to my files.</li>
+</ol>
+<p><strong>&ndash;&gt; BUT at this point</strong>, we have our tunnel up and running but literally ANYONE can get into our network, there may be cases where you
+DO want to open up a tunnel connection to the whole wide world (such as if you’re running a public web server), but in this case,
+we’re just trying to access some stuff on our own local LAN – we absolutely do not want the whole wide world to be able to
+connect in – we only want to be able to access it ourselves!</p>
+<ol start="5">
+<li><strong>Add Application for Authentication</strong>:
+<ul>
+<li><a href="https://www.crosstalksolutions.com/cloudflare-tunnel-easy-setup/">https://www.crosstalksolutions.com/cloudflare-tunnel-easy-setup/</a></li>
+<li><a href="https://www.youtube.com/watch?v=ey4u7OUAF3c&amp;list=WL&amp;index=14">https://www.youtube.com/watch?v=ey4u7OUAF3c&amp;list=WL&amp;index=14</a> (NetworkChuck Remote Network)</li>
+<li><a href="https://www.youtube.com/watch?v=65FdHRs0axE&amp;list=WL&amp;index=9&amp;pp=gAQBiAQB">https://www.youtube.com/watch?v=65FdHRs0axE&amp;list=WL&amp;index=9&amp;pp=gAQBiAQB</a> (Restrict Cloudflare Application)</li>
+<li><a href="https://www.youtube.com/watch?v=wdmbAo02ktQ&amp;list=WL&amp;index=8&amp;pp=gAQBiAQB">https://www.youtube.com/watch?v=wdmbAo02ktQ&amp;list=WL&amp;index=8&amp;pp=gAQBiAQB</a> (Restrict to Google&amp;Github Auth)</li>
+<li><a href="https://www.youtube.com/watch?v=lnw616HiINY&amp;list=WL&amp;index=5&amp;pp=gAQBiAQB">https://www.youtube.com/watch?v=lnw616HiINY&amp;list=WL&amp;index=5&amp;pp=gAQBiAQB</a> (SSH Remote Connection)</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="step-9-set-up-immich-and-navidrome">Step 9: Set Up Immich and Navidrome</h2>
+<p>Immich and Navidrome are excellent solutions for managing photos and music streaming, respectively.</p>
+<ol>
+<li><strong>Install Immich</strong>:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker run -d --name<span class="o">=</span>immich -p 3000:3000 -v /mnt/extdrive/immich:/data ghcr.io/immich-app/server
+</span></span></code></pre></div></li>
+<li><strong>Install Navidrome</strong>:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker run -d --name<span class="o">=</span>navidrome -p 4533:4533 -v /mnt/extdrive/music:/data navidrome/navidrome:latest
+</span></span></code></pre></div></li>
+<li><strong>Access Services</strong>:
+<ul>
+<li>Immich: <code>http://&lt;Raspberry_Pi_IP&gt;:3000</code></li>
+<li>Navidrome: <code>http://&lt;Raspberry_Pi_IP&gt;:4533</code></li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="step-10-set-up-pi-hole-on-portainer">Step 10: Set Up Pi-Hole on Portainer</h2>
+<ul>
+<li>Pi-hole is a network-wide ad blocker that works at the DNS level, preventing unwanted content from ever reaching your devices. Running it in Docker makes it portable, easy to manage, and isolated from your host system. This guide explains how to set up Pi-hole using Docker.</li>
+<li>See the guide <a href="https://www.youtube.com/watch?v=gAPZ-KI4JIc">here</a>.</li>
+</ul>
+<h3 id="1-clear-port-53">1. Clear port 53</h3>
+<ul>
+<li><a href="https://github.com/bigbeartechworld/big-bear-scripts/tree/master/disable-dns-service">Guide</a></li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">bash -c <span class="s2">&#34;</span><span class="k">$(</span>wget -qLO - https://raw.githubusercontent.com/bigbeartechworld/big-bear-scripts/master/disable-dns-service/disable_dns_service.sh<span class="k">)</span><span class="s2">&#34;</span>
+</span></span></code></pre></div><h3 id="2-add-pi-hole-stack-on-portainer">2. Add Pi-Hole Stack on Portainer</h3>
+<ul>
+<li><a href="https://github.com/bigbeartechworld/big-bear-video-assets/blob/main/how-to-install-pihole-on-portainer/docker-compose-pihole.yml">Script</a></li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="c"># Docker Compose version</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;3&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># Define services (containers to be created)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">services</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># Service name: pihole</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">pihole</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># Name of the container instance</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">pihole</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># Image to use for this container</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># Use the specified version of the pihole image</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">pihole/pihole:2024.07.0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># Expose and map ports (host:container)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s2">&#34;53:53/tcp&#34;</span><span class="w"> </span><span class="c"># DNS (TCP)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s2">&#34;53:53/udp&#34;</span><span class="w"> </span><span class="c"># DNS (UDP)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s2">&#34;7300:80/tcp&#34;</span><span class="w"> </span><span class="c"># Web UI HTTP</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># Environment variables</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">TZ</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;UTC&#34;</span><span class="w"> </span><span class="c"># Time Zone; Update this to your time zone</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">WEBPASSWORD</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;password&#34;</span><span class="w"> </span><span class="c"># Admin password for web UI; Change this to your desired admin password</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># Mount volumes for persistent data</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s2">&#34;/data/pihole/data/pihole:/etc/pihole&#34;</span><span class="w"> </span><span class="c"># Pi-hole data</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s2">&#34;/data/pihole/data/dnsmasq:/etc/dnsmasq.d&#34;</span><span class="w"> </span><span class="c"># dnsmasq data</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># Restart policy for the container when it exits</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l">unless-stopped</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># DNS servers for this container to use</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">dns</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="m">127.0.0.1</span><span class="w"> </span><span class="c"># Localhost for internal resolution</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="m">1.1.1.1</span><span class="w"> </span><span class="c"># Cloudflare DNS for external resolution</span><span class="w">
+</span></span></span></code></pre></div><p>Adjust the <code>TZ</code> and <code>WEBPASSWORD</code> as necessary. The <code>volumes</code> section ensures Pi-hole data persists between container restarts (keep default).</p>
+<h3 id="3-start-the-container">3. Start the Container</h3>
+<ul>
+<li>Deploy Stack</li>
+</ul>
+<h3 id="4-access-the-pi-hole-admin-interface">4. Access the Pi-hole Admin Interface</h3>
+<p>Once the container is running, access the Pi-hole web interface by navigating to the IP address of your Docker host in a web browser. For example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">http://192.168.4.178:7300/admin
+</span></span></code></pre></div><p>Log in using the password you set during configuration.</p>
+<hr>
+<h3 id="5-configure-your-network">5. Configure Your Network</h3>
+<p>To start blocking ads, set your router or device DNS to point to your Pi-hole instance. Typically, this involves:</p>
+<ol>
+<li>Logging into your router&rsquo;s admin interface.</li>
+<li>Setting the DNS server to the IP address of your Docker host.</li>
+</ol>
+<p>Alternatively, configure individual devices to use Pi-hole as their DNS server.</p>
+<hr>
+<h3 id="pi-hole-troubleshooting">Pi-hole Troubleshooting</h3>
+<ul>
+<li>
+<p><strong>Issue:</strong> Pi-hole web interface doesn’t load.</p>
+<ul>
+<li><strong>Solution:</strong> Check if the container is running: <code>docker ps</code>. Restart it if necessary: <code>docker restart pihole</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Issue:</strong> DNS resolution isn’t working.</p>
+<ul>
+<li><strong>Solution:</strong> Ensure the required ports (53 and 80) are not used by other services.</li>
+</ul>
+</li>
+<li>
+<p><strong>Issue:</strong> Configuration doesn’t persist after a restart.</p>
+<ul>
+<li><strong>Solution:</strong> Verify that the <code>volumes</code> are correctly mounted.</li>
+</ul>
+</li>
+</ul>
+<h2 id="common-errors-and-solutions">Common Errors and Solutions</h2>
+<h3 id="1-conflict-between-nameservers-and-manual-dns-on-domain-hosting-platform">1. Conflict between Nameservers and Manual DNS on Domain Hosting platform</h3>
+<p>At first when I had my personal website at tienng.xyz only, I had to choose either keeping the website alive or the tunnels to my RaspberryPi Server since my
+domain registrar <code>gen.xyz</code> only allow either &ldquo;Nameservers&rdquo; or &ldquo;Manual DNS records&rdquo;. Since all of my services provided by Cloudflares so I decided to assign Cloudflares&rsquo; nameservers
+to my domain registrar. This means that Cloudflare is now in charge of all the DNS records instead of my domain hosting service <code>gen.xyz</code>.</p>
+<ul>
+<li>
+<p>The purpose of a nameserver like Cloudflare is to handle the Domain Name System (DNS) for your domain.</p>
+</li>
+<li>
+<p>By switching to Cloudflare&rsquo;s nameservers, all DNS settings are controlled through Cloudflare&rsquo;s interface instead of your domain registrar.</p>
+</li>
+</ul>
+<p><img src="./cf-dns.png" alt="Cloudflare DNS Records"></p>
+<h2 id="conclusion">Conclusion</h2>
+<p>This setup transformed my Raspberry Pi into a versatile home server capable of file management, media streaming, and photo management—all accessible remotely through a secure Cloudflare Tunnel. With Docker, adding or modifying services is a breeze, making this setup highly customisable and scalable.</p>
+
+      </article>
+    </div>
+  </div>
+
+  
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
+      <div class="card bg-light border-0 p-3">
+        <div class="d-flex align-items-start">
+          
+          
+          <img src="/img/author-post-img.jpg" class="img-responsive me-3 flex-shrink-0" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;"
+                alt="Image of Tien Nguyen">
+          
+          
+          <div class="text-start flex-grow-1">
+            
+            <h6 class="mb-1 fw-medium">Tien Nguyen</h6>
+            
+            
+            <p class="mb-0 text-muted small text-start">&lt;whatever it takes for your dreams&gt;</p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  
+  <div class="row">
+        <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-2">
+      
+      <div class="blog-tags">
+        
+        <a href="https://lightbi-beta-demo.netlify.app/tags/tech/">tech</a>
+        
+        <a href="https://lightbi-beta-demo.netlify.app/tags/automation/">automation</a>
+        
+      </div>
+      
+    </div>
+
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
+      
+      <section id="social-share">
+        <div class="list-inline footer-links">
+          
+
+<div class="card justify-content-center align-items-center mt-4">
+  <div class="card-body">
+    <div class="col-md-12 d-flex align-items-center">
+      <i class="bi bi-chat-text me-2"></i>
+      <p class="fw-medium ">What are your thoughts on this post?</p>
+    </div>
+
+    
+    <div class="col-md-12">
+      <p class="mb-0 small text-muted">If you liked this post, feel free to use the share button below. It always makes me smile when I see someone enjoyed it.</p>
+
+      <div class="share-box d-flex justify-content-center align-items-center" aria-hidden="true">
+        <ul class="share d-flex list-unstyled mb-0">
+          
+          <li>
+            <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2flightbi-beta-demo.netlify.app%2fproject%2f2025%2fraspberry-pi-server%2f" target="_blank" title="Share on Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-facebook" viewBox="0 0 16 16">
+                <path
+                  d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+              </svg>
+            </a>
+          </li>
+          
+          <li>
+            <a href="//twitter.com/share?url=https%3a%2f%2flightbi-beta-demo.netlify.app%2fproject%2f2025%2fraspberry-pi-server%2f&amp;text=RaspberryPi%20Home%20Server&amp;via=map%5b%5d"
+              target="_blank" title="Share on Twitter">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-twitter-x"
+                viewBox="0 0 16 16">
+                <path
+                  d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z" />
+              </svg>
+            </a>
+          </li>
+
+
+          
+          <li>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2flightbi-beta-demo.netlify.app%2fproject%2f2025%2fraspberry-pi-server%2f&amp;title=RaspberryPi%20Home%20Server"
+              target="_blank" title="Share on LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-linkedin" viewBox="0 0 16 16">
+                <path
+                  d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+              </svg>
+            </a>
+          </li>
+
+          <li>
+            <a target="_blank" rel="noopener noreferrer" aria-label="share RaspberryPi Home Server on reddit"
+              href="https://reddit.com/submit?url=https%3a%2f%2flightbi-beta-demo.netlify.app%2fproject%2f2025%2fraspberry-pi-server%2f&title=RaspberryPi%20Home%20Server">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-reddit" viewBox="0 0 16 16">
+                <path
+                  d="M6.167 8a.831.831 0 0 0-.83.83c0 .459.372.84.83.831a.831.831 0 0 0 0-1.661zm1.843 3.647c.315 0 1.403-.038 1.976-.611a.232.232 0 0 0 0-.306.213.213 0 0 0-.306 0c-.353.363-1.126.487-1.67.487-.545 0-1.308-.124-1.671-.487a.213.213 0 0 0-.306 0 .213.213 0 0 0 0 .306c.564.563 1.652.61 1.977.61zm.992-2.807c0 .458.373.83.831.83.458 0 .83-.381.83-.83a.831.831 0 0 0-1.66 0z" />
+                <path
+                  d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.828-1.165c-.315 0-.602.124-.812.325-.801-.573-1.9-.945-3.121-.993l.534-2.501 1.738.372a.83.83 0 1 0 .83-.869.83.83 0 0 0-.744.468l-1.938-.41a.203.203 0 0 0-.153.028.186.186 0 0 0-.086.134l-.592 2.788c-1.24.038-2.358.41-3.17.992-.21-.2-.496-.324-.81-.324a1.163 1.163 0 0 0-.478 2.224c-.02.115-.029.23-.029.353 0 1.795 2.091 3.256 4.669 3.256 2.577 0 4.668-1.451 4.668-3.256 0-.114-.01-.238-.029-.353.401-.181.688-.592.688-1.069 0-.65-.525-1.165-1.165-1.165z" />
+              </svg>
+            </a>
+          </li>
+
+
+
+          
+          <li>
+            <a href="whatsapp://send?text=https%3a%2f%2flightbi-beta-demo.netlify.app%2fproject%2f2025%2fraspberry-pi-server%2f&amp;description=RaspberryPi%20Home%20Server" target="_blank" rel="noopener"
+              title="Share on WhatsApp">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                <path
+                  d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+              </svg>
+            </a>
+          </li>
+
+          
+          <li>
+          <a class="resp-sharing-button__link"
+            href="https://telegram.me/share/url?text=RaspberryPi%20Home%20Server&amp;url=https%3a%2f%2flightbi-beta-demo.netlify.app%2fproject%2f2025%2fraspberry-pi-server%2f" target="_blank"
+            rel="noopener" aria-label="Share on Telegram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-telegram" viewBox="0 0 16 16">
+              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09"/>
+            </svg>
+          </a>
+          </li>
+
+
+          
+          <li>
+              <a href="mailto:?subject=RaspberryPi%20Home%20Server&amp;body=https%3a%2f%2flightbi-beta-demo.netlify.app%2fproject%2f2025%2fraspberry-pi-server%2f&amp;description=RaspberryPi%20Home%20Server" target="_self" rel="noopener" aria-label="Share by E-Mail">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-envelope-heart" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l3.235 1.94a2.8 2.8 0 0 0-.233 1.027L1 5.384v5.721l3.453-2.124q.219.416.55.835l-3.97 2.443A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741l-3.968-2.442q.33-.421.55-.836L15 11.105V5.383l-3.002 1.801a2.8 2.8 0 0 0-.233-1.026L15 4.217V4a1 1 0 0 0-1-1zm6 2.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"/>
+                </svg>
+              </a>              
+            </li>
+
+        </ul>
+      </div>
+    </div>
+
+    
+        </div>
+      </section>
+      
+    </div>
+
+    <div class="col-lg-8 offset-lg-2 col-md-12 offset-md-1 pt-4">
+      
+      <ul class="list-group list-group-horizontal" style="flex-direction: row">
+        
+
+
+        
+        <li class="list-group-item ms-auto b-0 p-0">
+          <a type="button" class="btn btn-dark" role="button" href="https://lightbi-beta-demo.netlify.app/project/2025/ina219-lcd-display/"
+            data-toggle="tooltip" data-placement="top" title="Volt/Amp Meter with INA219, Nano and LCD display">Next Post
+            &rarr;</a>
+        </li>
+        
+      </ul>
+      
+    </div>
+
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
+    </div>
+  </div>
+  
+</div>
+
+<div class="">
+  
+  
+  
+  
+  
+
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 mt-3">
+        <h3>Read more</h3>
+        <hr />
+      </div>
+
+      
+      
+<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6  mb-4">
+    <a href="https://lightbi-beta-demo.netlify.app/project/2025/ina219-lcd-display/">
+        <div class="card h-100 single-post-card shadow-effect bg-faded-light border rounded-4">
+            <div class="card-body">
+                <h3 class="fw-medium post-title">Volt/Amp Meter with INA219, Nano and LCD display</h3>
+                
+
+                <p class="post-meta">
+                    <span class="post-meta text-muted">
+  
+  
+
+  30 November 2025
+
+  
+
+  
+  &nbsp;|&nbsp; <i class="bi bi-clock"></i>&nbsp;4&nbsp;minutes
+  
+
+  
+  &nbsp;|&nbsp;<i class="bi bi-book"></i>&nbsp;706&nbsp;words
+  
+
+  
+</span>
+
+                </p>
+                
+
+                <div class="post-entry text-secondary">
+                    
+                    A circuit designed to measure voltage drop and shunt current across a load.
+                    
+                </div>
+
+                <div class="read-more-section">
+                    
+                    <h6 class="text-muted ">Read more <i class="bi bi-arrow-right"></i></h6>
+                </div>
+            </div>
+
+            
+           
+    <div class="image-wrapper">
+        <img src="/img/project/2025/ina219_hu_bf5faccae3e7c28.jpg" alt="/img/project/2025/ina219.jpg"
+             class="img-fluid lazyload fixed-img rounded-bottom-4">
+    </div>
+    
+
+    
+        </div>
+    </a>
+</div>
+
+
+      
+    </div>
+  </div>
+  
+  
+
+  
+
+</div>
+
+    
+
+
+<footer>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <ul
+          class="list-inline list-group list-group-horizontal text-center footer-links d-flex justify-content-center flex-row">
+
+          
+          <li>
+            <a href="mailto:tien@tienng.xyz" title="Email me" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-envelope"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://discord.com/users/525637838083981333" title="Discord" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-discord"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/tonyn678" title="GitHub" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-github"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/in/tienngg" title="LinkedIn" target="_blank">
+              <span class="mx-2">
+                <i class="bi bi-linkedin"></i>
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="mx-2">
+                <i class="bi bi-rss"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <p class="credits copyright text-muted">
+          
+          
+          <a href="https://www.tienng.xyz/">Tien Nguyen</a>
+          
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+          2025
+          
+
+          
+          &nbsp;&bull;&nbsp;
+          <a href="https://lightbi-beta-demo.netlify.app/">Tien&#39;s Blog</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          Powered by <a href="https://gohugo.io">Hugo</a> & <a href="https://github.com/binokochumolvarghese/lightbi-hugo">Lightbi.</a>&nbsp; Made with ❤ by <a href="https://binovarghese.com">Bino</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://lightbi-beta-demo.netlify.app/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://lightbi-beta-demo.netlify.app/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> 
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll("pre.chroma").forEach(function (element) {
+    element.style.padding = "0";
+  });
+});
+ </script>
+
+    
+  </body>
+</html>
+

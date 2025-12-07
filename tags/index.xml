@@ -1,10 +1,49 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Tien&#39;s blog</title>
-    <link>https://tienng.xyz/tags/</link>
-    <description>Recent content in Tags on Tien&#39;s blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language><atom:link href="https://tienng.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
+    <title>Tags on Tien&#39;s Blog</title>
+    <link>https://lightbi-beta-demo.netlify.app/tags/</link>
+    <description>Recent content in Tags on Tien&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>tien@tienng.xyz (Tien Nguyen)</managingEditor>
+    <webMaster>tien@tienng.xyz (Tien Nguyen)</webMaster>
+    <lastBuildDate>Sun, 30 Nov 2025 14:07:02 +1100</lastBuildDate>
+    <atom:link href="https://lightbi-beta-demo.netlify.app/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hardware</title>
+      <link>https://lightbi-beta-demo.netlify.app/tags/hardware/</link>
+      <pubDate>Sun, 30 Nov 2025 14:07:02 +1100</pubDate><author>tien@tienng.xyz (Tien Nguyen)</author>
+      <guid>https://lightbi-beta-demo.netlify.app/tags/hardware/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tech</title>
+      <link>https://lightbi-beta-demo.netlify.app/tags/tech/</link>
+      <pubDate>Sun, 30 Nov 2025 14:07:02 +1100</pubDate><author>tien@tienng.xyz (Tien Nguyen)</author>
+      <guid>https://lightbi-beta-demo.netlify.app/tags/tech/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Automation</title>
+      <link>https://lightbi-beta-demo.netlify.app/tags/automation/</link>
+      <pubDate>Tue, 17 Dec 2024 15:01:15 +1100</pubDate><author>tien@tienng.xyz (Tien Nguyen)</author>
+      <guid>https://lightbi-beta-demo.netlify.app/tags/automation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Blog</title>
+      <link>https://lightbi-beta-demo.netlify.app/tags/blog/</link>
+      <pubDate>Mon, 25 Dec 2023 00:00:00 +0000</pubDate><author>tien@tienng.xyz (Tien Nguyen)</author>
+      <guid>https://lightbi-beta-demo.netlify.app/tags/blog/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Shortcodes</title>
+      <link>https://lightbi-beta-demo.netlify.app/tags/shortcodes/</link>
+      <pubDate>Thu, 30 Nov 2023 00:00:00 +0000</pubDate><author>tien@tienng.xyz (Tien Nguyen)</author>
+      <guid>https://lightbi-beta-demo.netlify.app/tags/shortcodes/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

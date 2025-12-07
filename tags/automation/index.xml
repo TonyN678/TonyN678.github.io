@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Automation on Tien&#39;s Blog</title>
+    <link>https://lightbi-beta-demo.netlify.app/tags/automation/</link>
+    <description>Recent content in Automation on Tien&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>tien@tienng.xyz (Tien Nguyen)</managingEditor>
+    <webMaster>tien@tienng.xyz (Tien Nguyen)</webMaster>
+    <lastBuildDate>Tue, 17 Dec 2024 15:01:15 +1100</lastBuildDate>
+    <atom:link href="https://lightbi-beta-demo.netlify.app/tags/automation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RaspberryPi Home Server</title>
+      <link>https://lightbi-beta-demo.netlify.app/project/2025/raspberry-pi-server/</link>
+      <pubDate>Tue, 17 Dec 2024 15:01:15 +1100</pubDate><author>tien@tienng.xyz (Tien Nguyen)</author>
+      <guid>https://lightbi-beta-demo.netlify.app/project/2025/raspberry-pi-server/</guid>
+      <description>&lt;h1 id=&#34;setting-up-a-raspberry-pi-home-server-with-docker&#34;&gt;Setting Up a Raspberry Pi Home Server with Docker&lt;/h1&gt;&#xA;&lt;p&gt;A Raspberry Pi can be transformed into a powerful and lightweight home server with the right configuration. In this guide, I will walk you through my setup process, starting from installing the Raspberry Pi OS Lite to configuring Docker containers and setting up essential services for remote file access, media streaming, and more.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

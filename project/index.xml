@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Project on Tien&#39;s Blog</title>
+    <link>https://lightbi-beta-demo.netlify.app/project/</link>
+    <description>Recent content in Project on Tien&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>tien@tienng.xyz (Tien Nguyen)</managingEditor>
+    <webMaster>tien@tienng.xyz (Tien Nguyen)</webMaster>
+    <lastBuildDate>Sun, 30 Nov 2025 14:07:02 +1100</lastBuildDate>
+    <atom:link href="https://lightbi-beta-demo.netlify.app/project/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Volt/Amp Meter with INA219, Nano and LCD display</title>
+      <link>https://lightbi-beta-demo.netlify.app/project/2025/ina219-lcd-display/</link>
+      <pubDate>Sun, 30 Nov 2025 14:07:02 +1100</pubDate><author>tien@tienng.xyz (Tien Nguyen)</author>
+      <guid>https://lightbi-beta-demo.netlify.app/project/2025/ina219-lcd-display/</guid>
+      <description>&lt;h1 id=&#34;building-a-diy-power-meter--logger-with-arduino-nano-and-ina219&#34;&gt;Building a DIY Power Meter &amp;amp; Logger with Arduino Nano and INA219&lt;/h1&gt;&#xA;&lt;p&gt;In this project, I&amp;rsquo;ll walk you through how I built a simple but accurate power meter and data logger using three main components: an Arduino Nano, the INA219 current/voltage monitoring IC, and a 16×2 LCD display. The goal was to create a compact device that can measure voltage, current, and power in real time—and also log the data for later analysis.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>RaspberryPi Home Server</title>
+      <link>https://lightbi-beta-demo.netlify.app/project/2025/raspberry-pi-server/</link>
+      <pubDate>Tue, 17 Dec 2024 15:01:15 +1100</pubDate><author>tien@tienng.xyz (Tien Nguyen)</author>
+      <guid>https://lightbi-beta-demo.netlify.app/project/2025/raspberry-pi-server/</guid>
+      <description>&lt;h1 id=&#34;setting-up-a-raspberry-pi-home-server-with-docker&#34;&gt;Setting Up a Raspberry Pi Home Server with Docker&lt;/h1&gt;&#xA;&lt;p&gt;A Raspberry Pi can be transformed into a powerful and lightweight home server with the right configuration. In this guide, I will walk you through my setup process, starting from installing the Raspberry Pi OS Lite to configuring Docker containers and setting up essential services for remote file access, media streaming, and more.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

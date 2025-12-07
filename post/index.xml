@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Tien&#39;s Blog</title>
+    <link>https://lightbi-beta-demo.netlify.app/post/</link>
+    <description>Recent content in Posts on Tien&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>tien@tienng.xyz (Tien Nguyen)</managingEditor>
+    <webMaster>tien@tienng.xyz (Tien Nguyen)</webMaster>
+    <lastBuildDate>Sat, 21 Dec 2024 14:27:51 +1100</lastBuildDate>
+    <atom:link href="https://lightbi-beta-demo.netlify.app/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Own Email Domain</title>
+      <link>https://lightbi-beta-demo.netlify.app/post/2025/my-own-email-domain/</link>
+      <pubDate>Sat, 21 Dec 2024 14:27:51 +1100</pubDate><author>tien@tienng.xyz (Tien Nguyen)</author>
+      <guid>https://lightbi-beta-demo.netlify.app/post/2025/my-own-email-domain/</guid>
+      <description>&lt;h1 id=&#34;how-to-set-up-your-own-email-on-your-domain-name&#34;&gt;How to Set Up Your Own Email on Your Domain Name&lt;/h1&gt;&#xA;&lt;p&gt;Having your own email address at your custom domain name adds a professional touch to your communications. This guide will walk you through the process of setting up your own email address using your domain and integrating it with Gmail for sending and receiving emails. This guide will show how I set up my own email address at &lt;a href=&#34;mailto:tien@tienng.xyz&#34;&gt;tien@tienng.xyz&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SSH Connection (Without Password) to a Remote Server</title>
+      <link>https://lightbi-beta-demo.netlify.app/post/2025/ssh-key-config/</link>
+      <pubDate>Thu, 19 Dec 2024 16:01:05 +1100</pubDate><author>tien@tienng.xyz (Tien Nguyen)</author>
+      <guid>https://lightbi-beta-demo.netlify.app/post/2025/ssh-key-config/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;&#xA;&lt;p&gt;Secure Shell (SSH) is a powerful tool for remotely accessing and managing servers. Setting up SSH key-based authentication eliminates the need for passwords and enhances security. This guide walks you through the process of setting up an SSH connection without a password to a remote server.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How did I build this blog?</title>
+      <link>https://lightbi-beta-demo.netlify.app/post/2025/this-hugo-blog/</link>
+      <pubDate>Sat, 23 Nov 2024 23:00:55 +1100</pubDate><author>tien@tienng.xyz (Tien Nguyen)</author>
+      <guid>https://lightbi-beta-demo.netlify.app/post/2025/this-hugo-blog/</guid>
+      <description>&lt;h2 id=&#34;inspiration&#34;&gt;Inspiration&lt;/h2&gt;&#xA;&lt;p&gt;I had always wanted to build my own website, no Wordpress or any third-party hosting bloats that rip your pocket! This is also for storing information and experiences I gained throughout my learning journey in the world of tech and engineering so I don&amp;rsquo;t have to crawling through my dusting physical A4 notebooks or proprietary gg docs :/&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Arch linux Setup and common Linux Errors</title>
+      <link>https://lightbi-beta-demo.netlify.app/post/2025/arch-linux-setup/</link>
+      <pubDate>Wed, 17 Jan 2024 15:02:12 +1100</pubDate><author>tien@tienng.xyz (Tien Nguyen)</author>
+      <guid>https://lightbi-beta-demo.netlify.app/post/2025/arch-linux-setup/</guid>
+      <description>&lt;h1 id=&#34;how-to-install-arch-linux&#34;&gt;How to Install Arch Linux&lt;/h1&gt;&#xA;&lt;p&gt;Make sure that the machine is not in Secure Boot mode to prevent further authentication or you will end up with a black and yellow window and can’t do anything.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Sample Post</title>
+      <link>https://lightbi-beta-demo.netlify.app/post/2020/sample-post/</link>
+      <pubDate>Mon, 25 Dec 2023 00:00:00 +0000</pubDate><author>tien@tienng.xyz (Tien Nguyen)</author>
+      <guid>https://lightbi-beta-demo.netlify.app/post/2020/sample-post/</guid>
+      <description>&lt;p&gt;This is a sample post where you can understand how this is working.&lt;/p&gt;&#xA;&lt;p&gt;Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Understanding Hugo Shortcodes</title>
+      <link>https://lightbi-beta-demo.netlify.app/post/2020/understanding-hugo-shortcodes/</link>
+      <pubDate>Thu, 30 Nov 2023 00:00:00 +0000</pubDate><author>tien@tienng.xyz (Tien Nguyen)</author>
+      <guid>https://lightbi-beta-demo.netlify.app/post/2020/understanding-hugo-shortcodes/</guid>
+      <description>&lt;p&gt;Hugo shortcodes are powerful tools for adding custom HTML or other special content within Markdown files without complex code. They enable enhanced flexibility and are a core part of Hugo&amp;rsquo;s functionality, offering reusable snippets for embedding media, custom components, or dynamic content. Below, we’ll explore what shortcodes are and highlight some popular examples.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lightbi Custom Shortcodes</title>
+      <link>https://lightbi-beta-demo.netlify.app/post/2020/custom-shortcodes/</link>
+      <pubDate>Fri, 24 Nov 2023 00:00:00 +0000</pubDate><author>tien@tienng.xyz (Tien Nguyen)</author>
+      <guid>https://lightbi-beta-demo.netlify.app/post/2020/custom-shortcodes/</guid>
+      <description>&lt;p&gt;To create your own shortcodes in Hugo, add an HTML file in layouts/shortcodes/. This theme provides the following useful custom shortcodes:&lt;/p&gt;&#xA;&lt;h3 id=&#34;info-card&#34;&gt;Info card&lt;/h3&gt;&#xA;&lt;p&gt;Displays information in a card format.&lt;/p&gt;&#xA;&lt;h5 id=&#34;shortcode&#34;&gt;Shortcode&lt;/h5&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{/* &amp;lt; info_cards header=&amp;#34;lorem-ipsum&amp;#34; title=&amp;#34;What is Lorem Ipsum?&amp;#34; content=&amp;#34;Lorem Ipsum is simply dummy text of the printing and typesetting industry.&amp;#34; &amp;gt; */}}&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;output&#34;&gt;Output&lt;/h5&gt;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;    &#xA;&#xA;&#xA;&lt;div class=&#34;card mb-3 p-0 mt-4 mb-4 info-card-bg&#34;&gt;&#xA;    &lt;div class=&#34;card-body&#34;&gt;&#xA;        &#xA;        &lt;h5 class=&#34;card-title mt-0&#34;&gt;&#xA;            What is Lorem Ipsum?&#xA;        &lt;/h5&gt;&#xA;        &#xA;        &lt;p class=&#34;card-text text-body-secondary fs-6 mt-0&#34;&gt;&#xA;&#xA;             &#xA;            Lorem Ipsum is simply dummy text of the printing and typesetting industry.&#xA;            &#xA;        &lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
